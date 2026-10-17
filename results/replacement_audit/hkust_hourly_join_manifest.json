@@ -1,0 +1,715 @@
+{
+  "schema_version": "hkust-hourly-join-1",
+  "created_utc": "2026-09-07T08:56:21.429395+00:00",
+  "source": {
+    "dataset": "HKUST rooftop PV dataset",
+    "doi": "10.5061/dryad.m37pvmd99",
+    "license": "CC0-1.0",
+    "paper_doi": "10.1038/s41597-025-04397-y"
+  },
+  "output": {
+    "root": "<private-derived-output>",
+    "files": 24,
+    "observations_published": false
+  },
+  "contract": {
+    "timezone_assumption": "Asia/Hong_Kong",
+    "frequency_minutes": 60,
+    "target_aggregation": "hourly mean power; minimum 75% source support",
+    "weather_aggregation": "hourly mean of valid one-minute values",
+    "join": "left join on issue timestamp; no forward-fill or cross-split interpolation",
+    "core_weather_fields": [
+      "irradiance",
+      "temperature",
+      "humidity",
+      "pressure",
+      "wind",
+      "visibility"
+    ],
+    "rainfall": "excluded from primary contract"
+  },
+  "summary": {
+    "eligible_systems": 24,
+    "joined_files": 24,
+    "weather_hour_keys": 26280,
+    "complete_core_weather_hours": 26133,
+    "join_complete_fraction": 0.994406,
+    "model_fitting_authorized": false,
+    "gate": "review"
+  },
+  "systems": [
+    {
+      "system_id": "LSK_North",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/LSK North.csv",
+      "output_file": "LSK_North.csv",
+      "capacity_kw": 55.0,
+      "rows": 22656,
+      "sha256": "1d3b02fbee99e80a6f2858698c558bc90f8728a0eea6305c6d663f9d0d82b9aa",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5136,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8758,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "LSK_South",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/LSK South.csv",
+      "output_file": "LSK_South.csv",
+      "capacity_kw": 25.0,
+      "rows": 22656,
+      "sha256": "b21b44a4b2a1b96ce1d9889f843ae247b8d40d068773c1361d235095c572b7ab",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5135,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8119,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "SQ1",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/SQ1.csv",
+      "output_file": "SQ1.csv",
+      "capacity_kw": 27.6,
+      "rows": 22656,
+      "sha256": "4298f971e5b427392ecaf5f1c6377439b0d9b797cb956956ffc03395c2de68d7",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5136,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8759,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "SQ2",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/SQ2.csv",
+      "output_file": "SQ2.csv",
+      "capacity_kw": 33.3,
+      "rows": 22656,
+      "sha256": "c3459dbd77d5c03215ae597f5134d5ccf888d07659751b6a26c4fb7f07de00fc",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5136,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8759,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "SQ3",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/SQ3.csv",
+      "output_file": "SQ3.csv",
+      "capacity_kw": 33.3,
+      "rows": 22656,
+      "sha256": "06ee639d85e2bc2864f1ec9fcf7ac4bcaea44c2966c896102f8b610adefddf7d",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5136,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8758,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "SQ4",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/SQ4.csv",
+      "output_file": "SQ4.csv",
+      "capacity_kw": 33.3,
+      "rows": 22656,
+      "sha256": "01b1f58ea967170f151681492adcd76859c4717f5b231c0f80f964006bc7d0d3",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5136,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8759,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "SQ567",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/SQ567.csv",
+      "output_file": "SQ567.csv",
+      "capacity_kw": 47.97,
+      "rows": 21936,
+      "sha256": "e17fbff260749ed898ff504cfd080e815e16e382f9d965fa6e056f3ae45b330a",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4416,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8759,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "UG_Hall2_2F",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/UG Hall2 2F.csv",
+      "output_file": "UG_Hall2_2F.csv",
+      "capacity_kw": 23.4,
+      "rows": 21936,
+      "sha256": "094542f88533b0735877c57eb9bc26d0bd4aa83d944d64175e21a46c64585d58",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4416,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8619,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "UG_Hall2_RF",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/UG Hall2 RF.csv",
+      "output_file": "UG_Hall2_RF.csv",
+      "capacity_kw": 8.0,
+      "rows": 21936,
+      "sha256": "58f1fc74f961dc3d6d9327e6a3cf4899a72ea5fa3aad43a714574b24f6ae17d9",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4402,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8577,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8723,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "UG_Hall3",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/UG Hall3.csv",
+      "output_file": "UG_Hall3.csv",
+      "capacity_kw": 25.0,
+      "rows": 21936,
+      "sha256": "d024ac5f678a7d698d4cc8e31b535766eb913dd709147eac4e3bd9b2c0e05618",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4416,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8710,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "UG_Hall4",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/UG Hall4.csv",
+      "output_file": "UG_Hall4.csv",
+      "capacity_kw": 32.76,
+      "rows": 21936,
+      "sha256": "a066fffb206ba14fe6387f2954b51c9ef613b457f2c6ce4bfe9fe4480190a7f6",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4416,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "UG_Hall6",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/UG Hall6.csv",
+      "output_file": "UG_Hall6.csv",
+      "capacity_kw": 25.0,
+      "rows": 22656,
+      "sha256": "8ae68afcdeeaa6e86f3940d874c9b3a4886df0012d13321696be2e2f07bca3ae",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5134,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8755,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8758,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "UG_Hall7",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/UG Hall7.csv",
+      "output_file": "UG_Hall7.csv",
+      "capacity_kw": 31.98,
+      "rows": 22656,
+      "sha256": "22115cb6c908b710435e2adf9626603aa507d3b2fe15acaeafd19a5becc587e8",
+      "years": {
+        "2021": {
+          "rows": 5136,
+          "target_valid_rows": 5136,
+          "core_weather_complete_rows": 5136,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8760,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "Zone_A1",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/Zone A1.csv",
+      "output_file": "Zone_A1.csv",
+      "capacity_kw": 33.3,
+      "rows": 21936,
+      "sha256": "9b64a779b40d74ab971014cdda2f121d91e98cf0db0c5891fcc45cf8caef3459",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4415,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8758,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8752,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "Zone_A2",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/Zone A2.csv",
+      "output_file": "Zone_A2.csv",
+      "capacity_kw": 249.5,
+      "rows": 21936,
+      "sha256": "3d1866b20e72856354706aa8dbf7f6067066497ce8b5e33a0d9e3edae812367e",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4415,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8721,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8646,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "Zone_A4",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations with panel level optimizer/Site level dataset/Zone A4.csv",
+      "output_file": "Zone_A4.csv",
+      "capacity_kw": 55.0,
+      "rows": 21936,
+      "sha256": "661a6a53b832186612458662b7f688f5389304b8fd71da0e1845ed3ff80c8742",
+      "years": {
+        "2021": {
+          "rows": 4416,
+          "target_valid_rows": 4388,
+          "core_weather_complete_rows": 4416,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8735,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8758,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "CYT__Station_1_",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/CYT (Station 1).csv",
+      "output_file": "CYT__Station_1_.csv",
+      "capacity_kw": 25.0,
+      "rows": 23303,
+      "sha256": "caaab0df1ad498cbac7feaf8dd76ca1922754a239049d56a15d86adb46ce29e0",
+      "years": {
+        "2021": {
+          "rows": 5783,
+          "target_valid_rows": 5736,
+          "core_weather_complete_rows": 5783,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8214,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8416,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "CYT__Station_2_",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/CYT (Station 2).csv",
+      "output_file": "CYT__Station_2_.csv",
+      "capacity_kw": 25.0,
+      "rows": 22872,
+      "sha256": "3db0603102bc98c6266cb945fb8680a9ecffb8e3f34eb94eda355a6b1b4671a6",
+      "years": {
+        "2021": {
+          "rows": 5352,
+          "target_valid_rows": 5322,
+          "core_weather_complete_rows": 5352,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8740,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8530,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "SQ10",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/SQ10.csv",
+      "output_file": "SQ10.csv",
+      "capacity_kw": 30.4,
+      "rows": 22066,
+      "sha256": "6517ba8bbc504c0123aaecd49b1c76ab4f56a2312ba4f3df96533066c8746a01",
+      "years": {
+        "2021": {
+          "rows": 4559,
+          "target_valid_rows": 4406,
+          "core_weather_complete_rows": 4559,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8739,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8747,
+          "target_valid_rows": 8523,
+          "core_weather_complete_rows": 8649,
+          "joined_complete_fraction": 0.988796
+        }
+      }
+    },
+    {
+      "system_id": "SQ11",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/SQ11.csv",
+      "output_file": "SQ11.csv",
+      "capacity_kw": 32.51,
+      "rows": 22067,
+      "sha256": "cd239d5228c52cc9f2f7e4357a629568d23a5900b5c3e5092da49b3df934fbb6",
+      "years": {
+        "2021": {
+          "rows": 4559,
+          "target_valid_rows": 4396,
+          "core_weather_complete_rows": 4559,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8729,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8748,
+          "target_valid_rows": 8529,
+          "core_weather_complete_rows": 8650,
+          "joined_complete_fraction": 0.988797
+        }
+      }
+    },
+    {
+      "system_id": "SQ17",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/SQ17.csv",
+      "output_file": "SQ17.csv",
+      "capacity_kw": 37.05,
+      "rows": 24299,
+      "sha256": "d8a137ed5b12e5d9883000817f1896518a21328ddd7050793e45ad618c8afdf9",
+      "years": {
+        "2021": {
+          "rows": 6792,
+          "target_valid_rows": 6298,
+          "core_weather_complete_rows": 6792,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8684,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8747,
+          "target_valid_rows": 8524,
+          "core_weather_complete_rows": 8649,
+          "joined_complete_fraction": 0.988796
+        }
+      }
+    },
+    {
+      "system_id": "SQ8",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/SQ8.csv",
+      "output_file": "SQ8.csv",
+      "capacity_kw": 32.51,
+      "rows": 23837,
+      "sha256": "3be1b597a488068b378fe9382443941f33ef2b4d9292daff7cea6a62d5969e85",
+      "years": {
+        "2021": {
+          "rows": 6329,
+          "target_valid_rows": 5820,
+          "core_weather_complete_rows": 6329,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8739,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8748,
+          "target_valid_rows": 8539,
+          "core_weather_complete_rows": 8650,
+          "joined_complete_fraction": 0.988797
+        }
+      }
+    },
+    {
+      "system_id": "Zone_L1__Station_1_",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/Zone L1 (Station 1).csv",
+      "output_file": "Zone_L1__Station_1_.csv",
+      "capacity_kw": 25.0,
+      "rows": 23859,
+      "sha256": "7c9978f700d84bd793bf735830b7f56cc2e3f8d87bb2fb15371dd0f9756a5540",
+      "years": {
+        "2021": {
+          "rows": 6335,
+          "target_valid_rows": 6116,
+          "core_weather_complete_rows": 6335,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8699,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8580,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    },
+    {
+      "system_id": "Zone_L1__Station_2_",
+      "site_file": "Dataset/Time series dataset/PV generation dataset/PV stations without panel level optimizer/Site level dataset/Zone L1(Station 2).csv",
+      "output_file": "Zone_L1__Station_2_.csv",
+      "capacity_kw": 25.0,
+      "rows": 23855,
+      "sha256": "1dc58c4c43ef5ac7cc989d308de09d28ba62f33959917520b4dbfc0fd4975eb3",
+      "years": {
+        "2021": {
+          "rows": 6335,
+          "target_valid_rows": 6104,
+          "core_weather_complete_rows": 6335,
+          "joined_complete_fraction": 1.0
+        },
+        "2022": {
+          "rows": 8760,
+          "target_valid_rows": 8700,
+          "core_weather_complete_rows": 8711,
+          "joined_complete_fraction": 0.994406
+        },
+        "2023": {
+          "rows": 8760,
+          "target_valid_rows": 8608,
+          "core_weather_complete_rows": 8662,
+          "joined_complete_fraction": 0.988813
+        }
+      }
+    }
+  ],
+  "interpretation": "Private derived tables were created for review. Feature engineering, issue-time cutoff checks, split-local interpolation and target-window construction remain required before model fitting."
+}

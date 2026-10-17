@@ -1,0 +1,62 @@
+{
+  "feature_order": [
+    "power",
+    "ghi",
+    "temperature",
+    "humidity",
+    "clear_ghi"
+  ],
+  "interpretation": "Removal costs are conditional prediction diagnostics, not causal physical contributions, additive importance scores, or universal rankings.",
+  "scope": "current Array 1B/DKASC plus 31-system HKUST; h6 point forecasts; LightGBM and GRU; five seeds",
+  "source_files": [
+    {
+      "path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/train_corrected_study.py",
+      "sha256": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28"
+    },
+    {
+      "path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/corrected_study.py",
+      "sha256": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+    },
+    {
+      "path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/configs/corrected_study_v28_array1b.json",
+      "sha256": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9"
+    }
+  ],
+  "status": "complete",
+  "task_id": "P06",
+  "variants": {
+    "without_calendar": {
+      "removed": [
+        "future.hour_harmonics",
+        "future.day_of_year_harmonics"
+      ],
+      "retained": "future.target_clear_ghi and all history channels"
+    },
+    "without_irradiance": {
+      "removed": [
+        "history.ghi"
+      ],
+      "retained": "all other history and future channels"
+    },
+    "without_other_weather": {
+      "removed": [
+        "history.temperature",
+        "history.humidity"
+      ],
+      "retained": "power, ghi, clear_ghi history plus future inputs"
+    },
+    "without_power": {
+      "removed": [
+        "history.power"
+      ],
+      "retained": "all other history and future channels"
+    },
+    "without_solar": {
+      "removed": [
+        "history.clear_ghi",
+        "future.target_clear_ghi"
+      ],
+      "retained": "power, ghi, temperature, humidity history plus calendar inputs"
+    }
+  }
+}

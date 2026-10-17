@@ -1,0 +1,25 @@
+Testbed,Frozen model,Reference,Skill (%),95% interval (%),Holm p
+DKASC,LightGBM,"Smart, any-daylight ratio",+58.6,"[+52.7, +64.5]",0.000
+DKASC,LightGBM,"Smart, specified",+53.0,"[+46.9, +59.4]",0.000
+DKASC,LightGBM,Previous day,-7.9,"[-18.0, -1.9]",0.044
+DKASC,LightGBM,Convex PD–climatology,-9.9,"[-19.9, -3.8]",0.006
+DKASC,GRU,"Smart, any-daylight ratio",+4.8,"[-2.0, +9.7]",0.150
+DKASC,GRU,"Smart, specified",-8.1,"[-18.5, -0.2]",0.150
+DKASC,GRU,Previous day,-148.1,"[-227.5, -102.6]",0.000
+DKASC,GRU,Convex PD–climatology,-152.8,"[-232.3, -106.6]",0.000
+DKASC,Transformer,"Smart, any-daylight ratio",+43.3,"[+39.5, +47.0]",0.000
+DKASC,Transformer,"Smart, specified",+35.6,"[+30.4, +40.9]",0.000
+DKASC,Transformer,Previous day,-47.7,"[-81.7, -27.8]",0.000
+DKASC,Transformer,Convex PD–climatology,-50.5,"[-84.9, -30.5]",0.000
+HKUST,LightGBM,"Smart, any-daylight ratio",+55.9,"[+51.8, +59.0]",0.000
+HKUST,LightGBM,"Smart, specified",+11.6,"[+3.6, +19.3]",0.056
+HKUST,LightGBM,Previous day,-4.3,"[-13.9, +3.2]",0.610
+HKUST,LightGBM,Convex PD–climatology,-9.6,"[-19.2, -1.8]",0.140
+HKUST,GRU,"Smart, any-daylight ratio",+53.8,"[+50.1, +56.1]",0.000
+HKUST,GRU,"Smart, specified",+7.2,"[+1.2, +12.7]",0.140
+HKUST,GRU,Previous day,-9.4,"[-19.6, -1.2]",0.140
+HKUST,GRU,Convex PD–climatology,-15.0,"[-25.2, -6.6]",0.003
+HKUST,Transformer,"Smart, any-daylight ratio",+56.7,"[+53.6, +58.8]",0.000
+HKUST,Transformer,"Smart, specified",+13.2,"[+7.9, +18.3]",0.000
+HKUST,Transformer,Previous day,-2.4,"[-13.6, +6.6]",0.636
+HKUST,Transformer,Convex PD–climatology,-7.6,"[-18.9, +1.6]",0.373

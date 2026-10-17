@@ -1,0 +1,77 @@
+{
+ "pvdaq9068/9068_ac_power_data.csv": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_ac_power_data.csv",
+  "bytes": 65002925,
+  "sha256": "d0f7381abfaad9f53ae74fca7c6761aecbc344e595faf316406c3b081f0d1548"
+ },
+ "pvdaq9068/9068_ac_power_data_20240101_20250430.csv": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_ac_power_data_20240101_20250430.csv",
+  "bytes": 10870311,
+  "sha256": "16cac9d3ec61027e6f176eea276dafd1ad6d46461336edb29a3772ad34b5efc2"
+ },
+ "pvdaq9068/9068_irradiance_data.csv": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_irradiance_data.csv",
+  "bytes": 31130390,
+  "sha256": "48a0b97014cba3f33ee8cc892c77e618f3995a2073d759672db3f809d351d5a9"
+ },
+ "pvdaq9068/9068_irradiance_data_20240101_20250430.csv": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_irradiance_data_20240101_20250430.csv",
+  "bytes": 6720619,
+  "sha256": "f3817d240ec0f6c567cde5055a07009f8b64ba16186aed25b316bdc0b2a161ae"
+ },
+ "pvdaq9068/9068_environment_data.csv": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_environment_data.csv",
+  "bytes": 287958472,
+  "sha256": "73572779243c8b1623bbcfc23f8dbc385d808b2c2e9350e6758dc60984367f26"
+ },
+ "pvdaq9068/9068_environment_data_20240101_20250430.csv": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_environment_data_20240101_20250430.csv",
+  "bytes": 66012711,
+  "sha256": "c8dbc9711b59e2847cdc158989f5a7fcdf93395a18cbd88dddd2ccbde579d867"
+ },
+ "pvdaq9068/9068_meter_data_20240101_20250430.csv": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_meter_data_20240101_20250430.csv",
+  "bytes": 14933441,
+  "sha256": "be6662913e7ceb0888b24e6ad16c2b76eba264e2c7c0ba69d36d6e85772157b6"
+ },
+ "pvdaq9068/9068_system_metadata.json": {
+  "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/metadata/9068_system_metadata.json",
+  "bytes": 186092,
+  "sha256": "6861ae58145427dd790315257feef95b6ed5067fe5b5378dc5b2fa4acc23937f"
+ },
+ "isd/72476824051_2020.csv": {
+  "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2020/72476824051.csv",
+  "bytes": 5284400,
+  "sha256": "6e13b4281497aea833137f5ce68e979394206431939b43f578d243e83da58531"
+ },
+ "isd/72476824051_2021.csv": {
+  "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2021/72476824051.csv",
+  "bytes": 5241367,
+  "sha256": "855f56d3ee0ea4cf3a8161d55b528f2d35d2094b4ea2e13af6f4f6b0068865b6"
+ },
+ "isd/72476824051_2022.csv": {
+  "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2022/72476824051.csv",
+  "bytes": 5358953,
+  "sha256": "d84c597ec7704526f27f60cad5c0ca2d4ab764118e06319ed920cb8baac480a1"
+ },
+ "isd/72476824051_2023.csv": {
+  "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2023/72476824051.csv",
+  "bytes": 5499361,
+  "sha256": "37eabed5a301142f444f5cbfb5cd5bd83a38dc07c0a5c8d829e19980bc0278ff"
+ },
+ "isd/72476824051_2024.csv": {
+  "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2024/72476824051.csv",
+  "bytes": 5206458,
+  "sha256": "edbffe4d3d0296d8ea2f30be41d7fc7436ed5b9ac86e6c3faacfb669988d35cc"
+ },
+ "isd/72476824051_2025.csv": {
+  "url": "https://www.ncei.noaa.gov/data/global-hourly/access/2025/72476824051.csv",
+  "bytes": 3421498,
+  "sha256": "24ea4ab3184af9677e989aa156bde55d28b4e86a48ae9d2d8ef7d35b3c36bbae"
+ },
+ "_licences": {
+  "pvdaq9068": "PVDAQ public datasets, OEDI submission 4568, Creative Commons Attribution 4.0 (DOI 10.25984/1846021)",
+  "isd": "NOAA NCEI Integrated Surface Dataset, U.S. Government public domain"
+ },
+ "_accessed_utc": "2026-09-26T07:50:41Z"
+}

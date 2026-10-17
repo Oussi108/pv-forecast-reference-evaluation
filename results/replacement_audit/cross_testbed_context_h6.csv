@@ -1,0 +1,4 @@
+testbed,systems,test_year_or_window,forecast_arm,reference_arm,mae,reference_mae,skill,n,aggregation
+DKASC,1,locked original test partition,LightGBM,smart persistence,0.07519852671123514,0.14067791611633274,0.46545606597520117,7219,array-level locked score
+PVOD pooled,8,22 Apr–13 Jun 2019,LightGBM,smart persistence,0.0910309545647966,0.1844377340097073,0.4969965121680936,4076,system-balanced mean of eight locked stations
+HKUST campus fleet,24,calendar year 2023,LightGBM,persistence,0.05973179,0.18345383,0.6744042356597297,199832,system-balanced mean of 24 systems

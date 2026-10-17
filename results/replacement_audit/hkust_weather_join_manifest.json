@@ -1,0 +1,312 @@
+{
+  "schema_version": "hkust-weather-join-manifest-1",
+  "created_utc": "2026-09-07T08:53:29.716440+00:00",
+  "source": {
+    "dataset": "HKUST rooftop PV dataset",
+    "doi": "10.5061/dryad.m37pvmd99",
+    "license": "CC0-1.0",
+    "paper_doi": "10.1038/s41597-025-04397-y"
+  },
+  "join_contract": {
+    "station_scope": "one shared on-campus weather station for all retained systems",
+    "issue_time_rule": "join weather measured at or before the forecast issue timestamp; no future values",
+    "frequency_minutes": 60,
+    "core_fields": [
+      "irradiance",
+      "temperature",
+      "humidity",
+      "pressure",
+      "wind"
+    ],
+    "optional_fields": [
+      "visibility",
+      "rainfall"
+    ],
+    "interpolation": "within split only, after chronological split; no cross-boundary fill",
+    "calendar_years": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  "field_summary": {
+    "irradiance": {
+      "files": 3,
+      "years_present": [
+        2021,
+        2022,
+        2023
+      ],
+      "all_years_present": true,
+      "minimum_non_null_fraction": 1.0,
+      "source_files": [
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Irradiance/Irradiance_2021.csv",
+          "rows_scanned": 525598,
+          "valid_timestamp_rows": 525598,
+          "non_null_fraction": 1.0,
+          "start": "2021-01-01T00:00:00+08:00",
+          "end": "2021-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Irradiance/Irradiance_2022.csv",
+          "rows_scanned": 522524,
+          "valid_timestamp_rows": 522524,
+          "non_null_fraction": 1.0,
+          "start": "2022-01-01T00:00:00+08:00",
+          "end": "2022-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Irradiance/Irradiance_2023.csv",
+          "rows_scanned": 519670,
+          "valid_timestamp_rows": 519670,
+          "non_null_fraction": 1.0,
+          "start": "2023-01-01T00:00:00+08:00",
+          "end": "2023-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        }
+      ]
+    },
+    "temperature": {
+      "files": 3,
+      "years_present": [
+        2021,
+        2022,
+        2023
+      ],
+      "all_years_present": true,
+      "minimum_non_null_fraction": 1.0,
+      "source_files": [
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Temperature/Temperature_2021.csv",
+          "rows_scanned": 525518,
+          "valid_timestamp_rows": 525518,
+          "non_null_fraction": 1.0,
+          "start": "2021-01-01T00:00:00+08:00",
+          "end": "2021-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Temperature/Temperature_2022.csv",
+          "rows_scanned": 522524,
+          "valid_timestamp_rows": 522524,
+          "non_null_fraction": 1.0,
+          "start": "2022-01-01T00:00:00+08:00",
+          "end": "2022-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Temperature/Temperature_2023.csv",
+          "rows_scanned": 519670,
+          "valid_timestamp_rows": 519670,
+          "non_null_fraction": 1.0,
+          "start": "2023-01-01T00:00:00+08:00",
+          "end": "2023-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        }
+      ]
+    },
+    "humidity": {
+      "files": 3,
+      "years_present": [
+        2021,
+        2022,
+        2023
+      ],
+      "all_years_present": true,
+      "minimum_non_null_fraction": 1.0,
+      "source_files": [
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Relative Humidity/Relative Humidity_2021.csv",
+          "rows_scanned": 525598,
+          "valid_timestamp_rows": 525598,
+          "non_null_fraction": 1.0,
+          "start": "2021-01-01T00:00:00+08:00",
+          "end": "2021-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Relative Humidity/Relative Humidity_2022.csv",
+          "rows_scanned": 522397,
+          "valid_timestamp_rows": 522397,
+          "non_null_fraction": 1.0,
+          "start": "2022-01-01T00:00:00+08:00",
+          "end": "2022-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Relative Humidity/Relative Humidity_2023.csv",
+          "rows_scanned": 519670,
+          "valid_timestamp_rows": 519670,
+          "non_null_fraction": 1.0,
+          "start": "2023-01-01T00:00:00+08:00",
+          "end": "2023-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        }
+      ]
+    },
+    "pressure": {
+      "files": 3,
+      "years_present": [
+        2021,
+        2022,
+        2023
+      ],
+      "all_years_present": true,
+      "minimum_non_null_fraction": 1.0,
+      "source_files": [
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Sea Level Pressure/Sea Level Pressure_2021.csv",
+          "rows_scanned": 525598,
+          "valid_timestamp_rows": 525598,
+          "non_null_fraction": 1.0,
+          "start": "2021-01-01T00:00:00+08:00",
+          "end": "2021-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Sea Level Pressure/Sea Level Pressure_2022.csv",
+          "rows_scanned": 522524,
+          "valid_timestamp_rows": 522524,
+          "non_null_fraction": 1.0,
+          "start": "2022-01-01T00:00:00+08:00",
+          "end": "2022-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Sea Level Pressure/Sea Level Pressure_2023.csv",
+          "rows_scanned": 519670,
+          "valid_timestamp_rows": 519670,
+          "non_null_fraction": 1.0,
+          "start": "2023-01-01T00:00:00+08:00",
+          "end": "2023-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        }
+      ]
+    },
+    "wind": {
+      "files": 3,
+      "years_present": [
+        2021,
+        2022,
+        2023
+      ],
+      "all_years_present": true,
+      "minimum_non_null_fraction": 1.0,
+      "source_files": [
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Wind/Wind_2021.csv",
+          "rows_scanned": 525314,
+          "valid_timestamp_rows": 525314,
+          "non_null_fraction": 1.0,
+          "start": "2021-01-01T00:00:00+08:00",
+          "end": "2021-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Wind/Wind_2022.csv",
+          "rows_scanned": 522191,
+          "valid_timestamp_rows": 522191,
+          "non_null_fraction": 1.0,
+          "start": "2022-01-01T00:00:00+08:00",
+          "end": "2022-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Wind/Wind_2023.csv",
+          "rows_scanned": 519670,
+          "valid_timestamp_rows": 519670,
+          "non_null_fraction": 1.0,
+          "start": "2023-01-01T00:00:00+08:00",
+          "end": "2023-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        }
+      ]
+    },
+    "visibility": {
+      "files": 3,
+      "years_present": [
+        2021,
+        2022,
+        2023
+      ],
+      "all_years_present": true,
+      "minimum_non_null_fraction": 1.0,
+      "source_files": [
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Visibility/Visibility_2021.csv",
+          "rows_scanned": 525598,
+          "valid_timestamp_rows": 525598,
+          "non_null_fraction": 1.0,
+          "start": "2021-01-01T00:00:00+08:00",
+          "end": "2021-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Visibility/Visibility_2022.csv",
+          "rows_scanned": 522524,
+          "valid_timestamp_rows": 522524,
+          "non_null_fraction": 1.0,
+          "start": "2022-01-01T00:00:00+08:00",
+          "end": "2022-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Visibility/Visibility_2023.csv",
+          "rows_scanned": 519670,
+          "valid_timestamp_rows": 519670,
+          "non_null_fraction": 1.0,
+          "start": "2023-01-01T00:00:00+08:00",
+          "end": "2023-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        }
+      ]
+    },
+    "rainfall": {
+      "files": 2,
+      "years_present": [
+        2022,
+        2023
+      ],
+      "all_years_present": false,
+      "minimum_non_null_fraction": 1.0,
+      "source_files": [
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Rainfall/Rainfall_2022.csv",
+          "rows_scanned": 522524,
+          "valid_timestamp_rows": 522524,
+          "non_null_fraction": 1.0,
+          "start": "2022-01-01T00:00:00+08:00",
+          "end": "2022-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        },
+        {
+          "file": "Dataset/Time series dataset/Meteorological dataset/Rainfall/Rainfall_2023.csv",
+          "rows_scanned": 519670,
+          "valid_timestamp_rows": 519670,
+          "non_null_fraction": 1.0,
+          "start": "2023-01-01T00:00:00+08:00",
+          "end": "2023-12-31T23:59:00+08:00",
+          "median_cadence_minutes": 1.0
+        }
+      ]
+    }
+  },
+  "target_context": {
+    "harmonised_systems": 34,
+    "eligible_all_years": 24
+  },
+  "decision": {
+    "core_weather_available_all_years": true,
+    "rainfall_decision_required": false,
+    "rainfall_primary_policy": "excluded; sensitivity only after 2021 workbook parsing",
+    "join_implementation_authorized": false,
+    "gate": "review",
+    "notes": [
+      "rainfall is excluded from the primary contract because CSV coverage starts in 2022; parse the 2021 workbook before a rainfall sensitivity",
+      "This is a source-availability checkpoint, not proof that a leakage-safe joined feature table has been produced."
+    ]
+  }
+}

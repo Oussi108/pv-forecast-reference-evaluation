@@ -1,0 +1,73 @@
+{
+  "array_checks": [
+    {
+      "testbed": "DKASC",
+      "horizon": 6,
+      "rows": 21380,
+      "excluded_out_of_study_rows": 0,
+      "status": "passed",
+      "source_sha256": "cf6f672101ed0f50f27f8b2425a6fb4d148d9991715c1fa6d860c5c9e44c97aa"
+    },
+    {
+      "testbed": "DKASC",
+      "horizon": 2,
+      "rows": 21416,
+      "excluded_out_of_study_rows": 0,
+      "status": "passed",
+      "source_sha256": "af0178dd416e8f56424db36ce3a2b65163c156d1a8fd5c930782768b4b771565"
+    },
+    {
+      "testbed": "DKASC",
+      "horizon": 4,
+      "rows": 21398,
+      "excluded_out_of_study_rows": 0,
+      "status": "passed",
+      "source_sha256": "5f24fbbbabf81c1671d0ad981cd3f4b5ab3df1d6d4f30d6c3b80761990a71a9d"
+    },
+    {
+      "testbed": "DKASC",
+      "horizon": 12,
+      "rows": 21328,
+      "excluded_out_of_study_rows": 0,
+      "status": "passed",
+      "source_sha256": "a73e6175dce13b39a9c894d80b8f683412f14ebf29c5b3464548e28173ff729a"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 6,
+      "rows": 670558,
+      "excluded_out_of_study_rows": 0,
+      "status": "passed",
+      "source_sha256": "2171a26924d5ef025eed9dedbb06d9bcd5324788ef793cbd49d3c5576461b52f"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 2,
+      "rows": 672373,
+      "excluded_out_of_study_rows": 1,
+      "status": "passed",
+      "source_sha256": "0273af2807d33bb98ceffba1de9abe4c6e27a82ab50c06cf896d1ce20952197e"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 4,
+      "rows": 671449,
+      "excluded_out_of_study_rows": 1,
+      "status": "passed",
+      "source_sha256": "55ef578cf8f6ec6f3d34417bb80953f478dc74b2d025fd69733c09bb66edc8f6"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 12,
+      "rows": 668664,
+      "excluded_out_of_study_rows": 0,
+      "status": "passed",
+      "source_sha256": "16654816dcbc8b0723acb7db2c8d9ae820d7cf91353fec33753527e2ee193bf9"
+    }
+  ],
+  "expected_run_count": 160,
+  "completed_run_count": 160,
+  "missing_runs": [],
+  "errors": [],
+  "science_gate": "complete"
+}

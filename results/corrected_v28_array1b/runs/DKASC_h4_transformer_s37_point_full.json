@@ -1,0 +1,32 @@
+{
+  "key": "DKASC_h4_transformer_s37_point_full",
+  "testbed": "DKASC",
+  "horizon": 4,
+  "model": "transformer",
+  "seed": 37,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_epochs": 39,
+    "selection_validation_loss": 0.04317275499841781,
+    "architecture": "transformer",
+    "parameters": 9985
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "5f24fbbbabf81c1671d0ad981cd3f4b5ab3df1d6d4f30d6c3b80761990a71a9d",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 124.70012092590332,
+  "counts": {
+    "select_train": 5754,
+    "select_val": 2014,
+    "development": 7768,
+    "calibration": 7849,
+    "test": 5781
+  },
+  "test_system_balanced_mae": 0.027012120932340622,
+  "prediction_sha256": "97165134247b957a670679c1dac8cb16d8751997e1f4e09358cd9f1c3c7d26fa",
+  "status": "complete"
+}

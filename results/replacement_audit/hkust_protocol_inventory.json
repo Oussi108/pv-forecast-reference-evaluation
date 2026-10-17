@@ -1,0 +1,62 @@
+{
+  "schema_version": "hkust-protocol-inventory-1",
+  "created_utc": "2026-09-07T08:49:41.743401+00:00",
+  "source": {
+    "dataset": "HKUST rooftop PV dataset",
+    "doi": "10.5061/dryad.m37pvmd99",
+    "license": "CC0-1.0",
+    "paper_doi": "10.1038/s41597-025-04397-y"
+  },
+  "input_contract": {
+    "target": "site-level AC power export",
+    "analysis_frequency_minutes": 60,
+    "primary_horizon_hours": 6,
+    "secondary_horizons_hours": [
+      2,
+      4,
+      12
+    ],
+    "timezone_assumption": "Asia/Hong_Kong for naive source timestamps; provider confirmation pending",
+    "predictors": "past target history plus issue-time measured weather; no NWP or satellite"
+  },
+  "archive_inventory": {
+    "site_target_files": 60,
+    "target_files_passing_screen": 34,
+    "target_files_review": 26,
+    "weather_files": 20,
+    "inverter_files_excluded": 44,
+    "rainfall_workbooks": 1,
+    "observed_target_median_cadence_minutes": {
+      "15.0": 37,
+      "60.0": 23
+    }
+  },
+  "mapping_check": {
+    "site_files_in_mapping": 60,
+    "mapped_site_files": 60,
+    "unique_system_ids": 60,
+    "unmatched_or_duplicate": 0,
+    "metadata_rows": 60,
+    "missing_capacity": 0,
+    "missing_connection_date": 0
+  },
+  "candidate_overlap": {
+    "candidate_count": 34,
+    "latest_candidate_start_utc": "2021-08-01T00:00:00+08:00",
+    "earliest_candidate_end_utc": "2023-12-31T10:00:00+08:00",
+    "common_interval_is_nonempty": true,
+    "interpretation": "The overlap is descriptive only; final year eligibility is checked after split-aware resampling."
+  },
+  "calendar_protocol": {
+    "development_year": 2021,
+    "calibration_year": 2022,
+    "untouched_test_year": 2023,
+    "selection_rule": "retain systems only after predeclared coverage, mapping, units and causal-join review",
+    "status": "review_required_before_model_fitting"
+  },
+  "decision": {
+    "gate": "review",
+    "model_fitting_authorized": false,
+    "reason": "Mechanical screening and mapping are complete, but timezone, units, rainfall handling, causal weather joins and split-specific coverage still require documented review."
+  }
+}

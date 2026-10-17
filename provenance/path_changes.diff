@@ -1,0 +1,553 @@
+--- as_run/release/scripts/corrected_study.py
++++ scripts/corrected_study.py
+@@ -18,7 +18,7 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ _protocol_override = os.environ.get('PV_FORECAST_PROTOCOL_PATH')
+-PROTOCOL_PATH = Path(_protocol_override).resolve() if _protocol_override else ROOT / 'configs/corrected_study_v27.json'
++PROTOCOL_PATH = Path(_protocol_override).resolve() if _protocol_override else ROOT / 'configs/corrected_study_v28_array1b.json'
+ PROTOCOL = json.loads(PROTOCOL_PATH.read_text())
+ PUBLIC = ROOT / PROTOCOL.get('public_results_dir', 'results/corrected_v27')
+ WEATHER = ['ghi', 'temperature', 'humidity']
+--- as_run/release/scripts/publication_revision_v29.py
++++ scripts/publication_revision_v29.py
+@@ -24,9 +24,9 @@
+ CONFIG = ROOT/'configs/publication_revision_v29.json'
+ PLAN = json.loads(CONFIG.read_text())
+ OUT = ROOT/'results/publication_v29'
+-WORK = ROOT.parents[3]
+-OLD = WORK/'tmp/corrected_v28_array1b'
+-PRIVATE = WORK/'tmp/publication_v29'
++from pv_paths import PREP_V28, PRIV_V29, RAW_DKASC  # private inputs, outside the repository
++OLD = PREP_V28
++PRIVATE = PRIV_V29
+ PARENT = ROOT/'results/corrected_v28_array1b'
+ 
+ 
+@@ -150,7 +150,7 @@
+         gate=json.loads((OUT/'temporal_preparation.json').read_text())
+         assert gate['protocol_sha256']==sha(CONFIG)
+         return
+-    source=ROOT/'data/raw/87-Site_DKA-M9_A+C-Phases.csv'
++    source=RAW_DKASC/'87-Site_DKA-M9_A+C-Phases.csv'
+     assert sha(source)==PROTOCOL['sources']['DKASC']['source_sha256']
+     columns={'Active_Power':'power','Global_Horizontal_Radiation':'ghi',
+              'Weather_Temperature_Celsius':'temperature','Weather_Relative_Humidity':'humidity'}
+--- as_run/strengthening/strengthening_runner.py
++++ updates/strengthening_runner.py
+@@ -22,20 +22,23 @@
+ import pandas as pd
+ 
+ PLAN_ID = "PAPER1-STRENGTHEN-20260914"
+-ROOT = Path(r"E:\master in china\s2\research\solar energy forecasting")
+-RELEASE = ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting"
+-EXEC = ROOT / "tmp/paper1_strengthening_20260914"
+-PARENT = ROOT / "tmp/corrected_v28_array1b"
+-V29PRIVATE = ROOT / "tmp/publication_v29"
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
++from pv_paths import REPO, RESULTS, PREP_V28, PRIV_V29, PRIV_UPDATES  # noqa: E402
++ROOT = REPO
++RELEASE = REPO
++EXEC = PRIV_UPDATES
++AGG = RESULTS / "updates_2023"
++PARENT = PREP_V28
++V29PRIVATE = PRIV_V29
+ V29OUT = RELEASE / "results/publication_v29"
+ PARENTOUT = RELEASE / "results/corrected_v28_array1b"
+-PLAN_DIR = ROOT / "reports/paper1_experiment_completion_20260914"
++PLAN_DIR = PRIV_UPDATES / "plan"
+ LOG_DIR = EXEC / "logs"
+ P01_TARGET_BOUNDS = (-0.05, 1.20)
+ P01_REFERENCE_BOUNDS = (0.0, 1.20)
+ P01_FLOAT32_TOLERANCE = 1e-6
+ 
+-for path in [EXEC, LOG_DIR, EXEC / "protocol", EXEC / "registry", EXEC / "audits", EXEC / "aggregates"]:
++for path in [EXEC, LOG_DIR, EXEC / "protocol", EXEC / "registry", EXEC / "audits", AGG]:
+     path.mkdir(parents=True, exist_ok=True)
+ 
+ 
+@@ -327,7 +330,7 @@
+     metric_rows = []
+     support_rows = []
+     weight_rows = []
+-    prediction_dir = EXEC / "aggregates/p02_predictions"
++    prediction_dir = AGG / "p02_predictions"
+     prediction_dir.mkdir(parents=True, exist_ok=True)
+     for bed in ["DKASC", "HKUST"]:
+         for horizon in [2, 4, 6, 12]:
+@@ -397,10 +400,10 @@
+             weight_rows.append({"testbed": bed, "horizon": horizon, "selected_weight_previous_day": best_w, "validation_mae": best_score, "candidate_weights": ",".join(str(i / 20) for i in range(21)), "tie_break": "smallest weight"})
+             np.savez_compressed(prediction_dir / f"{bed}_h{horizon}.npz", seven_day_median=median.astype("float32"), convex_previous_day_climatology=convex.astype("float32"), median_valid_count=valid_count.astype("int16"), median_fallback=median_fallback)
+             event("reference_horizon_complete", task, stage="references", testbed=bed, horizon=horizon, progress_current=len(metric_rows), progress_total=24)
+-    write_csv(EXEC / "aggregates/reference_metrics.csv", metric_rows)
+-    write_csv(EXEC / "aggregates/reference_support.csv", support_rows)
++    write_csv(AGG / "reference_metrics.csv", metric_rows)
++    write_csv(AGG / "reference_support.csv", support_rows)
+     protocol_path = EXEC / "protocol/protocol_p00_p02.json"
+-    write_json(EXEC / "aggregates/reference_weights.json", {"status": "complete", "rows": weight_rows, "protocol": str(protocol_path), "protocol_file_sha256": sha(protocol_path), "protocol_canonical_sha256": json.loads(protocol_path.read_text(encoding="utf-8"))["protocol_canonical_sha256"], "protocol_hash_scheme": "file hash is serialized bytes; canonical hash excludes the self-hash field"})
++    write_json(AGG / "reference_weights.json", {"status": "complete", "rows": weight_rows, "protocol": str(protocol_path), "protocol_file_sha256": sha(protocol_path), "protocol_canonical_sha256": json.loads(protocol_path.read_text(encoding="utf-8"))["protocol_canonical_sha256"], "protocol_hash_scheme": "file hash is serialized bytes; canonical hash excludes the self-hash field"})
+     # A minimal paired summary is produced without claiming confidence intervals;
+     # P07 will apply the declared synchronized block inference to all contrasts.
+     summary = []
+@@ -410,16 +413,16 @@
+             base = next(r for r in rows if r["reference"] == "previous_day")
+             for r in rows:
+                 summary.append({"testbed": bed, "horizon": horizon, "reference": r["reference"], "mae": r["mae"], "mae_difference_vs_previous_day": r["mae"] - base["mae"], "skill_vs_previous_day": 1 - r["mae"] / base["mae"]})
+-    write_csv(EXEC / "aggregates/reference_summary_vs_previous_day.csv", summary)
+-    p07_path = EXEC / "aggregates/p07/sensitivity_inference.csv"
++    write_csv(AGG / "reference_summary_vs_previous_day.csv", summary)
++    p07_path = AGG / "p07/sensitivity_inference.csv"
+     if p07_path.exists():
+         p07 = pd.read_csv(p07_path)
+         inference = p07[p07["analysis"].eq("reference_control")].copy()
+         inference["estimand"] = "calendar_day_system_balanced_mae_skill"
+         inference["source_artifact"] = "aggregates/p07/sensitivity_inference.csv"
+-        inference.to_csv(EXEC / "aggregates/reference_inference.csv", index=False)
++        inference.to_csv(AGG / "reference_inference.csv", index=False)
+     else:
+-        pd.DataFrame(columns=["analysis", "testbed", "year", "horizon", "model", "reference", "population", "metric", "block_days", "resamples", "n", "calendar_days", "skill", "ci_low", "ci_high", "p_two_sided", "status", "estimand", "source_artifact"]).to_csv(EXEC / "aggregates/reference_inference.csv", index=False)
++        pd.DataFrame(columns=["analysis", "testbed", "year", "horizon", "model", "reference", "population", "metric", "block_days", "resamples", "n", "calendar_days", "skill", "ci_low", "ci_high", "p_two_sided", "status", "estimand", "source_artifact"]).to_csv(AGG / "reference_inference.csv", index=False)
+     event("task_complete", task, stage="references", message="P02 reference predictions and metrics complete", outputs=["aggregates/reference_metrics.csv", "aggregates/reference_support.csv", "aggregates/reference_weights.json", "aggregates/reference_inference.csv"])
+ 
+ 
+@@ -651,9 +654,9 @@
+                             row.update({"testbed": bed, "forecast": forecast_name})
+                         group_rows.extend(rows)
+                 event("calibration_forecast_complete", task, stage="calibration", testbed=bed, forecast=forecast_name, progress_current=len(metric_rows), progress_total=144)
+-    write_csv(EXEC / "aggregates/calibration_metrics.csv", metric_rows)
+-    write_csv(EXEC / "aggregates/calibration_groups.csv", group_rows)
+-    write_json(EXEC / "aggregates/calibration_selection.json", {"status": "complete", "methods": methods, "levels": [0.8, 0.9], "policies": ["fixed_2022", "rolling_90_days"], "partial_pool_kappa_candidates": [0, 100, 500, 2000], "partial_pool_kappa_selection": selection_rows, "tie_rule": "larger kappa on exact interval-score ties", "fallback_rule": "named global policy before all-hours fallback", "primary": "variability_groups versus global_day_night at 80% fixed_2022", "source_quantile_rows": "2021 only; no 2023 labels used for quantile fitting"})
++    write_csv(AGG / "calibration_metrics.csv", metric_rows)
++    write_csv(AGG / "calibration_groups.csv", group_rows)
++    write_json(AGG / "calibration_selection.json", {"status": "complete", "methods": methods, "levels": [0.8, 0.9], "policies": ["fixed_2022", "rolling_90_days"], "partial_pool_kappa_candidates": [0, 100, 500, 2000], "partial_pool_kappa_selection": selection_rows, "tie_rule": "larger kappa on exact interval-score ties", "fallback_rule": "named global policy before all-hours fallback", "primary": "variability_groups versus global_day_night at 80% fixed_2022", "source_quantile_rows": "2021 only; no 2023 labels used for quantile fitting"})
+     event("task_complete", task, stage="calibration", message="P05 calibration metrics complete", outputs=["aggregates/calibration_metrics.csv", "aggregates/calibration_groups.csv", "aggregates/calibration_selection.json"])
+ 
+ 
+--- as_run/strengthening/run_p03_updates.py
++++ updates/run_p03_updates.py
+@@ -16,12 +16,13 @@
+ import numpy as np
+ import pandas as pd
+ 
+-ROOT = Path(r"E:\master in china\s2\research\solar energy forecasting")
+-RELEASE = ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting"
+-EXEC = ROOT / "tmp/paper1_strengthening_20260914"
+-PARENT = ROOT / "tmp/corrected_v28_array1b"
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
++from pv_paths import REPO, RESULTS, PREP_V28, PRIV_UPDATES  # noqa: E402
++RELEASE = REPO
++EXEC = PRIV_UPDATES
++PARENT = PREP_V28
+ RUNROOT = EXEC / "private_data/p03_updates"
+-OUT = EXEC / "aggregates/p03_updates"
++OUT = RESULTS / "updates_2023/p03_updates"
+ LOG = EXEC / "logs/execution.jsonl"
+ RUNROOT.mkdir(parents=True, exist_ok=True)
+ OUT.mkdir(parents=True, exist_ok=True)
+--- as_run/strengthening/run_p03_lightgbm_updates.py
++++ updates/run_p03_lightgbm_updates.py
+@@ -18,12 +18,13 @@
+ import numpy as np
+ import pandas as pd
+ 
+-ROOT = Path(r"E:\master in china\s2\research\solar energy forecasting")
+-RELEASE = ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting"
+-EXEC = ROOT / "tmp/paper1_strengthening_20260914"
+-PARENT = ROOT / "tmp/corrected_v28_array1b"
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
++from pv_paths import REPO, RESULTS, PREP_V28, PRIV_UPDATES  # noqa: E402
++RELEASE = REPO
++EXEC = PRIV_UPDATES
++PARENT = PREP_V28
+ RUNROOT = EXEC / "private_data/p03_lightgbm_updates"
+-OUT = EXEC / "aggregates/p03_lightgbm_updates"
++OUT = RESULTS / "updates_2023/p03_lightgbm_updates"
+ LOG = EXEC / "logs/execution.jsonl"
+ CONFIG = RELEASE / "configs/corrected_study_v28_array1b.json"
+ RUNROOT.mkdir(parents=True, exist_ok=True)
+--- as_run/strengthening/run_p06_ablation.py
++++ updates/run_p06_ablation.py
+@@ -5,11 +5,12 @@
+ import sys
+ from pathlib import Path
+ 
+-ROOT = Path(r"E:\master in china\s2\research\solar energy forecasting")
+-RELEASE = ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting"
+-EXEC = ROOT / "tmp/paper1_strengthening_20260914"
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
++from pv_paths import REPO, RESULTS, PRIV_UPDATES  # noqa: E402
++RELEASE = REPO
++EXEC = PRIV_UPDATES
+ PRIVATE = EXEC / "private_data/p06"
+-PUBLIC = EXEC / "aggregates/p06_runs"
++PUBLIC = RESULTS / "updates_2023/p06_runs"
+ PRIVATE.mkdir(parents=True, exist_ok=True)
+ PUBLIC.mkdir(parents=True, exist_ok=True)
+ os.environ["PV_FORECAST_PROTOCOL_PATH"] = str(RELEASE / "configs/corrected_study_v28_array1b.json")
+--- as_run/strengthening/aggregate_p06.py
++++ updates/aggregate_p06.py
+@@ -6,10 +6,12 @@
+ 
+ import pandas as pd
+ 
+-ROOT = Path(r"E:\master in china\s2\research\solar energy forecasting")
+-EXEC = ROOT / "tmp/paper1_strengthening_20260914"
+-P06 = EXEC / "aggregates/p06_runs"
+-PARENT = ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/results/corrected_v28_array1b/runs"
++import sys
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
++from pv_paths import REPO, RESULTS  # noqa: E402
++ROOT = REPO
++P06 = RESULTS / "updates_2023/p06_runs"
++PARENT = REPO / "results/corrected_v28_array1b/runs"
+ 
+ 
+ def parent_mae(bed: str, model: str, seed: int) -> float | None:
+@@ -87,9 +89,9 @@
+             "without_calendar": {"removed": ["future.hour_harmonics", "future.day_of_year_harmonics"], "retained": "future.target_clear_ghi and all history channels"},
+         },
+         "source_files": [
+-            {"path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/train_corrected_study.py", "sha256": sha256(ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/train_corrected_study.py")},
+-            {"path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/corrected_study.py", "sha256": sha256(ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/corrected_study.py")},
+-            {"path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/configs/corrected_study_v28_array1b.json", "sha256": sha256(ROOT / "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/configs/corrected_study_v28_array1b.json")},
++            {"path": "scripts/train_corrected_study.py", "sha256": sha256(ROOT / "scripts/train_corrected_study.py")},
++            {"path": "scripts/corrected_study.py", "sha256": sha256(ROOT / "scripts/corrected_study.py")},
++            {"path": "configs/corrected_study_v28_array1b.json", "sha256": sha256(ROOT / "configs/corrected_study_v28_array1b.json")},
+         ],
+         "interpretation": "Removal costs are conditional prediction diagnostics, not causal physical contributions, additive importance scores, or universal rankings.",
+     }
+--- as_run/v41_repair/code/d01_smart_persistence_audit.py
++++ analysis/d01_smart_persistence_audit.py
+@@ -12,9 +12,10 @@
+ import numpy as np
+ import pandas as pd
+ 
+-WS = Path(__file__).resolve().parents[3]  # .../solar energy forecasting
+-PREP = WS / 'tmp' / 'corrected_v28_array1b'
+-OUT = Path(__file__).resolve().parents[1] / 'results'
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
++from pv_paths import PREP_V28, RESULTS  # noqa: E402
++PREP = PREP_V28
++OUT = RESULTS / 'reference_and_update_inference'
+ H = int(sys.argv[1]) if len(sys.argv) > 1 else 6
+ SITES = {'DKASC': (-23.7626, 133.8748, 580, 'Australia/Darwin'),
+          'HKUST': (22.3363, 114.2634, 132, 'Asia/Hong_Kong')}
+--- as_run/v41_repair/code/d02_reference_and_update_inference.py
++++ analysis/d02_reference_and_update_inference.py
+@@ -18,20 +18,20 @@
+ import pandas as pd
+ 
+ HERE = Path(__file__).resolve().parent
+-WS = HERE.parents[2]
+-REL = WS / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
++REL = HERE.parent  # repository root
+ os.environ['PV_FORECAST_PROTOCOL_PATH'] = str(REL / 'configs/corrected_study_v28_array1b.json')
+ sys.path.insert(0, str(REL / 'scripts'))
++from pv_paths import PREP_V28, PRIV_V29, PRIV_UPDATES, RESULTS  # noqa: E402
+ sys.dont_write_bytecode = True
+ from evaluate_corrected_study import balanced, block_interval, holm_adjust  # noqa: E402
+ 
+ sys.path.insert(0, str(HERE))
+ from d01_smart_persistence_audit import smart_from  # noqa: E402
+ 
+-PREP = WS / 'tmp/corrected_v28_array1b'
+-STR = WS / 'tmp/paper1_strengthening_20260914'
+-V29 = WS / 'tmp/publication_v29/update_runs'
+-OUT = HERE.parent / 'results'
++PREP = PREP_V28
++STR = PRIV_UPDATES
++V29 = PRIV_V29 / 'update_runs'
++OUT = RESULTS / 'reference_and_update_inference'
+ LOG = HERE.parent / 'logs/d02_events.jsonl'
+ SEEDS = [11, 23, 37, 51, 73]
+ MODELS = ['lightgbm', 'gru', 'transformer']
+--- as_run/v41_repair/code/d03_build_tables.py
++++ analysis/d03_build_tables.py
+@@ -8,10 +8,9 @@
+ from PIL import Image, ImageDraw, ImageFont
+ 
+ HERE = Path(__file__).resolve().parent
+-RES = HERE.parent / 'results'
+-WS = HERE.parents[2]
+-REL = WS / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
+-OUT = HERE.parent / 'v41/tables'
++RES = HERE.parent / 'results/reference_and_update_inference'
++REL = HERE.parent  # repository root
++OUT = RES / 'tables'
+ OUT.mkdir(parents=True, exist_ok=True)
+ 
+ inf = pd.read_csv(RES / 'd02_inference.csv')
+--- as_run/v43_upgrade/code/a01_download.py
++++ analysis/a01_download.py
+@@ -1,10 +1,12 @@
+ """A01: download PVDAQ system 9068 (CC BY 4.0, OEDI) and NOAA ISD Greeley-Weld (public domain) raw files; record hashes.
+-Raw observations stay in tmp/paper1_v43_private (never inside the public release)."""
++Raw observations stay in PV_PRIVATE_ROOT/paper1_v43_private (never inside the public release)."""
+ import hashlib, json, time, urllib.request
+ from pathlib import Path
+-WS = Path(__file__).resolve().parents[3]
+-RAW = WS / 'tmp/paper1_v43_private/raw'
+-OUT = Path(__file__).resolve().parents[1] / 'results'
++import sys
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
++from pv_paths import PRIV_PVDAQ, RESULTS  # noqa: E402
++RAW = PRIV_PVDAQ / 'raw'
++OUT = RESULTS / 'pvdaq9068_evaluation'
+ B = 'https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI'
+ files = {f'pvdaq9068/{n}': f'{B}/data/{n}' for n in [
+     '9068_ac_power_data.csv', '9068_ac_power_data_20240101_20250430.csv', '9068_irradiance_data.csv',
+--- as_run/v43_upgrade/code/a02_prepare_9068.py
++++ analysis/a02_prepare_9068.py
+@@ -15,11 +15,12 @@
+ import pandas as pd
+ 
+ HERE = Path(__file__).resolve().parent
+-WS = HERE.parents[2]
+-REL = WS / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
+-RAW = WS / 'tmp/paper1_v43_private/raw'
+-PRIV = WS / 'tmp/paper1_v43_private/prepared'
+-OUT = HERE.parent / 'results'
++REL = HERE.parent  # repository root
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
++from pv_paths import PRIV_PVDAQ  # noqa: E402
++RAW = PRIV_PVDAQ / 'raw'
++PRIV = PRIV_PVDAQ / 'prepared'
++OUT = HERE.parent / 'results/pvdaq9068_evaluation'
+ PROTO = HERE.parent / 'protocol/protocol_v43_pvdaq9068.json'
+ LAT, LON, ALT = 40.3864, -104.5512, 1407.0
+ TZ = 'America/Denver'  # provider timestamps follow local civil time WITH daylight saving (2021 centroid audit)
+--- as_run/v43_upgrade/code/p01_write_protocol.py
++++ analysis/p01_write_protocol.py
+@@ -2,9 +2,9 @@
+ import json
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+-REL = HERE.parents[2] / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
++REL = HERE.parent  # repository root
+ p = json.loads((REL / 'configs/corrected_study_v28_array1b.json').read_text())
+-audit = json.loads((HERE.parent / 'results/a02_audit.json').read_text())
++audit = json.loads((HERE.parent / 'results/pvdaq9068_evaluation/a02_audit.json').read_text())
+ p.update({
+     'protocol_id': 'v43-pvdaq9068-2026-09-26',
+     'parent_protocol_id': p['protocol_id'],
+--- as_run/v43_upgrade/code/u01_updates_9068.py
++++ analysis/u01_updates_9068.py
+@@ -13,14 +13,14 @@
+ import pandas as pd
+ 
+ HERE = Path(__file__).resolve().parent
+-WS = HERE.parents[2]
+-REL = WS / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
++REL = HERE.parent  # repository root
+ os.environ['PV_FORECAST_PROTOCOL_PATH'] = str(HERE.parent / 'protocol/protocol_v43_pvdaq9068.json')
+ sys.path.insert(0, str(REL / 'scripts'))
++from pv_paths import PRIV_PVDAQ  # noqa: E402
+ from corrected_study import PROTOCOL, PUBLIC, sha  # noqa: E402
+ 
+-PRIV = WS / 'tmp/paper1_v43_private/prepared'
+-RUNS = WS / 'tmp/paper1_v43_private/update_runs'
++PRIV = PRIV_PVDAQ / 'prepared'
++RUNS = PRIV_PVDAQ / 'update_runs'
+ LOG = HERE.parent / 'logs/u01_events.jsonl'
+ BED = 'PVDAQ9068'
+ SEEDS = PROTOCOL['seeds']
+@@ -95,7 +95,7 @@
+     d = load(h); target = pd.to_datetime(d['target_ns']); issue = pd.to_datetime(d['issue_ns'])
+     test = target.year == year
+     parent = json.loads((PUBLIC / 'runs' / f'{BED}_h{h}_{model}_s{seed}_point_full.json').read_text())
+-    frozen = np.load(WS / f'tmp/paper1_v43_private/prepared/runs/{BED}_h{h}_{model}_s{seed}_point_full/prediction.npz')['prediction'][:, 0].astype('float32')
++    frozen = np.load(PRIV_PVDAQ / f'prepared/runs/{BED}_h{h}_{model}_s{seed}_point_full/prediction.npz')['prediction'][:, 0].astype('float32')
+     if model == 'lightgbm':
+         iters = int(parent['settings']['selected_iterations'][0])
+         x = np.concatenate([d['x'].reshape(len(d['y']), -1), d['future']], axis=1)
+--- as_run/v43_upgrade/code/t01_neural_tuning.py
++++ analysis/t01_neural_tuning.py
+@@ -15,17 +15,17 @@
+ import pandas as pd
+ 
+ HERE = Path(__file__).resolve().parent
+-WS = HERE.parents[2]
+-REL = WS / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
++REL = HERE.parent  # repository root
+ os.environ['PV_FORECAST_PROTOCOL_PATH'] = str(HERE.parent / 'protocol/protocol_v43_pvdaq9068.json')
+ sys.path.insert(0, str(REL / 'scripts'))
++from pv_paths import PREP_V28, PRIV_PVDAQ  # noqa: E402
+ import train_corrected_study as tcs  # noqa: E402
+ 
+-OUTR = WS / 'tmp/paper1_v43_private/tuning'
++OUTR = PRIV_PVDAQ / 'tuning'
+ LOG = HERE.parent / 'logs/t01_events.jsonl'
+-DATA = {'PVDAQ9068': WS / 'tmp/paper1_v43_private/prepared/PVDAQ9068/h6.npz',
+-        'DKASC': WS / 'tmp/corrected_v28_array1b/DKASC/h6.npz',
+-        'HKUST': WS / 'tmp/corrected_v28_array1b/HKUST/h6.npz'}
++DATA = {'PVDAQ9068': PRIV_PVDAQ / 'prepared/PVDAQ9068/h6.npz',
++        'DKASC': PREP_V28 / 'DKASC/h6.npz',
++        'HKUST': PREP_V28 / 'HKUST/h6.npz'}
+ GRID = [dict(hidden=w, layers=l) for w in (32, 64) for l in (1, 2)]
+ BASE = copy.deepcopy(tcs.PROTOCOL['neural'])
+ 
+@@ -69,7 +69,7 @@
+             summary.append(dict(bed=bed, model=model, selected=best['config'],
+                                 grid={r['config']: dict(val=r['selection_validation_loss'], epochs=r['selected_epochs']) for r in grid}))
+             log('tuning_selected', bed=bed, model=model, selected=best['config'])
+-    (HERE.parent / 'results/t01_selection.json').write_text(json.dumps(summary, indent=1))
++    (HERE.parent / 'results/pvdaq9068_evaluation/t01_selection.json').write_text(json.dumps(summary, indent=1))
+ 
+ 
+ if __name__ == '__main__':
+--- as_run/v43_upgrade/code/d06_evaluate_9068.py
++++ analysis/d06_evaluate_9068.py
+@@ -12,19 +12,19 @@
+ import pandas as pd
+ 
+ HERE = Path(__file__).resolve().parent
+-WS = HERE.parents[2]
+-REL = WS / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
+-V41 = WS / 'reports/paper1_v41_repair_20260926/code'
++REL = HERE.parent  # repository root
++V41 = HERE  # d02 is in the same folder
+ os.environ['PV_FORECAST_PROTOCOL_PATH'] = str(HERE.parent / 'protocol/protocol_v43_pvdaq9068.json')
+ sys.path.insert(0, str(REL / 'scripts')); sys.path.insert(0, str(V41))
++from pv_paths import PRIV_PVDAQ  # noqa: E402
+ from evaluate_corrected_study import balanced, block_interval, holm_adjust, interval_score  # noqa: E402
+ from publication_revision_v29 import correction_maps  # noqa: E402
+ from d01_smart_persistence_audit import smart_from  # noqa: E402
+ from d02_reference_and_update_inference import envelope_smart  # noqa: E402
+ 
+-PRIV = WS / 'tmp/paper1_v43_private'
++PRIV = PRIV_PVDAQ
+ BED = 'PVDAQ9068'
+-OUT = HERE.parent / 'results'
++OUT = HERE.parent / 'results/pvdaq9068_evaluation'
+ SEEDS = [11, 23, 37, 51, 73]
+ MODELS = ['lightgbm', 'gru', 'transformer']
+ YEARS = (2023, 2024)
+--- as_run/v43_upgrade/code/d07_evaluate_tuning.py
++++ analysis/d07_evaluate_tuning.py
+@@ -12,18 +12,18 @@
+ import pandas as pd
+ 
+ HERE = Path(__file__).resolve().parent
+-WS = HERE.parents[2]
+-REL = WS / 'WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting'
++REL = HERE.parent  # repository root
+ os.environ['PV_FORECAST_PROTOCOL_PATH'] = str(HERE.parent / 'protocol/protocol_v43_pvdaq9068.json')
+ sys.path.insert(0, str(REL / 'scripts'))
++from pv_paths import PREP_V28, PRIV_PVDAQ  # noqa: E402
+ from evaluate_corrected_study import balanced, block_interval, holm_adjust  # noqa: E402
+ 
+ SEEDS = [11, 23, 37, 51, 73]
+-TUN = WS / 'tmp/paper1_v43_private/tuning'
+-SRC = {'PVDAQ9068': (WS / 'tmp/paper1_v43_private/prepared/PVDAQ9068/h6.npz', WS / 'tmp/paper1_v43_private/prepared/runs'),
+-       'DKASC': (WS / 'tmp/corrected_v28_array1b/DKASC/h6.npz', WS / 'tmp/corrected_v28_array1b/runs'),
+-       'HKUST': (WS / 'tmp/corrected_v28_array1b/HKUST/h6.npz', WS / 'tmp/corrected_v28_array1b/runs')}
+-sys.path.insert(0, str(WS / 'reports/paper1_v41_repair_20260926/code'))
++TUN = PRIV_PVDAQ / 'tuning'
++SRC = {'PVDAQ9068': (PRIV_PVDAQ / 'prepared/PVDAQ9068/h6.npz', PRIV_PVDAQ / 'prepared/runs'),
++       'DKASC': (PREP_V28 / 'DKASC/h6.npz', PREP_V28 / 'runs'),
++       'HKUST': (PREP_V28 / 'HKUST/h6.npz', PREP_V28 / 'runs')}
++sys.path.insert(0, str(HERE))
+ from d02_reference_and_update_inference import smart_variants  # noqa: E402
+ import d06_evaluate_9068 as d06  # noqa: E402
+ 
+@@ -33,13 +33,13 @@
+ def specified_smart(bed, d):
+     if bed == 'PVDAQ9068':
+         var, _, _ = d06.references(d, 6)
+-        choice = pd.read_csv(HERE.parent / 'results/d06_smart_selection_9068.csv').set_index('horizon').loc[6, 'choice']
++        choice = pd.read_csv(HERE.parent / 'results/pvdaq9068_evaluation/d06_smart_selection_9068.csv').set_index('horizon').loc[6, 'choice']
+         return var[choice]
+     var, _ = smart_variants(bed, d, 6)
+     return var[SMART_CHOICE[bed]]
+ 
+ 
+-sel = {(r['bed'], r['model']): r for r in json.loads((HERE.parent / 'results/t01_selection.json').read_text())}
++sel = {(r['bed'], r['model']): r for r in json.loads((HERE.parent / 'results/pvdaq9068_evaluation/t01_selection.json').read_text())}
+ rows = []
+ for bed, (npz, runs) in SRC.items():
+     with np.load(npz) as z:
+@@ -62,5 +62,5 @@
+                                  mae=balanced(loss[m], d['system'][m]), reference_mae=balanced(ref[m], d['system'][m]), **r))
+     print('done', bed, flush=True)
+ df = holm_adjust(pd.DataFrame(rows), ['bed', 'year', 'contrast'])
+-df.to_csv(HERE.parent / 'results/d07_tuning_evaluation.csv', index=False)
++df.to_csv(HERE.parent / 'results/pvdaq9068_evaluation/d07_tuning_evaluation.csv', index=False)
+ print(df[['bed', 'model', 'year', 'contrast', 'config', 'mae', 'reference_mae', 'skill', 'ci_low', 'ci_high']].round(4).to_string())
+--- as_run/v43_upgrade/code/d08_expectations.py
++++ analysis/d08_expectations.py
+@@ -12,7 +12,7 @@
+ import d06_evaluate_9068 as d06
+ 
+ HERE = Path(__file__).resolve().parent
+-RES = HERE.parent / 'results'
++RES = HERE.parent / 'results/pvdaq9068_evaluation'
+ inf = pd.read_csv(RES / 'd06_inference_9068.csv')
+ met = pd.read_csv(RES / 'd06_metrics_9068.csv')
+ cal = pd.read_csv(RES / 'd06_calibration_9068.csv')
+--- as_run/v43_upgrade/figures_v5style/build_paper1_figures_v5style.py
++++ figures/build_figures_1_2.py
+@@ -8,6 +8,7 @@
+ Outputs (PDF, SVG, 600 dpi PNG): Figure1_study_workflow_v5style, Figure2_model_paths_v5style, all_figures.pdf.
+ """
+ import json
++import sys
+ from pathlib import Path
+ 
+ import matplotlib
+@@ -19,8 +20,10 @@
+ from matplotlib.colors import to_rgb
+ from matplotlib.patches import Circle, FancyArrowPatch, FancyBboxPatch, Polygon, Rectangle
+ 
+-OUT = Path(__file__).resolve().parent
+-WS = OUT.parents[2]
++OUT = Path(__file__).resolve().parents[1] / 'results' / 'figures'
++OUT.mkdir(parents=True, exist_ok=True)
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
++from pv_paths import PRIV_PVDAQ  # noqa: E402
+ plt.rcParams.update({"font.family": "Times New Roman", "font.size": 9, "mathtext.fontset": "stix", "text.color": "#20242b",
+                      "pdf.fonttype": 42, "ps.fonttype": 42, "svg.fonttype": "none", "axes.unicode_minus": False,
+                      "savefig.facecolor": "white"})
+@@ -32,7 +35,7 @@
+ ORANGE, ORANGE_F = "#bb9062", "#faf0e2"
+ RUST, RUST_F = "#b0644e", "#f6e6df"
+ GREY, GREY_F = "#b9bec6", "#f6f7f9"
+-SRC = WS / "tmp/paper1_v43_private/prepared/PVDAQ9068/pvdaq_9068.pkl"
++SRC = PRIV_PVDAQ / "prepared/PVDAQ9068/pvdaq_9068.pkl"
+ END = pd.Timestamp("2021-09-24 14:00", tz="America/Denver")
+ CREDIT = "Example series: NREL PVDAQ system 9068 (CC BY 4.0), humidity NOAA ISD Greeley, 2021"
+ 
+@@ -392,7 +395,7 @@
+     figure1(REC, ms=True); figure2(REC, ms=True)       # manuscript versions used in v44
+     (OUT / "validation.json").write_text(json.dumps({"figures": REC, "example_series": {
+         "source": "NREL PVDAQ system 9068 (CC BY 4.0) power, plane-of-array irradiance and temperature; relative humidity from "
+-                  "NOAA ISD Greeley 724768-24051; clear-sky from pvlib; file tmp/paper1_v43_private/prepared/PVDAQ9068/pvdaq_9068.pkl",
++                  "NOAA ISD Greeley 724768-24051; clear-sky from pvlib; file PV_PRIVATE_ROOT/paper1_v43_private/prepared/PVDAQ9068/pvdaq_9068.pkl",
+         "window_local": [str(_w.index.min()), str(_w.index.max())], "year": 2021, "use": "display only, min-max scaled per channel"},
+         "content_source": "v43 Figures 1-2, checked against the v43 manuscript text; no numbers changed"}, indent=1), encoding="utf-8")
+     print("built", [r["stem"] for r in REC], "->", OUT)
+--- as_run/v41_repair/code/f02_result_figures.py
++++ figures/f02_result_figures.py
+@@ -14,8 +14,8 @@
+ import pandas as pd
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-RES = ROOT / 'results'
+-OUT = ROOT / 'v41/figures'
++RES = ROOT / 'results/reference_and_update_inference'
++OUT = ROOT / 'results/figures'
+ plt.rcParams.update({'font.family': 'Arial', 'font.size': 7, 'axes.linewidth': 0.6, 'xtick.major.width': 0.6,
+                      'ytick.major.width': 0.6, 'xtick.major.size': 2.5, 'ytick.major.size': 2.5, 'svg.fonttype': 'none',
+                      'pdf.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False, 'legend.frameon': False})
+--- as_run/v43_upgrade/code/f03_figure6.py
++++ figures/f03_figure6.py
+@@ -13,8 +13,8 @@
+ import pandas as pd
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-RES = ROOT / 'results'
+-OUT = ROOT / 'v43/figures'; OUT.mkdir(parents=True, exist_ok=True)
++RES = ROOT / 'results/pvdaq9068_evaluation'
++OUT = ROOT / 'results/figures'; OUT.mkdir(parents=True, exist_ok=True)
+ plt.rcParams.update({'font.family': 'Arial', 'font.size': 7, 'axes.linewidth': 0.6, 'xtick.major.width': 0.6,
+                      'ytick.major.width': 0.6, 'xtick.major.size': 2.5, 'ytick.major.size': 2.5, 'svg.fonttype': 'none',
+                      'pdf.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False, 'legend.frameon': False})

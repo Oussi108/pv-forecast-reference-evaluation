@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checks": [
+    "finite_sample_rank_80_and_90",
+    "residual_fit_excludes_test_labels",
+    "all_calibration_maps_exclude_test_labels",
+    "daylight_control_matches_direct_order_statistic"
+  ]
+}

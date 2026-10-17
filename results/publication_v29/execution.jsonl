@@ -1,0 +1,82 @@
+{"time_utc": "2026-09-12T15:21:31.203631+00:00", "event": "stage_started", "stage": "all", "protocol_sha256": "8b9ddb3e22776d555e95d4402b4149ec928de142fc007f11861dc7c0bf89501a", "script_sha256": "34805287fda8e7488290718e14741ee555e8dd5b4b8bb4277db0c5b511c03f5c", "versions": {"numpy": "2.4.6", "pandas": "3.0.3", "lightgbm": "4.6.0", "scipy": "1.17.1", "pvlib": "0.15.1"}}
+{"time_utc": "2026-09-12T15:21:32.711158+00:00", "event": "failed", "error": "TypeError(\"paired() got multiple values for argument 'reference'\")"}
+{"time_utc": "2026-09-12T15:22:01.378254+00:00", "event": "stage_started", "stage": "all", "protocol_sha256": "8b9ddb3e22776d555e95d4402b4149ec928de142fc007f11861dc7c0bf89501a", "script_sha256": "48f72e943e9ff762211e932dc7e131d435d0ab006b234a11054cbf6fe627f6e1", "versions": {"numpy": "2.4.6", "pandas": "3.0.3", "lightgbm": "4.6.0", "scipy": "1.17.1", "pvlib": "0.15.1"}}
+{"time_utc": "2026-09-12T15:22:02.487052+00:00", "event": "calibration_model_complete", "testbed": "DKASC", "model": "probabilistic_persistence"}
+{"time_utc": "2026-09-12T15:22:03.093917+00:00", "event": "calibration_model_complete", "testbed": "DKASC", "model": "previous_day_residual"}
+{"time_utc": "2026-09-12T15:22:03.710044+00:00", "event": "calibration_model_complete", "testbed": "DKASC", "model": "lightgbm"}
+{"time_utc": "2026-09-12T15:22:04.302910+00:00", "event": "calibration_model_complete", "testbed": "DKASC", "model": "transformer"}
+{"time_utc": "2026-09-12T15:24:13.197473+00:00", "event": "calibration_model_complete", "testbed": "HKUST", "model": "probabilistic_persistence"}
+{"time_utc": "2026-09-12T15:24:15.958945+00:00", "event": "calibration_model_complete", "testbed": "HKUST", "model": "previous_day_residual"}
+{"time_utc": "2026-09-12T15:24:18.628564+00:00", "event": "calibration_model_complete", "testbed": "HKUST", "model": "lightgbm"}
+{"time_utc": "2026-09-12T15:24:21.215969+00:00", "event": "calibration_model_complete", "testbed": "HKUST", "model": "transformer"}
+{"time_utc": "2026-09-12T15:24:22.543933+00:00", "event": "calibration_complete", "comparisons": 38}
+{"time_utc": "2026-09-12T15:24:23.743506+00:00", "event": "update_start", "key": "DKASC_2023_h2_s11", "selected_trees": 679}
+{"time_utc": "2026-09-12T15:25:25.457525+00:00", "event": "update_complete", "key": "DKASC_2023_h2_s11", "seconds": 61.7}
+{"time_utc": "2026-09-12T15:25:25.932850+00:00", "event": "update_start", "key": "DKASC_2023_h2_s23", "selected_trees": 554}
+{"time_utc": "2026-09-12T15:26:13.977667+00:00", "event": "update_complete", "key": "DKASC_2023_h2_s23", "seconds": 48.0}
+{"time_utc": "2026-09-12T15:26:14.152686+00:00", "event": "update_start", "key": "DKASC_2023_h2_s37", "selected_trees": 768}
+{"time_utc": "2026-09-12T15:27:21.487623+00:00", "event": "update_complete", "key": "DKASC_2023_h2_s37", "seconds": 67.3}
+{"time_utc": "2026-09-12T15:27:21.905211+00:00", "event": "update_start", "key": "DKASC_2023_h2_s51", "selected_trees": 1080}
+{"time_utc": "2026-09-12T15:28:59.714815+00:00", "event": "update_complete", "key": "DKASC_2023_h2_s51", "seconds": 97.8}
+{"time_utc": "2026-09-12T15:28:59.985990+00:00", "event": "update_start", "key": "DKASC_2023_h2_s73", "selected_trees": 1200}
+{"time_utc": "2026-09-12T15:30:50.483874+00:00", "event": "update_complete", "key": "DKASC_2023_h2_s73", "seconds": 110.5}
+{"time_utc": "2026-09-12T15:30:51.571153+00:00", "event": "point_population_complete", "testbed": "DKASC", "horizon": 2, "year": 2023, "daylight_n": 2746}
+{"time_utc": "2026-09-12T15:30:51.742324+00:00", "event": "update_start", "key": "DKASC_2023_h6_s11", "selected_trees": 401}
+{"time_utc": "2026-09-12T15:31:30.445687+00:00", "event": "update_complete", "key": "DKASC_2023_h6_s11", "seconds": 38.7}
+{"time_utc": "2026-09-12T15:31:30.585948+00:00", "event": "update_start", "key": "DKASC_2023_h6_s23", "selected_trees": 482}
+{"time_utc": "2026-09-12T15:32:17.306760+00:00", "event": "update_complete", "key": "DKASC_2023_h6_s23", "seconds": 46.7}
+{"time_utc": "2026-09-12T15:32:17.510238+00:00", "event": "update_start", "key": "DKASC_2023_h6_s37", "selected_trees": 402}
+{"time_utc": "2026-09-12T15:32:56.575019+00:00", "event": "update_complete", "key": "DKASC_2023_h6_s37", "seconds": 39.1}
+{"time_utc": "2026-09-12T15:32:56.732858+00:00", "event": "update_start", "key": "DKASC_2023_h6_s51", "selected_trees": 402}
+{"time_utc": "2026-09-12T15:33:37.500527+00:00", "event": "update_complete", "key": "DKASC_2023_h6_s51", "seconds": 40.8}
+{"time_utc": "2026-09-12T15:33:37.746769+00:00", "event": "update_start", "key": "DKASC_2023_h6_s73", "selected_trees": 398}
+{"time_utc": "2026-09-12T15:34:16.003423+00:00", "event": "update_complete", "key": "DKASC_2023_h6_s73", "seconds": 38.3}
+{"time_utc": "2026-09-12T15:34:16.948002+00:00", "event": "point_population_complete", "testbed": "DKASC", "horizon": 6, "year": 2023, "daylight_n": 2706}
+{"time_utc": "2026-09-12T15:34:18.755796+00:00", "event": "update_start", "key": "HKUST_2023_h2_s11", "selected_trees": 150}
+{"time_utc": "2026-09-12T15:37:08.781973+00:00", "event": "update_complete", "key": "HKUST_2023_h2_s11", "seconds": 170.0}
+{"time_utc": "2026-09-12T15:37:08.928016+00:00", "event": "update_start", "key": "HKUST_2023_h2_s23", "selected_trees": 171}
+{"time_utc": "2026-09-12T15:40:25.769801+00:00", "event": "update_complete", "key": "HKUST_2023_h2_s23", "seconds": 196.8}
+{"time_utc": "2026-09-12T15:40:26.074085+00:00", "event": "update_start", "key": "HKUST_2023_h2_s37", "selected_trees": 139}
+{"time_utc": "2026-09-12T15:43:20.612049+00:00", "event": "update_complete", "key": "HKUST_2023_h2_s37", "seconds": 174.5}
+{"time_utc": "2026-09-12T15:43:20.745473+00:00", "event": "update_start", "key": "HKUST_2023_h2_s51", "selected_trees": 179}
+{"time_utc": "2026-09-12T15:46:33.832507+00:00", "event": "update_complete", "key": "HKUST_2023_h2_s51", "seconds": 193.1}
+{"time_utc": "2026-09-12T15:46:33.951599+00:00", "event": "update_start", "key": "HKUST_2023_h2_s73", "selected_trees": 172}
+{"time_utc": "2026-09-12T15:49:46.501840+00:00", "event": "update_complete", "key": "HKUST_2023_h2_s73", "seconds": 192.6}
+{"time_utc": "2026-09-12T15:49:52.043767+00:00", "event": "point_population_complete", "testbed": "HKUST", "horizon": 2, "year": 2023, "daylight_n": 121650}
+{"time_utc": "2026-09-12T15:49:53.428770+00:00", "event": "update_start", "key": "HKUST_2023_h6_s11", "selected_trees": 123}
+{"time_utc": "2026-09-12T15:51:40.957969+00:00", "event": "update_complete", "key": "HKUST_2023_h6_s11", "seconds": 107.5}
+{"time_utc": "2026-09-12T15:51:41.161332+00:00", "event": "update_start", "key": "HKUST_2023_h6_s23", "selected_trees": 120}
+{"time_utc": "2026-09-12T15:53:25.621908+00:00", "event": "update_complete", "key": "HKUST_2023_h6_s23", "seconds": 104.5}
+{"time_utc": "2026-09-12T15:53:25.775322+00:00", "event": "update_start", "key": "HKUST_2023_h6_s37", "selected_trees": 125}
+{"time_utc": "2026-09-12T15:55:13.231616+00:00", "event": "update_complete", "key": "HKUST_2023_h6_s37", "seconds": 107.5}
+{"time_utc": "2026-09-12T15:55:13.421538+00:00", "event": "update_start", "key": "HKUST_2023_h6_s51", "selected_trees": 118}
+{"time_utc": "2026-09-12T15:56:54.546720+00:00", "event": "update_complete", "key": "HKUST_2023_h6_s51", "seconds": 101.1}
+{"time_utc": "2026-09-12T15:56:54.762473+00:00", "event": "update_start", "key": "HKUST_2023_h6_s73", "selected_trees": 103}
+{"time_utc": "2026-09-12T15:58:27.904721+00:00", "event": "update_complete", "key": "HKUST_2023_h6_s73", "seconds": 93.1}
+{"time_utc": "2026-09-12T15:58:33.351852+00:00", "event": "point_population_complete", "testbed": "HKUST", "horizon": 6, "year": 2023, "daylight_n": 121644}
+{"time_utc": "2026-09-12T15:58:33.461592+00:00", "event": "updating_year_complete", "year": 2023}
+{"time_utc": "2026-09-12T15:58:44.725380+00:00", "event": "temporal_preparation_complete", "populations": [{"horizon": 2, "year": 2024, "all_windows": 2305, "daylight_windows": 1148, "first_target": "2024-01-25 18:00:00", "last_target": "2024-12-29 06:00:00", "sha256": "9af2ef18abe52510588ad5fae326896666e473221fbca3698c23879f523b91b2"}, {"horizon": 6, "year": 2024, "all_windows": 2295, "daylight_windows": 1136, "first_target": "2024-01-25 22:00:00", "last_target": "2024-12-30 15:00:00", "sha256": "0a133d149c3cfad21cc5bb005cb76bf4c798421ef2e0801c6f4c10796a6e13f9"}]}
+{"time_utc": "2026-09-12T15:58:44.803778+00:00", "event": "update_start", "key": "DKASC_2024_h2_s11", "selected_trees": 679}
+{"time_utc": "2026-09-12T15:59:10.642748+00:00", "event": "update_complete", "key": "DKASC_2024_h2_s11", "seconds": 25.8}
+{"time_utc": "2026-09-12T15:59:10.658997+00:00", "event": "update_start", "key": "DKASC_2024_h2_s23", "selected_trees": 554}
+{"time_utc": "2026-09-12T15:59:32.594143+00:00", "event": "update_complete", "key": "DKASC_2024_h2_s23", "seconds": 21.9}
+{"time_utc": "2026-09-12T15:59:32.606990+00:00", "event": "update_start", "key": "DKASC_2024_h2_s37", "selected_trees": 768}
+{"time_utc": "2026-09-12T16:00:04.171410+00:00", "event": "update_complete", "key": "DKASC_2024_h2_s37", "seconds": 31.6}
+{"time_utc": "2026-09-12T16:00:04.188601+00:00", "event": "update_start", "key": "DKASC_2024_h2_s51", "selected_trees": 1080}
+{"time_utc": "2026-09-12T16:00:59.900752+00:00", "event": "update_complete", "key": "DKASC_2024_h2_s51", "seconds": 55.7}
+{"time_utc": "2026-09-12T16:00:59.923030+00:00", "event": "update_start", "key": "DKASC_2024_h2_s73", "selected_trees": 1200}
+{"time_utc": "2026-09-12T16:01:50.557680+00:00", "event": "update_complete", "key": "DKASC_2024_h2_s73", "seconds": 50.6}
+{"time_utc": "2026-09-12T16:01:51.332071+00:00", "event": "point_population_complete", "testbed": "DKASC", "horizon": 2, "year": 2024, "daylight_n": 1148}
+{"time_utc": "2026-09-12T16:01:51.403501+00:00", "event": "update_start", "key": "DKASC_2024_h6_s11", "selected_trees": 401}
+{"time_utc": "2026-09-12T16:02:07.303158+00:00", "event": "update_complete", "key": "DKASC_2024_h6_s11", "seconds": 15.9}
+{"time_utc": "2026-09-12T16:02:07.314848+00:00", "event": "update_start", "key": "DKASC_2024_h6_s23", "selected_trees": 482}
+{"time_utc": "2026-09-12T16:02:26.387070+00:00", "event": "update_complete", "key": "DKASC_2024_h6_s23", "seconds": 19.1}
+{"time_utc": "2026-09-12T16:02:26.397188+00:00", "event": "update_start", "key": "DKASC_2024_h6_s37", "selected_trees": 402}
+{"time_utc": "2026-09-12T16:02:42.952029+00:00", "event": "update_complete", "key": "DKASC_2024_h6_s37", "seconds": 16.6}
+{"time_utc": "2026-09-12T16:02:42.962524+00:00", "event": "update_start", "key": "DKASC_2024_h6_s51", "selected_trees": 402}
+{"time_utc": "2026-09-12T16:02:59.319214+00:00", "event": "update_complete", "key": "DKASC_2024_h6_s51", "seconds": 16.4}
+{"time_utc": "2026-09-12T16:02:59.329884+00:00", "event": "update_start", "key": "DKASC_2024_h6_s73", "selected_trees": 398}
+{"time_utc": "2026-09-12T16:03:15.343856+00:00", "event": "update_complete", "key": "DKASC_2024_h6_s73", "seconds": 16.0}
+{"time_utc": "2026-09-12T16:03:16.095389+00:00", "event": "point_population_complete", "testbed": "DKASC", "horizon": 6, "year": 2024, "daylight_n": 1136}
+{"time_utc": "2026-09-12T16:03:16.109490+00:00", "event": "updating_year_complete", "year": 2024}
+{"time_utc": "2026-09-12T16:03:16.120686+00:00", "event": "stage_complete", "stage": "all"}

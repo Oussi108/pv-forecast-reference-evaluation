@@ -1,0 +1,586 @@
+{
+  "status": "passed",
+  "v28_rows_reproduced": 72,
+  "checks": [
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "DKASC",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "probabilistic_persistence",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "lightgbm",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.8,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "raw",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "raw",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "global_all_hours",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "all",
+      "status": "v28_reproduced"
+    },
+    {
+      "testbed": "HKUST",
+      "model": "transformer",
+      "level": 0.9,
+      "method": "variability_groups",
+      "population": "daylight",
+      "status": "v28_reproduced"
+    }
+  ],
+  "residual_fit_year": 2021,
+  "calibration_fit_year": 2022,
+  "test_year": 2023,
+  "protocol_sha256": "8b9ddb3e22776d555e95d4402b4149ec928de142fc007f11861dc7c0bf89501a"
+}

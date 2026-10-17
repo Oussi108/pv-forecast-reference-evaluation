@@ -1,0 +1,60 @@
+{
+  "schema_version": "cross-testbed-context-h6-1",
+  "created_utc": "2026-09-07T12:45:19.951283+00:00",
+  "metric": "capacity-factor MAE; skill = 1 - MAE / reference MAE",
+  "rows": [
+    {
+      "testbed": "DKASC",
+      "systems": 1,
+      "test_year_or_window": "locked original test partition",
+      "forecast_arm": "LightGBM",
+      "reference_arm": "smart persistence",
+      "mae": 0.07519852671123514,
+      "reference_mae": 0.14067791611633274,
+      "skill": 0.46545606597520117,
+      "n": 7219,
+      "aggregation": "array-level locked score"
+    },
+    {
+      "testbed": "PVOD pooled",
+      "systems": 8,
+      "test_year_or_window": "22 Apr\u201313 Jun 2019",
+      "forecast_arm": "LightGBM",
+      "reference_arm": "smart persistence",
+      "mae": 0.0910309545647966,
+      "reference_mae": 0.1844377340097073,
+      "skill": 0.4969965121680936,
+      "n": 4076,
+      "aggregation": "system-balanced mean of eight locked stations"
+    },
+    {
+      "testbed": "HKUST campus fleet",
+      "systems": 24,
+      "test_year_or_window": "calendar year 2023",
+      "forecast_arm": "LightGBM",
+      "reference_arm": "persistence",
+      "mae": 0.05973179,
+      "reference_mae": 0.18345383,
+      "skill": 0.6744042356597297,
+      "n": 199832,
+      "aggregation": "system-balanced mean of 24 systems"
+    }
+  ],
+  "scope_note": "Contextual comparison only. HKUST uses an annual 2023 test year and persistence because no clear-sky index is released in the ground-sensor contract; DKASC/PVOD use the locked smart-persistence contract and their original partitions. Values must not be interpreted as a climatology-controlled head-to-head test.",
+  "pvod_pool_station_ids": [
+    "pvod_station00",
+    "pvod_station01",
+    "pvod_station02",
+    "pvod_station03",
+    "pvod_station05",
+    "pvod_station06",
+    "pvod_station08",
+    "pvod_station09"
+  ],
+  "source_files": [
+    "results/point/skill_table_lightgbm_dkasc_test_h6.csv",
+    "results/point/skill_table_lightgbm_pvod_test_h6.csv",
+    "results/replacement_audit/hkust_lightgbm_h6.json",
+    "results/replacement_audit/hkust_baseline_pilot.json"
+  ]
+}

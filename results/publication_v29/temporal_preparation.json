@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "protocol_sha256": "8b9ddb3e22776d555e95d4402b4149ec928de142fc007f11861dc7c0bf89501a",
+  "source_sha256": "adebe983a30f58c5900247308790ed0659de9fdff2a4fd59f6e464147e3c2d14",
+  "v28_preparation_reproduced": true,
+  "populations": [
+    {
+      "horizon": 2,
+      "year": 2024,
+      "all_windows": 2305,
+      "daylight_windows": 1148,
+      "first_target": "2024-01-25 18:00:00",
+      "last_target": "2024-12-29 06:00:00",
+      "sha256": "9af2ef18abe52510588ad5fae326896666e473221fbca3698c23879f523b91b2"
+    },
+    {
+      "horizon": 6,
+      "year": 2024,
+      "all_windows": 2295,
+      "daylight_windows": 1136,
+      "first_target": "2024-01-25 22:00:00",
+      "last_target": "2024-12-30 15:00:00",
+      "sha256": "0a133d149c3cfad21cc5bb005cb76bf4c798421ef2e0801c6f4c10796a6e13f9"
+    }
+  ],
+  "source_previously_quality_audited": true,
+  "untouched_holdout": false
+}

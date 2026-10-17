@@ -1,0 +1,10 @@
+Forecast,Array 1B MAE,HKUST MAE
+Persistence,0.2836,0.2352
+"Smart persistence, any-daylight ratio",0.1084,0.2305
+"Smart persistence, specified (2022-selected)",0.0955,0.1149
+Climatology,0.1041,0.1240
+Previous day,0.0416,0.0974
+Convex previous day–climatology,0.0408,0.0927
+LightGBM (frozen),0.0449,0.1016
+GRU (frozen),0.1032,0.1066
+Transformer (frozen),0.0614,0.0997

@@ -1,0 +1,35 @@
+{
+  "key": "HKUST_h4_lightgbm_s73_point_full",
+  "testbed": "HKUST",
+  "horizon": 4,
+  "model": "lightgbm",
+  "seed": 73,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_iterations": [
+      112
+    ],
+    "objective": "regression_l1"
+  },
+  "signature": {
+    "protocol": "2f6e03b8bd16c6d929fa13244e56b0e8bdab44f65234b13fd6aed4a62c2bff6b",
+    "data": "55ef578cf8f6ec6f3d34417bb80953f478dc74b2d025fd69733c09bb66edc8f6",
+    "training_code": "165089b5042369679e62b3e15d3b16a121c4392cab3791c7a1fa2f12bf1c0615",
+    "preparation_code": "905848f0bd7402299b8c2aae81bc0bae01a963f2ebfcf0652a1ce8d82c29c2ea"
+  },
+  "runtime_seconds": 12.966752529144287,
+  "counts": {
+    "select_train": 92963,
+    "select_val": 64082,
+    "development": 157045,
+    "calibration": 260850,
+    "test": 253553
+  },
+  "test_system_balanced_mae": 0.04634971171617508,
+  "prediction_sha256": "38f4b69c75f631b64bc5d1f48735a2d759f6c76229a61fcc424255c4b07db3e0",
+  "status": "complete",
+  "reused_from": "corrected_v27",
+  "reuse_validation": "byte_identical_prepared_array_and_verified_v27_run",
+  "reuse_note": "HKUST prepared arrays are byte-identical in v27 and v28; model predictions and curves are reused without retraining."
+}

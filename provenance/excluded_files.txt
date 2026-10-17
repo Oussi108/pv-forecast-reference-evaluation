@@ -1,0 +1,7 @@
+Files in the copied result folders that were NOT released (arrays or archives that may contain observations):
+WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/results/corrected_v28_array1b/superseded_smoke/DKASC_h6_lightgbm_s11_point_full.csv
+WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/results/corrected_v28_array1b/superseded_smoke/DKASC_h6_lightgbm_s11_point_full.json
+WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/results/corrected_v28_array1b/superseded_smoke/DKASC_h6_lightgbm_s11_point_full_after_handler_fix.csv
+WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/results/corrected_v28_array1b/superseded_smoke/DKASC_h6_lightgbm_s11_point_full_after_handler_fix.json
+WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/results/corrected_v28_array1b/superseded_smoke/DKASC_h6_lightgbm_s23_point_full.csv
+WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/results/corrected_v28_array1b/superseded_smoke/DKASC_h6_lightgbm_s23_point_full.json

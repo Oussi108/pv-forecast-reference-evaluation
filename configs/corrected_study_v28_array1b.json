@@ -1,0 +1,74 @@
+{
+  "protocol_id": "corrected-study-v28-array1b-2026-09-09",
+  "parent_protocol_id": "corrected-study-v27-2026-09-07",
+  "status": "revision_frozen_before_candidate_forecast_evaluation",
+  "revision_type": "retrospective_source_and_coverage_revision",
+  "test_history": "2023 was examined in prior pilots and is not an untouched confirmation set.",
+  "public_results_dir": "results/corrected_v28_array1b",
+  "testbeds": ["DKASC", "HKUST"],
+  "sources": {
+    "DKASC": {
+      "site_id": "dka_1b",
+      "provider_filename": "87-Site_DKA-M9_A+C-Phases.csv",
+      "capacity_kw": 23.4,
+      "timezone": "Australia/Darwin",
+      "provider_url": "https://dkasolarcentre.com.au/source/alice-springs/dka-m9-a-c-phases",
+      "provider_metadata": {
+        "manufacturer": "Trina",
+        "technology": "mono-Si",
+        "structure": "dual-axis tracker",
+        "installed": 2009
+      },
+      "provider_operational_notes": [
+        "Provider notes tracker failures and subsequent alignment changes at site 1.",
+        "Provider notes two failed inverters at site 1B were replaced in February 2022."
+      ],
+      "source_sha256": "adebe983a30f58c5900247308790ed0659de9fdff2a4fd59f6e464147e3c2d14",
+      "selection_status": "eligible_for_full_matrix_with_documented_operational_regime_limitation"
+    },
+    "HKUST": {
+      "timezone": "Asia/Hong_Kong",
+      "selection_status": "reuse_only_if_shared_contract_and_code_are_verified"
+    }
+  },
+  "horizons": [6, 2, 4, 12],
+  "seeds": [11, 23, 37, 51, 73],
+  "models": ["lightgbm", "gru", "transformer"],
+  "history_hours": 24,
+  "selection_train_end": "2021-09-30 23:00:00",
+  "selection_validation_start": "2021-10-01 00:00:00",
+  "refit_year": 2021,
+  "calibration_year": 2022,
+  "test_year": 2023,
+  "timestamp_contract": "hourly means of [t-1h,t) available at t; target is mean over [t+h-1h,t+h)",
+  "source_timezone": {"HKUST": "Asia/Hong_Kong", "DKASC": "Australia/Darwin"},
+  "common_weather": ["ghi", "temperature", "humidity"],
+  "history_channels": ["power", "ghi", "temperature", "humidity", "clear_ghi"],
+  "future_known": ["target_clear_ghi", "target_hour_sin", "target_hour_cos", "target_day_sin", "target_day_cos"],
+  "coverage": {
+    "development_minimum_days": 180,
+    "pretest_minimum_days": 500,
+    "calibration_minimum_fraction": 0.90,
+    "test_minimum_days_diagnostic": 300,
+    "test_minimum_months_diagnostic": 10,
+    "pretest_physical_bad_fraction_max": 0.01,
+    "primary_test_population": "all valid daylight target windows in 2023 under the frozen input, target, and reference contract",
+    "strict_monthly_sensitivity_min_retained_daylight_fraction": 0.80,
+    "sparse_month_diagnostic_target_count": 100,
+    "coverage_amendment": "The original every-test-month 0.80 gate is retained as a sensitivity and is not used to delete outcome-dependent rows from the primary available-window population.",
+    "coverage_selection_rule": "No test-month or target is selected using forecast outcomes; all valid 2023 daylight targets are included in the primary population and all exclusions are reported."
+  },
+  "minimum_source_fraction": 0.75,
+  "power_range": [-0.05, 1.20],
+  "daylight_clear_ghi_threshold": 20,
+  "reference_bounds": [0, 1.20],
+  "references": ["persistence", "previous_day", "hour_climatology", "smart_persistence"],
+  "quantiles": [0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95],
+  "primary_quantile_models": ["lightgbm", "transformer"],
+  "quantile_horizon": 6,
+  "neural": {"hidden": 32, "layers": 1, "attention_heads": 4, "dropout": 0.1, "batch_size": 1024, "learning_rate": 0.001, "max_epochs": 40, "patience": 6},
+  "lightgbm": {"n_estimators": 1200, "learning_rate": 0.03, "num_leaves": 31, "min_child_samples": 50, "feature_fraction": 0.9, "early_stopping_rounds": 60},
+  "calibration": {"levels": [0.8, 0.9], "score": "nonnegative central interval exceedance", "minimum_group": 100, "partial_pool_kappa_candidates": [0, 100, 500, 2000], "kappa_selection": "first-half 2022 fit, second-half 2022 interval-score selection; final maps use 2022"},
+  "inference": {"resamples": 2000, "block_days": [1, 7], "primary_block_days": 7, "synchronize_sites": true, "seed": 42, "aggregation": "ratio of system-balanced MAE means", "multiple_comparisons": "Holm within testbed and metric families"},
+  "compute_threads": 4
+}

@@ -1,0 +1,10 @@
+# Versions used for the PVDAQ 9068 runs and for the release re-check (CPython 3.13, Windows 11, CPU only).
+# The Array 1B / HKUST preparation record (results/corrected_v28_array1b/preparation.json) lists the versions of that run.
+numpy==2.3.4
+pandas==3.0.2
+scipy==1.16.2
+lightgbm==4.6.0
+torch==2.9.1          # CPU build is sufficient
+pvlib==0.15.1
+matplotlib==3.10.8
+pillow==12.0.0

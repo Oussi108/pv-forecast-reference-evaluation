@@ -1,0 +1,6 @@
+{
+  "missing_runs": [],
+  "status": "complete",
+  "aggregation": "Model point losses averaged across five seeds before site-balanced summaries; no seed selection",
+  "ablation": "One prespecified seed, independently stopped and refit variants; common windows; non-additive effects"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "coverage_masks_frozen_before_new_prediction_scoring",
+  "timing": "Retrospective completion after original v28 outcomes were known; not preregistered.",
+  "threshold": 0.8,
+  "denominator": "All 2023 local completed-hour target bins with quadrature clear-sky GHI >20 W/m2",
+  "matched_rule": "system-month meets threshold at all four leads, then intersect system-target keys",
+  "mask_sha256": {
+    "DKASC_h2_matched_daylight": "9d284255df881f5a82a4fa8fb8437af466b29c0c12bd2308b03b71f8f3091995",
+    "DKASC_h2_high_coverage_matched": "91cc580f9e41c934da9270345c4da01ea20dba1f78c9419be3744f0f82b9349f",
+    "DKASC_h4_matched_daylight": "b43b3e457c2238f598e2ec0c6dd2ea05f75de18ab7d5fdeee3deb7aa918d70bb",
+    "DKASC_h4_high_coverage_matched": "fe6a1ddd7e6ae091dacb120d5de572471bd43add26c811a9d70d0c7ade4e0823",
+    "DKASC_h6_matched_daylight": "b30db0686dea8fdab7e94be809941b91432af56bb5cf9e41945d6fe8f089f74d",
+    "DKASC_h6_high_coverage_matched": "cbd3b583894999d15db59448eceecbcb756bd93fa40cb3e2ce5900e50c2a4280",
+    "DKASC_h6_daylight": "f9e15fd9081823c737d842e38dd2ac16af2337d21b93097ccadb1abb4ed091a2",
+    "DKASC_h6_high_coverage_daylight": "05ee54179b4a0fb711a5281f4857bb86ff63c7e24dd9bb7cfa028a0837754f8b",
+    "DKASC_h12_matched_daylight": "bde2046bd61ce9a7421b0338bbf9574a9b42d62806adab8ae440e95602bbe4b1",
+    "DKASC_h12_high_coverage_matched": "f85f17355db6aa664bce41acab58987d0bf7a79e1291fcb1f84b4b70002e00d2",
+    "HKUST_h2_matched_daylight": "13705e706d2bf55d6328264da67f59fa40fb451ac6ebe9edbbe4e0b6fd4846b1",
+    "HKUST_h2_high_coverage_matched": "f1ee2928e55ab3c955c04f3ccf0e7bee0d91dcd97133da5c267633c03209f7ad",
+    "HKUST_h4_matched_daylight": "359df15fcdef0d447d0b278ad9ee9b5ac2e79c2e773da856f56462e379a08d33",
+    "HKUST_h4_high_coverage_matched": "6349e4b681e37521b242183e9d9d77daf4a28f216eff67ec2be066f9cd9622b4",
+    "HKUST_h6_matched_daylight": "3386df49f76e1b1cec8386d44739d3f478ce0cc80ac656510af0a5d67b0cfe54",
+    "HKUST_h6_high_coverage_matched": "d60422660d89b554af92b6f7c2a8390224804ec2daea79dd8b40a30571a3d5fb",
+    "HKUST_h6_daylight": "62e3a159a203d754d114e2facf2670b7166ab4a4fdd9fac615117cf0df04a869",
+    "HKUST_h6_high_coverage_daylight": "d1b32319ab2af8590100dd4f19227ca87d4f6499a51ee77254f812724b88b1d8",
+    "HKUST_h12_matched_daylight": "a38dd31f0b2db5311202445ec9d0637d1c2d00bdb12b057aa5f1cc891e2c94e6",
+    "HKUST_h12_high_coverage_matched": "f3023f38204ba8ca111a76184cb70bb631849fafe8fa0540f3cf8a42de53cd55"
+  },
+  "input_sha256": {
+    "DKASC/h2.npz": "af0178dd416e8f56424db36ce3a2b65163c156d1a8fd5c930782768b4b771565",
+    "DKASC/h4.npz": "5f24fbbbabf81c1671d0ad981cd3f4b5ab3df1d6d4f30d6c3b80761990a71a9d",
+    "DKASC/h6.npz": "cf6f672101ed0f50f27f8b2425a6fb4d148d9991715c1fa6d860c5c9e44c97aa",
+    "DKASC/h12.npz": "a73e6175dce13b39a9c894d80b8f683412f14ebf29c5b3464548e28173ff729a",
+    "HKUST/h2.npz": "0273af2807d33bb98ceffba1de9abe4c6e27a82ab50c06cf896d1ce20952197e",
+    "HKUST/h4.npz": "55ef578cf8f6ec6f3d34417bb80953f478dc74b2d025fd69733c09bb66edc8f6",
+    "HKUST/h6.npz": "2171a26924d5ef025eed9dedbb06d9bcd5324788ef793cbd49d3c5576461b52f",
+    "HKUST/h12.npz": "16654816dcbc8b0723acb7db2c8d9ae820d7cf91353fec33753527e2ee193bf9"
+  }
+}

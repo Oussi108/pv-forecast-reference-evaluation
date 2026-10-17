@@ -1,0 +1,162 @@
+{
+ "2023": {
+  "E1": {
+   "statement": "No frozen family has a 6-h skill interval above zero against previous-day persistence",
+   "confirmed": true,
+   "detail": {
+    "lightgbm": [
+     0.0533,
+     -0.0177,
+     0.1121
+    ],
+    "gru": [
+     -0.0131,
+     -0.1183,
+     0.0735
+    ],
+    "transformer": [
+     0.0457,
+     -0.035,
+     0.1113
+    ]
+   }
+  },
+  "E2": {
+   "statement": "Specified smart persistence has lower 6-h daylight MAE than form (a)",
+   "confirmed": true,
+   "specified_form": "envelope",
+   "mae_specified": 0.2318,
+   "mae_form_a": 0.3248,
+   "paired_skill_for_information": [
+    0.2865,
+    0.2075,
+    0.3599
+   ]
+  },
+  "E3": {
+   "statement": "Monthly refitting lowers 6-h MAE relative to the frozen fit for every family",
+   "confirmed": true,
+   "detail": {
+    "lightgbm": [
+     0.0497,
+     0.0012,
+     0.0896,
+     0.0834
+    ],
+    "gru": [
+     0.0612,
+     0.0295,
+     0.0919,
+     0.0027
+    ],
+    "transformer": [
+     0.0631,
+     0.0218,
+     0.1002,
+     0.0133
+    ]
+   }
+  },
+  "E4": {
+   "statement": "All-hour correction changes LightGBM daylight coverage by <1 pp; day/night correction increases it",
+   "confirmed": true,
+   "coverage": {
+    "raw": 0.7115,
+    "global_all_hours": 0.7115,
+    "global_day_night": 0.8373,
+    "variability_groups": 0.8354
+   }
+  },
+  "E5": {
+   "statement": "Variability grouping has no resolved interval-score benefit over day/night correction",
+   "confirmed": true,
+   "detail": [
+    -0.0008,
+    -0.0018,
+    0.0001,
+    0.1094
+   ],
+   "note": ""
+  }
+ },
+ "2024": {
+  "E1": {
+   "statement": "No frozen family has a 6-h skill interval above zero against previous-day persistence",
+   "confirmed": true,
+   "detail": {
+    "lightgbm": [
+     0.0407,
+     -0.0349,
+     0.0993
+    ],
+    "gru": [
+     -0.0392,
+     -0.1422,
+     0.0401
+    ],
+    "transformer": [
+     0.0313,
+     -0.0455,
+     0.0913
+    ]
+   }
+  },
+  "E2": {
+   "statement": "Specified smart persistence has lower 6-h daylight MAE than form (a)",
+   "confirmed": true,
+   "specified_form": "envelope",
+   "mae_specified": 0.2204,
+   "mae_form_a": 0.3209,
+   "paired_skill_for_information": [
+    0.3132,
+    0.2547,
+    0.3803
+   ]
+  },
+  "E3": {
+   "statement": "Monthly refitting lowers 6-h MAE relative to the frozen fit for every family",
+   "confirmed": true,
+   "detail": {
+    "lightgbm": [
+     0.067,
+     0.0273,
+     0.1051,
+     0.0019
+    ],
+    "gru": [
+     0.0675,
+     0.0315,
+     0.0979,
+     0.0009
+    ],
+    "transformer": [
+     0.0808,
+     0.044,
+     0.1182,
+     0.0001
+    ]
+   }
+  },
+  "E4": {
+   "statement": "All-hour correction changes LightGBM daylight coverage by <1 pp; day/night correction increases it",
+   "confirmed": true,
+   "coverage": {
+    "raw": 0.794,
+    "global_all_hours": 0.794,
+    "global_day_night": 0.877,
+    "variability_groups": 0.8751
+   }
+  },
+  "E5": {
+   "statement": "Variability grouping has no resolved interval-score benefit over day/night correction",
+   "confirmed": true,
+   "detail": [
+    -0.0011,
+    -0.0021,
+    -0.0003,
+    0.0317
+   ],
+   "note": "interval entirely below zero = resolved small loss from grouping"
+  }
+ }
+}

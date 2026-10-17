@@ -1,0 +1,169 @@
+{
+  "schema_version": "hkust-baseline-pilot-1",
+  "created_utc": "2026-09-07T09:06:09.945553+00:00",
+  "input": {
+    "root": "<private-feature-output>",
+    "test_year": 2023,
+    "training_for_climatology": "years before 2023 only"
+  },
+  "contract": {
+    "horizons_hours": [
+      2,
+      4,
+      6,
+      12
+    ],
+    "references": [
+      "persistence",
+      "day_persistence",
+      "hourly_climatology"
+    ],
+    "metrics": [
+      "MAE",
+      "RMSE",
+      "bias"
+    ],
+    "test_policy": "predictions fixed before scoring; no model tuning on 2023"
+  },
+  "summary": {
+    "systems": 24,
+    "rows_detail": 288,
+    "rows_summary": 12,
+    "model_fitting": false,
+    "gate": "pilot_complete"
+  },
+  "system_balanced": [
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 2,
+      "reference": "day_persistence",
+      "n_systems": 24,
+      "n": 205954,
+      "mae": 0.08899786,
+      "rmse": 0.15879697,
+      "bias": 0.00029922
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 2,
+      "reference": "hourly_climatology",
+      "n_systems": 24,
+      "n": 207558,
+      "mae": 0.09279482,
+      "rmse": 0.15606746,
+      "bias": 0.00812243
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 2,
+      "reference": "persistence",
+      "n_systems": 24,
+      "n": 206946,
+      "mae": 0.07812409,
+      "rmse": 0.1389847,
+      "bias": -4.267e-05
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 4,
+      "reference": "day_persistence",
+      "n_systems": 24,
+      "n": 205673,
+      "mae": 0.14105839,
+      "rmse": 0.23203181,
+      "bias": 0.00027629
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 4,
+      "reference": "hourly_climatology",
+      "n_systems": 24,
+      "n": 207512,
+      "mae": 0.14450959,
+      "rmse": 0.2229865,
+      "bias": 0.00896257
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 4,
+      "reference": "persistence",
+      "n_systems": 24,
+      "n": 206415,
+      "mae": 0.13780771,
+      "rmse": 0.22703417,
+      "bias": -6.667e-05
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 6,
+      "reference": "day_persistence",
+      "n_systems": 24,
+      "n": 205387,
+      "mae": 0.18482528,
+      "rmse": 0.28378149,
+      "bias": 0.00021687
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 6,
+      "reference": "hourly_climatology",
+      "n_systems": 24,
+      "n": 207464,
+      "mae": 0.19006314,
+      "rmse": 0.27254423,
+      "bias": 0.01005157
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 6,
+      "reference": "persistence",
+      "n_systems": 24,
+      "n": 205877,
+      "mae": 0.18345383,
+      "rmse": 0.28211062,
+      "bias": -4.096e-05
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 12,
+      "reference": "day_persistence",
+      "n_systems": 24,
+      "n": 204740,
+      "mae": 0.23138071,
+      "rmse": 0.3175732,
+      "bias": 7.96e-06
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 12,
+      "reference": "hourly_climatology",
+      "n_systems": 24,
+      "n": 207320,
+      "mae": 0.23985592,
+      "rmse": 0.30528586,
+      "bias": 0.01134484
+    },
+    {
+      "system_id": "SYSTEM_BALANCED_MEAN",
+      "test_year": 2023,
+      "horizon_hours": 12,
+      "reference": "persistence",
+      "n_systems": 24,
+      "n": 204734,
+      "mae": 0.23129365,
+      "rmse": 0.31748778,
+      "bias": -6.629e-05
+    }
+  ]
+}

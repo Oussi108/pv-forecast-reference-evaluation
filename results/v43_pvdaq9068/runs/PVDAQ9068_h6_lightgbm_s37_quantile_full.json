@@ -1,0 +1,38 @@
+{
+  "key": "PVDAQ9068_h6_lightgbm_s37_quantile_full",
+  "testbed": "PVDAQ9068",
+  "horizon": 6,
+  "model": "lightgbm",
+  "seed": 37,
+  "quantile": true,
+  "variant": "full",
+  "settings": {
+    "selected_iterations": [
+      75,
+      54,
+      68,
+      79,
+      279,
+      321,
+      659
+    ],
+    "objective": "quantile"
+  },
+  "signature": {
+    "protocol": "951e8ecbce79a5b53bbbd9e29832affd0588eaaf8b27caa762d6948e84949951",
+    "data": "cd49644502704c073459be5e210978da0ad38cd08f5bdf0206df14532ec67877",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 19.267738580703735,
+  "counts": {
+    "select_train": 3236,
+    "select_val": 1619,
+    "development": 4855,
+    "calibration": 6743,
+    "test": 5285
+  },
+  "test_system_balanced_mae": 0.07801030576229095,
+  "prediction_sha256": "ad74c4693154f04e0eb0479f8a6b7d8e637e28e1f51e37b048ffba1e49d774e9",
+  "status": "complete"
+}

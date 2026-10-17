@@ -1,0 +1,73 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "testbed": "DKASC",
+      "horizon": 2,
+      "selected_weight_previous_day": 0.95,
+      "validation_mae": 0.02622309692529606,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    },
+    {
+      "testbed": "DKASC",
+      "horizon": 4,
+      "selected_weight_previous_day": 0.95,
+      "validation_mae": 0.026257248609315664,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    },
+    {
+      "testbed": "DKASC",
+      "horizon": 6,
+      "selected_weight_previous_day": 0.95,
+      "validation_mae": 0.026415807914744804,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    },
+    {
+      "testbed": "DKASC",
+      "horizon": 12,
+      "selected_weight_previous_day": 0.95,
+      "validation_mae": 0.02705806284802015,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 2,
+      "selected_weight_previous_day": 0.85,
+      "validation_mae": 0.03570709849108041,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 4,
+      "selected_weight_previous_day": 0.85,
+      "validation_mae": 0.03581197306865283,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 6,
+      "selected_weight_previous_day": 0.85,
+      "validation_mae": 0.035923168759812885,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    },
+    {
+      "testbed": "HKUST",
+      "horizon": 12,
+      "selected_weight_previous_day": 0.85,
+      "validation_mae": 0.03610976200356681,
+      "candidate_weights": "0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0",
+      "tie_break": "smallest weight"
+    }
+  ],
+  "protocol": "<workspace>\\tmp\\paper1_strengthening_20260914\\protocol\\protocol_p00_p02.json",
+  "protocol_file_sha256": "03c7218b3936db159510b691cf9bf38aed3be6eb74a017b8f8700823f3137e0e",
+  "protocol_canonical_sha256": "8e5fb43a985db52043ec00da5eec03ed6f66dea2d852ebe107cf180ae3514c95",
+  "protocol_hash_scheme": "file hash is serialized bytes; canonical hash excludes the self-hash field"
+}

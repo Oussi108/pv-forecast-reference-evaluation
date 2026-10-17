@@ -1,0 +1,32 @@
+{
+  "key": "HKUST_h6_gru_s11_point_without_power",
+  "testbed": "HKUST",
+  "horizon": 6,
+  "model": "gru",
+  "seed": 11,
+  "quantile": false,
+  "variant": "without_power",
+  "settings": {
+    "selected_epochs": 4,
+    "selection_validation_loss": 0.06356599715922764,
+    "architecture": "gru",
+    "parameters": 4897
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "2171a26924d5ef025eed9dedbb06d9bcd5324788ef793cbd49d3c5576461b52f",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 119.07802867889404,
+  "counts": {
+    "select_train": 92805,
+    "select_val": 63933,
+    "development": 156738,
+    "calibration": 260729,
+    "test": 253091
+  },
+  "test_system_balanced_mae": 0.059652406722307205,
+  "prediction_sha256": "8087dae1187f21a2b7f8408e9e39e8a6b53bb8ffe27ce3067e07493cc9fa4515",
+  "status": "complete"
+}

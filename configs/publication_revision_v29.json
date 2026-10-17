@@ -1,0 +1,59 @@
+{
+  "revision_id": "publication-revision-v29-2026-09-12",
+  "parent_protocol": "corrected_study_v28_array1b.json",
+  "status": "specified_before_new_v29_scores",
+  "test_history": "2023 outcomes were previously examined. DKASC 2024 source quality was previously inspected; no untouched-holdout claim is permitted.",
+  "author_instruction": "Oussi El Houcine only for this draft; funding, competing interests and final approval remain unconfirmed.",
+  "point_update": {
+    "model": "lightgbm",
+    "testbeds": ["DKASC", "HKUST"],
+    "horizons": [2, 6],
+    "seeds": [11, 23, 37, 51, 73],
+    "test_year": 2023,
+    "policies": ["frozen_2021", "annual_previous_year", "monthly_trailing_365_days"],
+    "selection": "All tree counts and hyperparameters are inherited from each corresponding v28 2021 selection fit. No new duration or parameter search.",
+    "timing": "Every training target precedes the first local calendar instant of the prediction month; only predictions with issue >= cutoff are assigned to that month's model.",
+    "population": "Same complete-case daylight targets for all policies at a given horizon; do not score missing labels or select dates by error.",
+    "minimum_training_examples_per_system": 100,
+    "fallback": "Reuse previous policy fit if any retained system lacks 100 recent examples; log every fallback.",
+    "scope": "Tests updating within LightGBM only; no claim about updated GRU or Transformer families."
+  },
+  "calibration_control": {
+    "horizon": 6,
+    "residual_fit_year": 2021,
+    "calibration_year": 2022,
+    "test_year": 2023,
+    "models": ["probabilistic_persistence", "previous_day_residual", "lightgbm", "transformer"],
+    "methods": ["raw", "global_all_hours", "global_day_night", "variability_groups"],
+    "levels": [0.8, 0.9],
+    "primary_level": 0.8,
+    "primary_comparator": "variability_groups versus global_day_night on daylight targets",
+    "secondary_comparator": "global_day_night versus global_all_hours on daylight targets",
+    "previous_day_reference": "Same system and target-hour development residual quantiles as v28 smart residual reference, replacing only the point center with previous-day persistence; system fallback below 20 development rows.",
+    "minimum_calibration_group": 100,
+    "fallback": "Use the all-hour global correction and explicitly log insufficient groups.",
+    "distribution_comparator": "Truncated CRPS7 for learned quantiles versus previous_day_residual; raw quantile scores remain distinct from corrected interval scores."
+  },
+  "temporal_extension": {
+    "testbed": "DKASC",
+    "target_year": 2024,
+    "horizons": [2, 6],
+    "model": "lightgbm",
+    "seeds": [11, 23, 37, 51, 73],
+    "policies": ["frozen_2021", "annual_previous_year", "monthly_trailing_365_days"],
+    "preprocessing": "Same v28 completed-hour, physical-range, reference, and input-window rules; normalize Array 1B by 23.4 kW.",
+    "selection_rule": "Use all eligible 2024 daylight targets; no replacement year if results are unfavorable. Report monthly availability even if no complete windows survive.",
+    "interpretation": "Additional temporal evaluation on previously source-audited observations. It does not supply an independent campus or certify a fully untouched holdout."
+  },
+  "inference": {
+    "resamples": 2000,
+    "block_days": 7,
+    "seed": 42,
+    "aggregation": "Mean absolute losses over seeds, then equally weighted system means; paired synchronous calendar-day blocks.",
+    "point_comparators": ["previous_day", "frozen_2021"],
+    "multiplicity": "Holm HAC p-values within each test year, testbed, analysis and metric family; percentile intervals remain pointwise.",
+    "limitations": "Conditional on fitted seeds, retained observations and retrospective protocol."
+  },
+  "release": "Code, configuration and aggregate evidence only; raw source records, fitted models and prediction arrays stay in private workspace scratch.",
+  "integrity": "Preserve v28 artifacts; hash protocol and parent inputs; verify raw/global/group calibration replication; test correction rank, residual fitting scope and monthly cutoff boundaries."
+}

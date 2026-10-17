@@ -1,0 +1,35 @@
+{
+  "key": "HKUST_h6_transformer_s37_point_full",
+  "testbed": "HKUST",
+  "horizon": 6,
+  "model": "transformer",
+  "seed": 37,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_epochs": 8,
+    "selection_validation_loss": 0.04682187070239193,
+    "architecture": "transformer",
+    "parameters": 9985
+  },
+  "signature": {
+    "protocol": "2f6e03b8bd16c6d929fa13244e56b0e8bdab44f65234b13fd6aed4a62c2bff6b",
+    "data": "2171a26924d5ef025eed9dedbb06d9bcd5324788ef793cbd49d3c5576461b52f",
+    "training_code": "165089b5042369679e62b3e15d3b16a121c4392cab3791c7a1fa2f12bf1c0615",
+    "preparation_code": "905848f0bd7402299b8c2aae81bc0bae01a963f2ebfcf0652a1ce8d82c29c2ea"
+  },
+  "runtime_seconds": 560.277973651886,
+  "counts": {
+    "select_train": 92805,
+    "select_val": 63933,
+    "development": 156738,
+    "calibration": 260729,
+    "test": 253091
+  },
+  "test_system_balanced_mae": 0.05174766480922699,
+  "prediction_sha256": "6982638b5072d209dadc0cac36933e0cb31e679e6f9350639afd726b31d2eb34",
+  "status": "complete",
+  "reused_from": "corrected_v27",
+  "reuse_validation": "byte_identical_prepared_array_and_verified_v27_run",
+  "reuse_note": "HKUST prepared arrays are byte-identical in v27 and v28; model predictions and curves are reused without retraining."
+}

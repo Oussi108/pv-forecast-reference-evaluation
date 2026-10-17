@@ -1,0 +1,32 @@
+{
+  "DKASC|previous_day_residual": {
+    "grouped_vs_daynight": "+0.90 [+0.23, +1.56]",
+    "daynight_vs_allhour": "-6.1 [-15.8, -0.2]",
+    "grouped_p_holm": 0.1257432081951884
+  },
+  "DKASC|lightgbm": {
+    "grouped_vs_daynight": "+0.59 [+0.13, +1.18]",
+    "daynight_vs_allhour": "+1.1 [-3.4, +4.5]",
+    "grouped_p_holm": 0.3700126546112893
+  },
+  "DKASC|transformer": {
+    "grouped_vs_daynight": "-0.00 [-0.25, +0.31]",
+    "daynight_vs_allhour": "-1.3 [-4.0, +1.1]",
+    "grouped_p_holm": 1.0
+  },
+  "HKUST|previous_day_residual": {
+    "grouped_vs_daynight": "+0.00 [+0.00, +0.01]",
+    "daynight_vs_allhour": "+0.0 [+0.0, +0.0]",
+    "grouped_p_holm": 0.3156964723313899
+  },
+  "HKUST|lightgbm": {
+    "grouped_vs_daynight": "-0.02 [-0.16, +0.10]",
+    "daynight_vs_allhour": "+3.4 [+2.5, +4.3]",
+    "grouped_p_holm": 1.0
+  },
+  "HKUST|transformer": {
+    "grouped_vs_daynight": "+0.04 [-0.06, +0.15]",
+    "daynight_vs_allhour": "+1.5 [+1.3, +1.8]",
+    "grouped_p_holm": 1.0
+  }
+}

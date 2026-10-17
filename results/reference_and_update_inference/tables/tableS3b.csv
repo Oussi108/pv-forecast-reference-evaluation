@@ -1,0 +1,13 @@
+Testbed,Model,Policy,Skill vs convex (%) [95% CI],Holm p
+DKASC,LightGBM,Annual,"+0.7 [-9.8, +7.7]",0.977
+DKASC,LightGBM,Monthly,"-3.1 [-14.5, +4.3]",0.977
+DKASC,GRU,Annual,"-34.5 [-57.8, -16.8]",0.000
+DKASC,GRU,Monthly,"-21.3 [-39.5, -6.8]",0.011
+DKASC,Transformer,Annual,"-6.1 [-19.2, +2.6]",0.814
+DKASC,Transformer,Monthly,"-5.0 [-18.6, +3.7]",0.935
+HKUST,LightGBM,Annual,"+1.7 [-2.4, +5.8]",1.000
+HKUST,LightGBM,Monthly,"+2.2 [-2.2, +6.3]",1.000
+HKUST,GRU,Annual,"-3.6 [-11.2, +3.3]",1.000
+HKUST,GRU,Monthly,"+1.5 [-4.3, +6.6]",1.000
+HKUST,Transformer,Annual,"-5.2 [-15.5, +3.3]",1.000
+HKUST,Transformer,Monthly,"+3.8 [-2.2, +8.9]",1.000

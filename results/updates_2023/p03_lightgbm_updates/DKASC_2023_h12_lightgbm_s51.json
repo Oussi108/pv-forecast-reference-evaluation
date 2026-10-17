@@ -1,0 +1,161 @@
+{
+  "status": "complete",
+  "key": "DKASC_2023_h12_lightgbm_s51",
+  "bed": "DKASC",
+  "year": 2023,
+  "horizon": 12,
+  "model": "lightgbm",
+  "seed": 51,
+  "iterations": 396,
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "code": "df7304a828b6cf5b934fd7a6e16365ab4d7ff02650dd643c09ea9b1af2adb27e",
+    "data": "a73e6175dce13b39a9c894d80b8f683412f14ebf29c5b3464548e28173ff729a",
+    "parent_model": "194878a9dc4c2ee5f465c0f04d70f74d7370584d5641993c76ac0853032e74e5",
+    "parent_prediction": "e3364078d30d862cbc9aa611dc10c82ec0411a1be42b18f6bd1469fd88653a1a"
+  },
+  "records": [
+    {
+      "policy": "annual_previous_year",
+      "cutoff": "2023-01-01 00:00:00",
+      "train_n": 7833,
+      "train_max": "2022-12-31 23:00:00",
+      "min_issue": "2023-01-01 00:00:00",
+      "fallback": false
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 1,
+      "cutoff": "2023-01-01 00:00:00",
+      "train_n": 7833,
+      "train_max": "2022-12-31 23:00:00",
+      "min_issue": "2023-01-01 00:00:00",
+      "predictions": 486,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 2,
+      "cutoff": "2023-02-01 00:00:00",
+      "train_n": 7797,
+      "train_max": "2023-01-24 08:00:00",
+      "min_issue": "2023-02-01 00:00:00",
+      "predictions": 620,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 3,
+      "cutoff": "2023-03-01 00:00:00",
+      "train_n": 7828,
+      "train_max": "2023-02-28 23:00:00",
+      "min_issue": "2023-03-01 00:00:00",
+      "predictions": 643,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 4,
+      "cutoff": "2023-04-01 00:00:00",
+      "train_n": 7754,
+      "train_max": "2023-03-31 23:00:00",
+      "min_issue": "2023-04-02 11:00:00",
+      "predictions": 591,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 5,
+      "cutoff": "2023-05-01 00:00:00",
+      "train_n": 7726,
+      "train_max": "2023-04-30 23:00:00",
+      "min_issue": "2023-05-01 00:00:00",
+      "predictions": 714,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 6,
+      "cutoff": "2023-06-01 00:00:00",
+      "train_n": 7701,
+      "train_max": "2023-05-31 23:00:00",
+      "min_issue": "2023-06-01 00:00:00",
+      "predictions": 572,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 7,
+      "cutoff": "2023-07-01 00:00:00",
+      "train_n": 7744,
+      "train_max": "2023-06-30 23:00:00",
+      "min_issue": "2023-07-05 08:00:00",
+      "predictions": 445,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 8,
+      "cutoff": "2023-08-01 00:00:00",
+      "train_n": 7455,
+      "train_max": "2023-07-30 14:00:00",
+      "min_issue": "2023-08-02 07:00:00",
+      "predictions": 713,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 9,
+      "cutoff": "2023-09-01 00:00:00",
+      "train_n": 7442,
+      "train_max": "2023-08-31 23:00:00",
+      "min_issue": "2023-09-01 00:00:00",
+      "predictions": 720,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 10,
+      "cutoff": "2023-10-01 00:00:00",
+      "train_n": 7511,
+      "train_max": "2023-09-30 23:00:00",
+      "min_issue": "2023-10-01 00:00:00",
+      "predictions": 182,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 11,
+      "cutoff": "2023-11-01 00:00:00",
+      "train_n": 6961,
+      "train_max": "2023-10-13 10:00:00",
+      "min_issue": "2023-11-01 10:00:00",
+      "predictions": 60,
+      "fallback": false,
+      "status": "complete"
+    },
+    {
+      "policy": "monthly_trailing_365_days",
+      "month": 12,
+      "cutoff": "2023-12-01 00:00:00",
+      "train_n": 6360,
+      "train_max": "2023-11-17 12:00:00",
+      "min_issue": "2023-12-08 16:00:00",
+      "predictions": 13,
+      "fallback": false,
+      "status": "complete"
+    }
+  ],
+  "prediction_sha256": "fd3938843784127323b17d8e1bb71c67a44c537842452afd3d7121805e335e92",
+  "runtime_seconds": 51.0
+}

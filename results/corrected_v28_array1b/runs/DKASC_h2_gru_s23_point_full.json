@@ -1,0 +1,32 @@
+{
+  "key": "DKASC_h2_gru_s23_point_full",
+  "testbed": "DKASC",
+  "horizon": 2,
+  "model": "gru",
+  "seed": 23,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_epochs": 36,
+    "selection_validation_loss": 0.03792396406569178,
+    "architecture": "gru",
+    "parameters": 4993
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "af0178dd416e8f56424db36ce3a2b65163c156d1a8fd5c930782768b4b771565",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 26.980069637298584,
+  "counts": {
+    "select_train": 5760,
+    "select_val": 2016,
+    "development": 7776,
+    "calibration": 7853,
+    "test": 5787
+  },
+  "test_system_balanced_mae": 0.030125869438052177,
+  "prediction_sha256": "a38071668fcc6ea00f1768839d898c16621fb231d4963209adb092a0fb7a1241",
+  "status": "complete"
+}

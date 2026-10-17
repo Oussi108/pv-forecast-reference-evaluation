@@ -1,0 +1,52 @@
+{
+  "schema_version": "hkust-lightgbm-1",
+  "created_utc": "2026-09-07T09:16:40.713652+00:00",
+  "contract": {
+    "horizon_hours": 12,
+    "features": [
+      "irradiance",
+      "temperature",
+      "humidity",
+      "pressure",
+      "wind",
+      "visibility",
+      "capacity_factor_lag_1h",
+      "capacity_factor_lag_2h",
+      "capacity_factor_lag_3h",
+      "capacity_factor_lag_6h",
+      "capacity_factor_lag_12h",
+      "capacity_factor_lag_24h",
+      "hour_sin",
+      "hour_cos",
+      "dayofyear_sin",
+      "dayofyear_cos"
+    ],
+    "train_year": 2021,
+    "validation_year": 2022,
+    "untouched_test_year": 2023,
+    "seed": 11,
+    "early_stopping": 75
+  },
+  "counts": {
+    "train_rows": 116556,
+    "validation_rows": 205359,
+    "test_rows": 199556,
+    "systems": 24,
+    "best_iteration": 185
+  },
+  "pooled_test_metrics": {
+    "n": 199556,
+    "mae": 0.0496939,
+    "rmse": 0.10093434,
+    "bias": -0.0074897
+  },
+  "system_balanced_test_metrics": {
+    "system_id": "SYSTEM_BALANCED_MEAN",
+    "n_systems": 24,
+    "n": 199556,
+    "mae": 0.04972258,
+    "rmse": 0.09992673,
+    "bias": -0.00749828
+  },
+  "model_fitting": true
+}

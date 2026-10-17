@@ -1,0 +1,68 @@
+system_id,location,latitude,longitude,altitude_m,connection_date,capacity_kw,azimuth,tilt,inverter_resource
+CYT__Station_1_,Cheng_Yu_Tung_Building,22.3,114.17,132.0,2021-01-30T00:00:00,25.0,90/-90deg,10deg,pvsystem:CYT__Station_1__Inverter
+CYT__Station_2_,Cheng_Yu_Tung_Building,22.3,114.17,132.0,2021-01-30T00:00:00,25.0,90/-90deg,10deg,pvsystem:CYT__Station_2__Inverter
+Indoor_Sport_Center,Indoor_Sport_Centre_Building,22.28,114.17,3.0,2021-12-01T00:00:00,33.3,0/180deg,10deg,pvsystem:Indoor_Sport_Center_Inverter
+LSK_North,Lee_Shau_Kee_Business_Building,22.33,114.18,142.0,2021-04-30T00:00:00,55.0,10/-153deg,10deg,pvsystem:LSK_North_Inverter
+LSK_South,Lee_Shau_Kee_Business_Building,22.33,114.18,152.0,2021-04-30T00:00:00,25.0,0deg,0deg,pvsystem:LSK_South_Inverter
+Library,AcademicBuilding,22.28,114.17,87.0,2022-05-31 00:00:00,170.2,Mixed,10deg,"pvsystem:Library_Inverter_1,
+        pvsystem:Library_Inverter_2,
+        pvsystem:Library_Inverter_3"
+SQ1,Staff_Quarter_Tower_1,22.33,114.18,94.0,2021-04-30T00:00:00,27.6,0deg,0deg,pvsystem:SQ1_Inverter
+SQ10,Staff_Quarter_Tower_10,22.3,114.17,124.0,2021-04-30T00:00:00,30.4,175/-5deg,10deg,pvsystem:SQ10_Inverter
+SQ11,,22.3,114.17,124.0,2021-04-30T00:00:00,32.51,Mixed,Mixed,pvsystem:UST_SQ11_Inverter
+SQ12,,22.3,114.17,123.0,2021-02-27T00:00:00,32.12,Mixed,Mixed,pvsystem:UST_SQ12_Inverter
+SQ13,Staff_Quarter_Tower_13,22.3,114.17,125.0,2021-02-27T00:00:00,28.47,Mixed,Mixed,pvsystem:SQ13_Inverter
+SQ14,,22.3,114.17,125.0,2021-02-27T00:00:00,32.9,Mixed,Mixed,pvsystem:UST_SQ14_Inverter
+SQ15,,22.3,114.17,123.0,2021-02-27T00:00:00,33.29,Mixed,Mixed,pvsystem:UST_SQ15_Inverter
+SQ16,Staff_Quarter_Tower_16,22.3,114.17,127.0,2021-02-27T00:00:00,33.15,88/-92deg,10deg,pvsystem:SQ16_Inverter
+SQ17,Staff_Quarter_Tower_17,22.3,114.17,127.0,2021-02-27T00:00:00,37.05,88/-92deg,10deg,pvsystem:SQ17_Inverter
+SQ18,Staff_Quarter_Tower_18,22.3,114.17,125.0,2021-01-30T00:00:00,33.93,73/-107deg,10deg,pvsystem:SQ18_Inverter
+SQ19,,22.3,114.17,124.0,2021-01-30T00:00:00,32.51,Mixed,Mixed,pvsystem:UST_SQ19_Inverter
+SQ2,Staff_Quarter_Tower_2,22.33,114.18,91.0,2021-04-30T00:00:00,33.3,0deg,0deg,pvsystem:SQ2_Inverter
+SQ3,Staff_Quarter_Tower_3,22.41,114.21,79.0,2021-06-01T00:00:00,33.3,0deg,0deg,pvsystem:SQ3_Inverter
+SQ4,Staff_Quarter_Tower_4,22.41,114.21,73.0,2021-04-30T00:00:00,33.3,0deg,0deg,pvsystem:SQ4_Inverter
+SQ567,Staff_Quarter_Tower_5_7,22.41,114.21,41.0,2021-06-01T00:00:00,47.97,0deg,0deg,pvsystem:SQ567_Inverter
+SQ567_Flexible_PV,Staff_Quarter_Tower_5_7,22.41,114.21,41.0,2021-06-01T00:00:00,11.16,Mixed,Mixed,pvsystem:SQ567_Flexible_PV_Inverter
+SQ8,,22.3,114.17,122.0,2021-02-27T00:00:00,32.51,Mixed,Mixed,pvsystem:UST_SQ8_Inverter
+SQ9,Staff_Quarter_Tower_9,22.3,114.17,123.0,2021-02-27T00:00:00,30.81,165/-15deg,10deg,pvsystem:SQ9_Inverter
+SQ_Apartment13_24,Staff_Quarters_Apartments_13_24,22.41,114.21,120.0,2021-07-07T00:00:00,17.0,0deg,0deg,pvsystem:SQ_Apartment13_24_Inverter
+SQ_Apartment1_12,Staff_Quarters_Apartments_1_12,22.41,114.21,120.0,2021-07-07T00:00:00,17.0,0deg,0deg,pvsystem:SQ_Apartment1_12_Inverter
+SQ_Apartment25_36,Staff_Quarters_Apartments_25_36,22.41,114.21,120.0,2021-07-07T00:00:00,17.0,0deg,0deg,pvsystem:SQ_Apartment25_36_Inverter
+SQ_Apartment37_48,Staff_Quarters_Apartments_37_48,22.41,114.21,118.0,2021-07-07T00:00:00,16.22,0deg,0deg,pvsystem:SQ_Apartment37_48_Inverter
+SQ_Apartment37_48_Flexible_PV,Staff_Quarters_Apartments_37_48,22.41,114.21,118.0,2021-07-07T00:00:00,3.72,Mixed,Mixed,pvsystem:SQ_Apartment37_48_Flexible_PV_Inverter
+SQ_Block_P,Staff_Quarter_Block_P,22.41,114.21,133.0,2023-07-21T00:00:00,33.3,0deg,0deg,pvsystem:SQ_Block_P_Inverter
+SQ_Block_Q,Staff_Quarter_Block_Q,22.28,114.17,133.0,2022-08-12T00:00:00,26.26,0deg,0deg,pvsystem:SQ_Block_Q_Inverter
+SQ_Block_Q__Phrase_2_,Staff_Quarter_Block_Q,22.28,114.17,133.0,2022-09-23T00:00:00,10.3,0deg,0deg,pvsystem:SQ_Block_Q__Phrase_2__Inverter
+SQ_Block_R,Staff_Quarter_Block_R,22.28,114.17,133.0,2021-08-18T00:00:00,33.3,0deg,0deg,pvsystem:SQ_Block_R_Inverter
+SQ_Block_S,Staff_Quarter_Block_S,22.28,114.17,133.0,2021-08-18T00:00:00,32.85,0deg,0deg,pvsystem:SQ_Block_S_Inverter
+S_H_Ho_Sports_Hall,S_H_Ho_Sports_Hall_Building,22.28,114.17,96.0,2021-10-02 00:00:00,42.0,0deg,0deg,"pvsystem:S_H_Ho_Sports_Hall_Inverter_1,
+        pvsystem:S_H_Ho_Sports_Hall_Inverter_2"
+Shaw_Auditorium,Shaw_Auditorium_Building,22.2,114.15,135.0,2023-07-29T00:00:00,88.48,Mixed,0deg,pvsystem:Shaw_Auditorium_Inverter
+Tower_A,University_Apartments_Tower_A,22.3,114.17,124.0,2020-12-01T00:00:00,40.29,58deg,0deg,pvsystem:Tower_A_Inverter
+UG_Hall2_2F,Undergraduate_Hall_II,22.41,114.21,25.0,2021-06-01T00:00:00,23.4,0deg,0deg,pvsystem:UG_Hall2_2F_Inverter
+UG_Hall2_RF,Undergraduate_Hall_II,22.41,114.21,22.0,2021-04-30T00:00:00,8.0,0deg,0deg,pvsystem:UG_Hall2_RF_Inverter
+UG_Hall3,Undergraduate_Hall_III,22.41,114.21,38.0,2021-06-01T00:00:00,25.0,0deg,0deg,pvsystem:UG_Hall3_Inverter
+UG_Hall4,Undergraduate_Hall_IV,22.41,114.21,19.0,2021-06-01T00:00:00,32.76,65/-10deg,0/15deg,pvsystem:UG_Hall4_Inverter
+UG_Hall4_Flexible_PV,Undergraduate_Hall_IV,22.41,114.21,19.0,2021-06-01T00:00:00,19.84,Mixed,Mixed,pvsystem:UG_Hall4_Flexible_PV_Inverter
+UG_Hall6,Undergraduate_Hall_VI,22.41,114.21,25.0,2021-04-30T00:00:00,25.0,0deg,0deg,pvsystem:UG_Hall6_Inverter
+UG_Hall7,Undergraduate_Hall_VII,22.41,114.21,27.0,2021-06-01T00:00:00,31.98,56/146deg,0/11deg,pvsystem:UG_Hall7_Inverter
+UG_Hall7_Flexible_PV,Undergraduate_Hall_VII,22.41,114.21,27.0,2021-06-01T00:00:00,5.58,Mixed,Mixed,pvsystem:UG_Hall7_Flexible_PV_Inverter
+UG_Hall8,Undergraduate_Hall_VIII,22.28,114.17,34.0,2023-03-01T00:00:00,25.0,0deg,0deg,pvsystem:UG_Hall8_Inverter
+UG_Hall9,Undergraduate_Hall_IX,22.28,114.17,47.0,2023-03-01T00:00:00,25.0,0deg,0deg,pvsystem:UG_Hall9_Inverter
+Wong_Check_She_Research_Centre,Wong_Check_She_Research_Centre_Building,22.28,114.17,136.0,2021-08-31 00:00:00,100.0,0deg,0deg,"pvsystem:Wong_Check_She_Research_Centre_Inverter_1,
+        pvsystem:Wong_Check_She_Research_Centre_Inverter_2"
+Zone_A1,AcademicBuilding,22.41,114.21,125.0,2021-06-01T00:00:00,33.3,0deg,0deg,pvsystem:Zone_A1_Inverter
+Zone_A2,AcademicBuilding,22.28,114.17,125.0,2023-05-31T00:00:00,249.5,0deg,0deg,"pvsystem:Zone_A2_Inverter_1,
+        pvsystem:Zone_A2_Inverter_2,
+        pvsystem:Zone_A2_Inverter_3"
+Zone_A4,AcademicBuilding,22.41,114.21,125.0,2021-06-01T00:00:00,55.0,0deg,0deg,pvsystem:Zone_A4_Inverter
+Zone_A5,AcademicBuilding,22.28,114.17,125.0,2021-10-02T00:00:00,17.0,0deg,0deg,pvsystem:Zone_A5_Inverter
+Zone_A6,AcademicBuilding,22.41,114.21,125.0,2021-07-31T00:00:00,50.0,0deg,0deg,pvsystem:Zone_A6_Inverter
+Zone_A7,AcademicBuilding,22.28,114.17,125.0,2021-11-08T00:00:00,12.78,90/-90deg,10deg,pvsystem:Zone_A7_Inverter
+Zone_D,AcademicBuilding,22.41,114.21,125.0,2021-12-01T00:00:00,68.62,Mixed,10deg,"pvsystem:Zone_D_Inverter_1,
+        pvsystem:Zone_D_Inverter_2"
+Zone_J1,AcademicBuilding,22.28,114.17,125.0,2021-11-08T00:00:00,25.55,Mixed,10deg,pvsystem:Zone_J1_Inverter
+Zone_J2,AcademicBuilding,22.41,114.21,125.0,2021-12-01T00:00:00,50.0,Mixed,10deg,pvsystem:Zone_J2_Inverter
+Zone_L1__Station_1_,Staff_Quarter_Tower_11,22.3,114.17,125.0,2021-01-30T00:00:00,25.0,Mixed,10deg,pvsystem:Zone_L1__Station_1__Inverter
+Zone_L1__Station_2_,AcademicBuilding,22.3,114.17,125.0,2021-01-30T00:00:00,25.0,Mixed,10deg,pvsystem:Zone_L1__Station_2__Inverter
+Zone_L2,AcademicBuilding,22.41,114.21,125.0,2022-07-30T00:00:00,10.0,0deg,0deg,pvsystem:Zone_L2_Inverter

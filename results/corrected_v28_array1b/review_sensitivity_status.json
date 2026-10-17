@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "protocol_sha256": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+  "fitting_performed": false,
+  "point_rows": 140,
+  "inference_rows": 168,
+  "equal_month_uncertainty": "Descriptive only; no bootstrap or significance claim.",
+  "intervals": "Pointwise 95%; synchronized calendar blocks preserving gaps; conditional on retained samples and fitted seeds.",
+  "multiplicity": "HAC p-values Holm-adjusted across all horizons, models and both references within testbed/population/block length.",
+  "source_manifest_sha256": "ce60358289b75964b2d8a76b5c7184f0c795ada55101fe67521466209e1ae341",
+  "script_sha256": "18a48988f9e8ae17bc00c48a3472cb17c2df8fc320420862a8ae0bbaf5946f45"
+}

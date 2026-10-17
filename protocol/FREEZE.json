@@ -1,0 +1,12 @@
+{
+ "protocol/PREREGISTRATION_v43.md": "872942cb4ad2a73c70499275c4657bd56269d508a53f764637958471cbede368",
+ "protocol/protocol_v43_pvdaq9068.json": "951e8ecbce79a5b53bbbd9e29832affd0588eaaf8b27caa762d6948e84949951",
+ "code/a02_prepare_9068.py": "59eac452b843d91a1b7b9dff792eb776488a9885b45b5378beeff7a4d8ab0593",
+ "code/u01_updates_9068.py": "48eced727adb1e8ffd866c9dc926ce6a11bcf6af141a1e28db7bf08eb910b687",
+ "code/t01_neural_tuning.py": "b1515487d50e19e31c3ea75a1f7bb2faa4aa203b107ec6ece54049fc251d6a73",
+ "results/a02_audit.json": "0db4b1a226f9b7264d6c0ee2588a3d7ec02952e5ff97f9275cc359ccb0aa8311",
+ "results/a02_power_source.json": "dff2a4664c10306327bd54296b5b045dc7345759f097bc296ba6120270d03c59",
+ "results/a01_download_manifest.json": "fc77a736184cb111811dcd57188d47be5b31621119969c36a8d0a998eb9a50b5",
+ "_frozen_utc": "2026-09-26T07:54:05Z",
+ "_statement": "Frozen before any forecast for PVDAQ9068 was produced or scored, and before any tuned neural model was fitted."
+}

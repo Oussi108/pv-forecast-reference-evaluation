@@ -1,0 +1,3 @@
+testbed,lower,upper,variable,fitting_period,use
+DKASC,0.0,0.04759315028786659,standard deviation of last six completed hourly normalized-power values,2021 daytime-target windows,issue-time-known diagnostic/calibration grouping
+HKUST,0.0,0.02221686579287052,standard deviation of last six completed hourly normalized-power values,2021 daytime-target windows,issue-time-known diagnostic/calibration grouping

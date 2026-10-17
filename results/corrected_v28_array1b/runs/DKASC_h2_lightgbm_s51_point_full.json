@@ -1,0 +1,32 @@
+{
+  "key": "DKASC_h2_lightgbm_s51_point_full",
+  "testbed": "DKASC",
+  "horizon": 2,
+  "model": "lightgbm",
+  "seed": 51,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_iterations": [
+      1080
+    ],
+    "objective": "regression_l1"
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "af0178dd416e8f56424db36ce3a2b65163c156d1a8fd5c930782768b4b771565",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 13.332807064056396,
+  "counts": {
+    "select_train": 5760,
+    "select_val": 2016,
+    "development": 7776,
+    "calibration": 7853,
+    "test": 5787
+  },
+  "test_system_balanced_mae": 0.019111987203359604,
+  "prediction_sha256": "8b786320a6448b87a705815a6f3aedf4a23a06c62ba5de5f20e3ae48df1cb696",
+  "status": "complete"
+}

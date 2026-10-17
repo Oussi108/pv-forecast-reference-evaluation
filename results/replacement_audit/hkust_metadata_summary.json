@@ -1,0 +1,23 @@
+{
+  "schema_version": "hkust-metadata-1",
+  "created_utc": "2026-09-07T08:49:41.385767+00:00",
+  "source": {
+    "dataset_doi": "10.5061/dryad.m37pvmd99",
+    "metadata_file": "PV generation system metadata.ttl"
+  },
+  "systems_parsed": 60,
+  "missing_capacity": 0,
+  "missing_connection_date": 0,
+  "duplicate_locations": [
+    "AcademicBuilding",
+    "Cheng_Yu_Tung_Building",
+    "Lee_Shau_Kee_Business_Building",
+    "Staff_Quarter_Block_Q",
+    "Staff_Quarter_Tower_5_7",
+    "Staff_Quarters_Apartments_37_48",
+    "Undergraduate_Hall_II",
+    "Undergraduate_Hall_IV",
+    "Undergraduate_Hall_VII"
+  ],
+  "note": "Review against site-level CSV names before ingestion; no automatic mapping was inferred."
+}

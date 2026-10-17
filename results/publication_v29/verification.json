@@ -1,0 +1,188 @@
+{
+  "status": "passed",
+  "checks": [
+    "finite_sample_rank_80_and_90",
+    "residual_fit_excludes_test_labels",
+    "all_calibration_maps_exclude_test_labels",
+    "daylight_control_matches_direct_order_statistic",
+    "30_policy_bundles_complete",
+    "training_target_strictly_before_prediction_issue",
+    "protocol_and_prediction_hashes_match",
+    "frozen_2021_scores_reproduce_parent_on_both_populations",
+    "72_parent_calibration_rows_reproduced",
+    "temporal_preparation_reproduces_2021_2023_arrays",
+    "temporal_extension_not_mislabelled_untouched",
+    "all_paired_comparisons_finite_with_2000_resamples"
+  ],
+  "policy_bundles": [
+    {
+      "key": "DKASC_2023_h2_s11",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h2_s23",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h2_s37",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h2_s51",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h2_s73",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h6_s11",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h6_s23",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h6_s37",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h6_s51",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2023_h6_s73",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h2_s11",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h2_s23",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h2_s37",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h2_s51",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h2_s73",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h6_s11",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h6_s23",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h6_s37",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h6_s51",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "DKASC_2024_h6_s73",
+      "fit_count": 12,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h2_s11",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h2_s23",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h2_s37",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h2_s51",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h2_s73",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h6_s11",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h6_s23",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h6_s37",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h6_s51",
+      "fit_count": 13,
+      "fallback_count": 0
+    },
+    {
+      "key": "HKUST_2023_h6_s73",
+      "fit_count": 13,
+      "fallback_count": 0
+    }
+  ],
+  "total_new_fits": 380,
+  "manifest": {
+    "configs\\publication_revision_v29.json": "8b9ddb3e22776d555e95d4402b4149ec928de142fc007f11861dc7c0bf89501a",
+    "scripts\\publication_revision_v29.py": "48f72e943e9ff762211e932dc7e131d435d0ab006b234a11054cbf6fe627f6e1",
+    "scripts\\verify_publication_v29.py": "d0796262e21cf53e6b6d9dabd398873ab9d1fe3af54225f9e7d82208666c5b76",
+    "results\\publication_v29\\calibration_groups.csv": "1b1f9337d6c64de6099d7e2f941cf56c1d9805d155da7065c93860f7aa4f1018",
+    "results\\publication_v29\\calibration_inference.csv": "ce7c533cccf93fef8af168f1d46ae2f7b011894bdcb966b1ab4f0af62071d7cc",
+    "results\\publication_v29\\calibration_metrics.csv": "a8d4c5bb04415fdb9d8a9c57a05bff009f167b6233956cf172a42653e8b0337d",
+    "results\\publication_v29\\distribution_metrics.csv": "4276e2e98384eb23bb4c9aea715021397664b030890bf70bd6e5e323d68b0bed",
+    "results\\publication_v29\\temporal_coverage.csv": "89877125ad7b8093111325d1c37c302d2a2c80c871d062e8bf31d6784b42ebc8",
+    "results\\publication_v29\\updating_inference_2023.csv": "8a2c874348e491c5474b3b07bebdd5b185bab68ffc39f93ff9e0a70cd8b485fb",
+    "results\\publication_v29\\updating_inference_2024.csv": "f78ea1bdfd8eeeb782ad6b74d7c6530cdf2d50ca652b503d7a88df9ac1a5da94",
+    "results\\publication_v29\\updating_metrics_2023.csv": "c15a6f7fb22d3611ad458a9f5996d75369bee226c3b74d413e005aeb756aba92",
+    "results\\publication_v29\\updating_metrics_2024.csv": "7ad40ec02f727e578eab25a3eed813d7c01fc528addd2d12791cc90a27390141",
+    "results\\publication_v29\\updating_monthly_2023.csv": "7b4a403f1ec4acf7ae850f83e4173ccdeaea491f33b70df54ff69b4f2170e57d",
+    "results\\publication_v29\\updating_monthly_2024.csv": "21a01e5c7765eed7f4b293df72af400c94f0ef5af67d710396ad3e8cb0600a06"
+  },
+  "independence": "Additional 2024 observations are source-audited same-array data, not an independently certified untouched holdout.",
+  "claim_boundary": "These checks establish implemented controls and recorded numerical consistency; they do not certify publication acceptance."
+}

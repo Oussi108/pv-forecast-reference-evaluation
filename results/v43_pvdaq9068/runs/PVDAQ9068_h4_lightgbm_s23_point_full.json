@@ -1,0 +1,32 @@
+{
+  "key": "PVDAQ9068_h4_lightgbm_s23_point_full",
+  "testbed": "PVDAQ9068",
+  "horizon": 4,
+  "model": "lightgbm",
+  "seed": 23,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_iterations": [
+      148
+    ],
+    "objective": "regression_l1"
+  },
+  "signature": {
+    "protocol": "951e8ecbce79a5b53bbbd9e29832affd0588eaaf8b27caa762d6948e84949951",
+    "data": "aec2e4c0079362aee0794437babeeb3f6164ca7444fffb9103079f30a83cdf7f",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 1.9169752597808838,
+  "counts": {
+    "select_train": 3249,
+    "select_val": 1622,
+    "development": 4871,
+    "calibration": 6755,
+    "test": 5313
+  },
+  "test_system_balanced_mae": 0.07116667181253433,
+  "prediction_sha256": "572ce230dbc807ff177af9533e6252fce8914a768799583d8b645fcf8c56f38f",
+  "status": "complete"
+}

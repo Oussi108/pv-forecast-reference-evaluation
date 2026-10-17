@@ -1,0 +1,7 @@
+Testbed,Model,Frozen,Annual,Monthly,"Monthly skill vs PD, % [95% CI]"
+DKASC,LightGBM,0.0449,0.0405,0.0421,"-1.2 [-12.5, +6.3]"
+DKASC,GRU,0.1032,0.0549,0.0495,"-19.1 [-37.2, -4.9]"
+DKASC,Transformer,0.0614,0.0433,0.0429,"-3.1 [-16.9, +5.6]"
+HKUST,LightGBM,0.1016,0.0911,0.0906,"+6.9 [+2.5, +10.9]"
+HKUST,GRU,0.1066,0.0960,0.0913,"+6.3 [+0.5, +11.2]"
+HKUST,Transformer,0.0997,0.0975,0.0892,"+8.4 [+2.5, +13.4]"

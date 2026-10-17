@@ -1,0 +1,1613 @@
+{
+  "schema_version": "hkust-feature-windows-1",
+  "created_utc": "2026-09-07T08:58:42.677260+00:00",
+  "output": {
+    "root": "<private-feature-output>",
+    "files": 24,
+    "observations_published": false
+  },
+  "contract": {
+    "frequency_minutes": 60,
+    "horizons_hours": [
+      2,
+      4,
+      6,
+      12
+    ],
+    "issue_time": "features are evaluated at timestamp t; labels are y(t+h)",
+    "past_only": true,
+    "target_lags_hours": [
+      1,
+      2,
+      3,
+      6,
+      12,
+      24
+    ],
+    "weather_fields": [
+      "irradiance",
+      "temperature",
+      "humidity",
+      "pressure",
+      "wind",
+      "visibility"
+    ],
+    "interpolation": "none; missing rows are dropped from a window",
+    "split_rule": "year-specific counts are descriptive; model transforms must be fit within development splits"
+  },
+  "summary": {
+    "systems": 24,
+    "total_rows": 542894,
+    "window_totals": {
+      "2": 522347,
+      "4": 521906,
+      "6": 521445,
+      "12": 521471
+    },
+    "model_fitting_authorized": false,
+    "gate": "review"
+  },
+  "files": [
+    {
+      "system_id": "CYT__Station_1_",
+      "source_file": "CYT__Station_1_.csv",
+      "output_file": "CYT__Station_1_.csv",
+      "rows": 23303,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 20597,
+          "by_year": {
+            "2021": 5602,
+            "2022": 7355,
+            "2023": 7640
+          }
+        },
+        "4": {
+          "total": 20533,
+          "by_year": {
+            "2021": 5594,
+            "2022": 7347,
+            "2023": 7592
+          }
+        },
+        "6": {
+          "total": 20470,
+          "by_year": {
+            "2021": 5586,
+            "2022": 7340,
+            "2023": 7544
+          }
+        },
+        "12": {
+          "total": 20499,
+          "by_year": {
+            "2021": 5580,
+            "2022": 7434,
+            "2023": 7485
+          }
+        }
+      },
+      "sha256": "1e01125e737e07ca2fce11f54bee269057ebad914f0fc974d2e154746bb033b6"
+    },
+    {
+      "system_id": "CYT__Station_2_",
+      "source_file": "CYT__Station_2_.csv",
+      "output_file": "CYT__Station_2_.csv",
+      "rows": 22872,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21865,
+          "by_year": {
+            "2021": 5226,
+            "2022": 8643,
+            "2023": 7996
+          }
+        },
+        "4": {
+          "total": 21821,
+          "by_year": {
+            "2021": 5220,
+            "2022": 8639,
+            "2023": 7962
+          }
+        },
+        "6": {
+          "total": 21777,
+          "by_year": {
+            "2021": 5214,
+            "2022": 8635,
+            "2023": 7928
+          }
+        },
+        "12": {
+          "total": 21724,
+          "by_year": {
+            "2021": 5205,
+            "2022": 8629,
+            "2023": 7890
+          }
+        }
+      },
+      "sha256": "18143fac03017eb09199a96628dcb5ec494338fdc6112ff0f00019d34a0c7f19"
+    },
+    {
+      "system_id": "LSK_North",
+      "source_file": "LSK_North.csv",
+      "output_file": "LSK_North.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22469,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 22467,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 22465,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 22459,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "f0470809107ef38050926c8412e033dd81d354d8c156c9b95cb553683cbfa526"
+    },
+    {
+      "system_id": "LSK_South",
+      "source_file": "LSK_South.csv",
+      "output_file": "LSK_South.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21133,
+          "by_year": {
+            "2021": 5105,
+            "2022": 8711,
+            "2023": 7317
+          }
+        },
+        "4": {
+          "total": 21125,
+          "by_year": {
+            "2021": 5105,
+            "2022": 8711,
+            "2023": 7309
+          }
+        },
+        "6": {
+          "total": 21116,
+          "by_year": {
+            "2021": 5105,
+            "2022": 8711,
+            "2023": 7300
+          }
+        },
+        "12": {
+          "total": 21164,
+          "by_year": {
+            "2021": 5105,
+            "2022": 8711,
+            "2023": 7348
+          }
+        }
+      },
+      "sha256": "f11e349a3cb149a7b65f7624a800330a5c7a343eb38aaa082beb7d720d242caf"
+    },
+    {
+      "system_id": "SQ1",
+      "source_file": "SQ1.csv",
+      "output_file": "SQ1.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22476,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8653
+          }
+        },
+        "4": {
+          "total": 22474,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8651
+          }
+        },
+        "6": {
+          "total": 22472,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8649
+          }
+        },
+        "12": {
+          "total": 22466,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8643
+          }
+        }
+      },
+      "sha256": "9b6430aa0bfe8cc3ce82564a1e4b153a8a275f08b30ff4154153dfc2ab8c1265"
+    },
+    {
+      "system_id": "SQ10",
+      "source_file": "SQ10.csv",
+      "output_file": "SQ10.csv",
+      "rows": 22066,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 20720,
+          "by_year": {
+            "2021": 4121,
+            "2022": 8636,
+            "2023": 7963
+          }
+        },
+        "4": {
+          "total": 20680,
+          "by_year": {
+            "2021": 4115,
+            "2022": 8632,
+            "2023": 7933
+          }
+        },
+        "6": {
+          "total": 20639,
+          "by_year": {
+            "2021": 4108,
+            "2022": 8628,
+            "2023": 7903
+          }
+        },
+        "12": {
+          "total": 20616,
+          "by_year": {
+            "2021": 4122,
+            "2022": 8622,
+            "2023": 7872
+          }
+        }
+      },
+      "sha256": "606e4833926d081ebe81db8057dc63f93f298e52d33755395795d55f45f5cfa7"
+    },
+    {
+      "system_id": "SQ11",
+      "source_file": "SQ11.csv",
+      "output_file": "SQ11.csv",
+      "rows": 22067,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 20669,
+          "by_year": {
+            "2021": 4087,
+            "2022": 8602,
+            "2023": 7980
+          }
+        },
+        "4": {
+          "total": 20629,
+          "by_year": {
+            "2021": 4079,
+            "2022": 8596,
+            "2023": 7954
+          }
+        },
+        "6": {
+          "total": 20586,
+          "by_year": {
+            "2021": 4070,
+            "2022": 8590,
+            "2023": 7926
+          }
+        },
+        "12": {
+          "total": 20560,
+          "by_year": {
+            "2021": 4081,
+            "2022": 8581,
+            "2023": 7898
+          }
+        }
+      },
+      "sha256": "bd7e33b738c1c52c4b8064cca5dd89c520e3a8bc95ce618422bb03292782f6b2"
+    },
+    {
+      "system_id": "SQ17",
+      "source_file": "SQ17.csv",
+      "output_file": "SQ17.csv",
+      "rows": 24299,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21725,
+          "by_year": {
+            "2021": 5304,
+            "2022": 8464,
+            "2023": 7957
+          }
+        },
+        "4": {
+          "total": 21642,
+          "by_year": {
+            "2021": 5264,
+            "2022": 8451,
+            "2023": 7927
+          }
+        },
+        "6": {
+          "total": 21566,
+          "by_year": {
+            "2021": 5226,
+            "2022": 8444,
+            "2023": 7896
+          }
+        },
+        "12": {
+          "total": 21549,
+          "by_year": {
+            "2021": 5237,
+            "2022": 8449,
+            "2023": 7863
+          }
+        }
+      },
+      "sha256": "2ba2f0a8e8ea1e4bc471d2b3fd3aab52bd63ccdad6fb1b8cb3a4fd0eb6d83291"
+    },
+    {
+      "system_id": "SQ2",
+      "source_file": "SQ2.csv",
+      "output_file": "SQ2.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22476,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 22474,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 22472,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 22466,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "385d9cfd4982d8154cb5491f54d88bc537fbf8613247577899a57ec68ede024c"
+    },
+    {
+      "system_id": "SQ3",
+      "source_file": "SQ3.csv",
+      "output_file": "SQ3.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22469,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 22467,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 22465,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 22459,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8697,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "2fd6eb092ae8d1b412be603c43e1e4d3e35053d00ff1833121a69fa2fc630cb8"
+    },
+    {
+      "system_id": "SQ4",
+      "source_file": "SQ4.csv",
+      "output_file": "SQ4.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22476,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 22474,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 22472,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 22466,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8704,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "dd02b7daef2005d08f073257c97e3bc655a93cb5a085a86f4580105f312347b6"
+    },
+    {
+      "system_id": "SQ567",
+      "source_file": "SQ567.csv",
+      "output_file": "SQ567.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21756,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8704,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 21754,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8704,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 21752,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8704,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 21746,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8704,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "30d392128f03db611504570fe5123ca066cbf8dd384ce55fd8e948208916947d"
+    },
+    {
+      "system_id": "SQ8",
+      "source_file": "SQ8.csv",
+      "output_file": "SQ8.csv",
+      "rows": 23837,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21676,
+          "by_year": {
+            "2021": 5024,
+            "2022": 8636,
+            "2023": 8016
+          }
+        },
+        "4": {
+          "total": 21639,
+          "by_year": {
+            "2021": 5015,
+            "2022": 8632,
+            "2023": 7992
+          }
+        },
+        "6": {
+          "total": 21599,
+          "by_year": {
+            "2021": 5005,
+            "2022": 8628,
+            "2023": 7966
+          }
+        },
+        "12": {
+          "total": 21649,
+          "by_year": {
+            "2021": 5086,
+            "2022": 8622,
+            "2023": 7941
+          }
+        }
+      },
+      "sha256": "68a9bf4536264cdf4a809a51424549b0384e67c0889dcaf757454ce294066a8b"
+    },
+    {
+      "system_id": "UG_Hall2_2F",
+      "source_file": "UG_Hall2_2F.csv",
+      "output_file": "UG_Hall2_2F.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21421,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8369,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 21417,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8367,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 21413,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8365,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 21418,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8376,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "f99df269ce17435534cdef92f08f058c53f719cf2002926233a9c6e05af7032a"
+    },
+    {
+      "system_id": "UG_Hall2_RF",
+      "source_file": "UG_Hall2_RF.csv",
+      "output_file": "UG_Hall2_RF.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 20786,
+          "by_year": {
+            "2021": 4297,
+            "2022": 8079,
+            "2023": 8410
+          }
+        },
+        "4": {
+          "total": 20780,
+          "by_year": {
+            "2021": 4297,
+            "2022": 8076,
+            "2023": 8407
+          }
+        },
+        "6": {
+          "total": 20774,
+          "by_year": {
+            "2021": 4297,
+            "2022": 8072,
+            "2023": 8405
+          }
+        },
+        "12": {
+          "total": 20823,
+          "by_year": {
+            "2021": 4301,
+            "2022": 8106,
+            "2023": 8416
+          }
+        }
+      },
+      "sha256": "9c38b3da9d8d3daaefa4b8f701f73e74e48eb912b5c3ae8253c695ac548640e6"
+    },
+    {
+      "system_id": "UG_Hall3",
+      "source_file": "UG_Hall3.csv",
+      "output_file": "UG_Hall3.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21626,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8574,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 21621,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8571,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 21616,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8568,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 21616,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8574,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "4eb1b4f52940147d74bafc9c48f65a73dc5f9039413a48dfc2380a24e9fb57b7"
+    },
+    {
+      "system_id": "UG_Hall4",
+      "source_file": "UG_Hall4.csv",
+      "output_file": "UG_Hall4.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21763,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8711,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 21761,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8711,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 21759,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8711,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 21753,
+          "by_year": {
+            "2021": 4392,
+            "2022": 8711,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "41db14bfb0099293a5c99608d1a92c1efeaf0b6572c7e5cbe8a995e8528d7a95"
+    },
+    {
+      "system_id": "UG_Hall6",
+      "source_file": "UG_Hall6.csv",
+      "output_file": "UG_Hall6.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22426,
+          "by_year": {
+            "2021": 5100,
+            "2022": 8678,
+            "2023": 8648
+          }
+        },
+        "4": {
+          "total": 22424,
+          "by_year": {
+            "2021": 5100,
+            "2022": 8678,
+            "2023": 8646
+          }
+        },
+        "6": {
+          "total": 22422,
+          "by_year": {
+            "2021": 5100,
+            "2022": 8678,
+            "2023": 8644
+          }
+        },
+        "12": {
+          "total": 22416,
+          "by_year": {
+            "2021": 5100,
+            "2022": 8678,
+            "2023": 8638
+          }
+        }
+      },
+      "sha256": "390fe471cc5160c21eb2ed4c24f5e89b0c4cff9aebd288e4136f59a663ada216"
+    },
+    {
+      "system_id": "UG_Hall7",
+      "source_file": "UG_Hall7.csv",
+      "output_file": "UG_Hall7.csv",
+      "rows": 22656,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22483,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8660
+          }
+        },
+        "4": {
+          "total": 22481,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8658
+          }
+        },
+        "6": {
+          "total": 22479,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8656
+          }
+        },
+        "12": {
+          "total": 22473,
+          "by_year": {
+            "2021": 5112,
+            "2022": 8711,
+            "2023": 8650
+          }
+        }
+      },
+      "sha256": "61e4ca58ef9f5acada76d56739b72017a52920a198188191b799db4ade80c8a1"
+    },
+    {
+      "system_id": "Zone_A1",
+      "source_file": "Zone_A1.csv",
+      "output_file": "Zone_A1.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21712,
+          "by_year": {
+            "2021": 4385,
+            "2022": 8697,
+            "2023": 8630
+          }
+        },
+        "4": {
+          "total": 21708,
+          "by_year": {
+            "2021": 4385,
+            "2022": 8697,
+            "2023": 8626
+          }
+        },
+        "6": {
+          "total": 21704,
+          "by_year": {
+            "2021": 4385,
+            "2022": 8697,
+            "2023": 8622
+          }
+        },
+        "12": {
+          "total": 21697,
+          "by_year": {
+            "2021": 4385,
+            "2022": 8697,
+            "2023": 8615
+          }
+        }
+      },
+      "sha256": "aa2a05c45196f7762f0c32ed87e693cb043a993b06b0dcd65bea73d98153206e"
+    },
+    {
+      "system_id": "Zone_A2",
+      "source_file": "Zone_A2.csv",
+      "output_file": "Zone_A2.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21320,
+          "by_year": {
+            "2021": 4385,
+            "2022": 8598,
+            "2023": 8337
+          }
+        },
+        "4": {
+          "total": 21314,
+          "by_year": {
+            "2021": 4385,
+            "2022": 8597,
+            "2023": 8332
+          }
+        },
+        "6": {
+          "total": 21306,
+          "by_year": {
+            "2021": 4385,
+            "2022": 8596,
+            "2023": 8325
+          }
+        },
+        "12": {
+          "total": 21311,
+          "by_year": {
+            "2021": 4386,
+            "2022": 8599,
+            "2023": 8326
+          }
+        }
+      },
+      "sha256": "9a09ae1c814d662f2b9aa5c72e6c8428ee72c5ccdedebae36ce753c1c2159f50"
+    },
+    {
+      "system_id": "Zone_A4",
+      "source_file": "Zone_A4.csv",
+      "output_file": "Zone_A4.csv",
+      "rows": 21936,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 21586,
+          "by_year": {
+            "2021": 4310,
+            "2022": 8628,
+            "2023": 8648
+          }
+        },
+        "4": {
+          "total": 21580,
+          "by_year": {
+            "2021": 4308,
+            "2022": 8626,
+            "2023": 8646
+          }
+        },
+        "6": {
+          "total": 21576,
+          "by_year": {
+            "2021": 4306,
+            "2022": 8626,
+            "2023": 8644
+          }
+        },
+        "12": {
+          "total": 21574,
+          "by_year": {
+            "2021": 4308,
+            "2022": 8628,
+            "2023": 8638
+          }
+        }
+      },
+      "sha256": "f6e564ddf5df1463b7c78ff32be1f12c4b644fdad3666bddd96ea5c3e9384b49"
+    },
+    {
+      "system_id": "Zone_L1__Station_1_",
+      "source_file": "Zone_L1__Station_1_.csv",
+      "output_file": "Zone_L1__Station_1_.csv",
+      "rows": 23859,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22384,
+          "by_year": {
+            "2021": 5719,
+            "2022": 8530,
+            "2023": 8135
+          }
+        },
+        "4": {
+          "total": 22346,
+          "by_year": {
+            "2021": 5709,
+            "2022": 8524,
+            "2023": 8113
+          }
+        },
+        "6": {
+          "total": 22302,
+          "by_year": {
+            "2021": 5695,
+            "2022": 8518,
+            "2023": 8089
+          }
+        },
+        "12": {
+          "total": 22307,
+          "by_year": {
+            "2021": 5730,
+            "2022": 8515,
+            "2023": 8062
+          }
+        }
+      },
+      "sha256": "dd2bc15a1fbafdf96403281621bd0c1a03b1f7dc3913fce14f90662b43f90cdb"
+    },
+    {
+      "system_id": "Zone_L1__Station_2_",
+      "source_file": "Zone_L1__Station_2_.csv",
+      "output_file": "Zone_L1__Station_2_.csv",
+      "rows": 23855,
+      "feature_columns": [
+        "capacity_factor_lag_1h",
+        "capacity_factor_lag_2h",
+        "capacity_factor_lag_3h",
+        "capacity_factor_lag_6h",
+        "capacity_factor_lag_12h",
+        "capacity_factor_lag_24h",
+        "irradiance",
+        "temperature",
+        "humidity",
+        "pressure",
+        "wind",
+        "visibility",
+        "hour_sin",
+        "hour_cos",
+        "dayofyear_sin",
+        "dayofyear_cos"
+      ],
+      "label_columns": [
+        "target_h2h",
+        "target_h4h",
+        "target_h6h",
+        "target_h12h"
+      ],
+      "window_counts": {
+        "2": {
+          "total": 22333,
+          "by_year": {
+            "2021": 5682,
+            "2022": 8518,
+            "2023": 8133
+          }
+        },
+        "4": {
+          "total": 22295,
+          "by_year": {
+            "2021": 5670,
+            "2022": 8511,
+            "2023": 8114
+          }
+        },
+        "6": {
+          "total": 22243,
+          "by_year": {
+            "2021": 5655,
+            "2022": 8501,
+            "2023": 8087
+          }
+        },
+        "12": {
+          "total": 22260,
+          "by_year": {
+            "2021": 5690,
+            "2022": 8499,
+            "2023": 8071
+          }
+        }
+      },
+      "sha256": "bccc5bbf34b0ba49f13e2ca100d17d199b51b1cae971fb71304a0a5684d359db"
+    }
+  ],
+  "interpretation": "Private feature/label tables were created for the next locked baseline stage. No scaling, model selection or test-year calibration was performed."
+}

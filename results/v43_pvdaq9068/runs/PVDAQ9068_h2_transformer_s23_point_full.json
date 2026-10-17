@@ -1,0 +1,32 @@
+{
+  "key": "PVDAQ9068_h2_transformer_s23_point_full",
+  "testbed": "PVDAQ9068",
+  "horizon": 2,
+  "model": "transformer",
+  "seed": 23,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_epochs": 39,
+    "selection_validation_loss": 0.05651467146872008,
+    "architecture": "transformer",
+    "parameters": 9985
+  },
+  "signature": {
+    "protocol": "951e8ecbce79a5b53bbbd9e29832affd0588eaaf8b27caa762d6948e84949951",
+    "data": "14d720bae01d9089e7aa47b5438478b54896b43fccd6b1802979cffdbed77b1a",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 68.8553478717804,
+  "counts": {
+    "select_train": 3263,
+    "select_val": 1626,
+    "development": 4889,
+    "calibration": 6769,
+    "test": 5347
+  },
+  "test_system_balanced_mae": 0.07176969200372696,
+  "prediction_sha256": "585d8b93e114376371ffda12653d1ed2fc24c78b798c7fd179fd902af82d3ad4",
+  "status": "complete"
+}

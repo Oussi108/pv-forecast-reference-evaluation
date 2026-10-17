@@ -1,0 +1,21 @@
+# Provider observations, prepared arrays, fitted models and predictions must never be committed.
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.parquet
+*.pt
+*.pth
+*.joblib
+*.h5
+*.zip
+pv_private/
+
+# Python and local environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# build marker of the release assembly script
+.built_by_r01

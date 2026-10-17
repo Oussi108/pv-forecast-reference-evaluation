@@ -1,0 +1,66 @@
+{
+  "schema_version": "hkust-quantile-conformal-h6-1",
+  "created_utc": "2026-09-07T11:56:39.316404+00:00",
+  "contract": {
+    "quantiles": [
+      0.05,
+      0.1,
+      0.5,
+      0.9,
+      0.95
+    ],
+    "train_year": 2021,
+    "calibration_year": 2022,
+    "untouched_test_year": 2023,
+    "conformal_score": "additive central-interval nonconformity",
+    "calibration_quantile": 0.9,
+    "seed": 11
+  },
+  "counts": {
+    "train_rows": 116377,
+    "calibration_rows": 205236,
+    "test_rows": 199832,
+    "systems": 24
+  },
+  "conformal_corrections": {
+    "80": 0.01774535186421473,
+    "90": 0.0
+  },
+  "test_distribution_metrics": {
+    "pinball_q05": 0.005378015060876125,
+    "pinball_q50": 0.027770981589477217,
+    "pinball_q95": 0.007884790196789646,
+    "crps_approx": 0.03322059285007877
+  },
+  "intervals": [
+    {
+      "interval": "raw_80",
+      "nominal": 0.8,
+      "coverage": 0.82205052,
+      "mean_width": 0.1670204,
+      "n": 199832
+    },
+    {
+      "interval": "conformal_80",
+      "nominal": 0.8,
+      "coverage": 0.92422635,
+      "mean_width": 0.20251111,
+      "n": 199832
+    },
+    {
+      "interval": "raw_90",
+      "nominal": 0.9,
+      "coverage": 0.92507706,
+      "mean_width": 0.20844084,
+      "n": 199832
+    },
+    {
+      "interval": "conformal_90",
+      "nominal": 0.9,
+      "coverage": 0.92507706,
+      "mean_width": 0.20844084,
+      "n": 199832
+    }
+  ],
+  "predictions_private": true
+}

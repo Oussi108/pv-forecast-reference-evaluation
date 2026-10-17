@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "stage": "all",
+  "script_sha256": "d7d92e829dd660ff78e03cc50c085e5f20622b05267380e0d69e2a9947f9864f",
+  "verification_sha256": "8be5e7cbab8cc568d3fa58f2acd689bdc82eab6537ec67be32091cdfbf4e3cd2",
+  "bootstrap": "Synchronized non-circular consecutive calendar-day blocks across all systems; 1/7-day sensitivity",
+  "test_history": "Retrospective correction of examined 2023 data",
+  "crps": "Trapezoidal integral over seven quantiles from .05 to .95; explicitly truncated, not exact CRPS",
+  "pit": "Piecewise linear interpolation between supplied quantiles; randomized only at repeated quantiles; unidentified tails clamped to .05/.95. CvM descriptive only, not a full-CDF test.",
+  "calibration_budget": "Retrospective correction-window sensitivity; partial-pooling kappa is fixed using the full 2022 tuning exercise, so this is not a strict total-label-budget experiment.",
+  "partial_pool": "Heuristic weighted average of site/global corrections, validation-selected kappa; no conditional coverage guarantee"
+}

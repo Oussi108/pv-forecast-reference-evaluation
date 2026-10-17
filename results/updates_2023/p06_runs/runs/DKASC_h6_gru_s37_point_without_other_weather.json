@@ -1,0 +1,32 @@
+{
+  "key": "DKASC_h6_gru_s37_point_without_other_weather",
+  "testbed": "DKASC",
+  "horizon": 6,
+  "model": "gru",
+  "seed": 37,
+  "quantile": false,
+  "variant": "without_other_weather",
+  "settings": {
+    "selected_epochs": 40,
+    "selection_validation_loss": 0.047566665347598895,
+    "architecture": "gru",
+    "parameters": 4801
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "cf6f672101ed0f50f27f8b2425a6fb4d148d9991715c1fa6d860c5c9e44c97aa",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 54.67094969749451,
+  "counts": {
+    "select_train": 5748,
+    "select_val": 2012,
+    "development": 7760,
+    "calibration": 7845,
+    "test": 5775
+  },
+  "test_system_balanced_mae": 0.04115767776966095,
+  "prediction_sha256": "20c3d2c91ccf31c67f2d4f7dce24ddf44633f91b4369944d3fae0c11963875c8",
+  "status": "complete"
+}

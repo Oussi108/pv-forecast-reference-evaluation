@@ -1,0 +1,258 @@
+[
+ {
+  "released": "scripts/corrected_study.py",
+  "as_run": "provenance/as_run/release/scripts/corrected_study.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/corrected_study.py",
+  "as_run_sha256": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619",
+  "released_sha256": "40ca42302603a3bd00ac506a757f4b6a4f7acab8d83bdb2ae1f704addc3a01ea",
+  "changed_lines": 2
+ },
+ {
+  "released": "scripts/train_corrected_study.py",
+  "as_run": "provenance/as_run/release/scripts/train_corrected_study.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/train_corrected_study.py",
+  "as_run_sha256": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+  "released_sha256": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+  "changed_lines": 0
+ },
+ {
+  "released": "scripts/evaluate_corrected_study.py",
+  "as_run": "provenance/as_run/release/scripts/evaluate_corrected_study.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/evaluate_corrected_study.py",
+  "as_run_sha256": "d7d92e829dd660ff78e03cc50c085e5f20622b05267380e0d69e2a9947f9864f",
+  "released_sha256": "d7d92e829dd660ff78e03cc50c085e5f20622b05267380e0d69e2a9947f9864f",
+  "changed_lines": 0
+ },
+ {
+  "released": "scripts/publication_revision_v29.py",
+  "as_run": "provenance/as_run/release/scripts/publication_revision_v29.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/publication_revision_v29.py",
+  "as_run_sha256": "48f72e943e9ff762211e932dc7e131d435d0ab006b234a11054cbf6fe627f6e1",
+  "released_sha256": "01ed7dadb4746ce0c3bd2dc75a9665828c923de49315bf723573cb95c4ded566",
+  "changed_lines": 8
+ },
+ {
+  "released": "scripts/audit_hkust_dataset.py",
+  "as_run": "provenance/as_run/release/scripts/audit_hkust_dataset.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/audit_hkust_dataset.py",
+  "as_run_sha256": "419f74fb5fbdae4c895dd8ad107aaaeaa25b59d44ab96de870ca82e677314b6d",
+  "released_sha256": "419f74fb5fbdae4c895dd8ad107aaaeaa25b59d44ab96de870ca82e677314b6d",
+  "changed_lines": 0
+ },
+ {
+  "released": "scripts/parse_hkust_metadata.py",
+  "as_run": "provenance/as_run/release/scripts/parse_hkust_metadata.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/parse_hkust_metadata.py",
+  "as_run_sha256": "c626d00de6d8fb9c701bf98c4941218caae4ba553968baf3e263d07fe49665b7",
+  "released_sha256": "c626d00de6d8fb9c701bf98c4941218caae4ba553968baf3e263d07fe49665b7",
+  "changed_lines": 0
+ },
+ {
+  "released": "scripts/build_hkust_system_map.py",
+  "as_run": "provenance/as_run/release/scripts/build_hkust_system_map.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/release/six-hour-pv-forecasting/scripts/build_hkust_system_map.py",
+  "as_run_sha256": "4c6f4144d1556b739531c5df427ad3805fcd519090038cc5a69ada80cf254737",
+  "released_sha256": "4c6f4144d1556b739531c5df427ad3805fcd519090038cc5a69ada80cf254737",
+  "changed_lines": 0
+ },
+ {
+  "released": "updates/strengthening_runner.py",
+  "as_run": "provenance/as_run/strengthening/strengthening_runner.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/strengthening_runner.py",
+  "as_run_sha256": "1fd1f0ff4365e3ab6502333e7ca07c462e9220d7f1da90de131f27794daf3295",
+  "released_sha256": "03881c90a323918749091c367f256a2268b09ee88827e8e720b73a3e88ac3542",
+  "changed_lines": 39
+ },
+ {
+  "released": "updates/run_p03_updates.py",
+  "as_run": "provenance/as_run/strengthening/run_p03_updates.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/run_p03_updates.py",
+  "as_run_sha256": "b05d5f52cc576dd2af17607294bb3c8a6a2b0afd64b3df7c9fabaf7cc1024698",
+  "released_sha256": "5698beb8fdf067b3464ad6bf0beb3ff0763088803ec1d39105b4869261aeed10",
+  "changed_lines": 11
+ },
+ {
+  "released": "updates/run_p03_lightgbm_updates.py",
+  "as_run": "provenance/as_run/strengthening/run_p03_lightgbm_updates.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/run_p03_lightgbm_updates.py",
+  "as_run_sha256": "df7304a828b6cf5b934fd7a6e16365ab4d7ff02650dd643c09ea9b1af2adb27e",
+  "released_sha256": "319903838572677672fa713dbe4c9d6098d5609b00090e7d9d287f6d155b9d64",
+  "changed_lines": 11
+ },
+ {
+  "released": "updates/run_p03_lightgbm_parallel.py",
+  "as_run": "provenance/as_run/strengthening/run_p03_lightgbm_parallel.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/run_p03_lightgbm_parallel.py",
+  "as_run_sha256": "5e22222c2ee7094ad7bbc4419b534eee9da233f40f6675668adb7d2e5d88cc33",
+  "released_sha256": "5e22222c2ee7094ad7bbc4419b534eee9da233f40f6675668adb7d2e5d88cc33",
+  "changed_lines": 0
+ },
+ {
+  "released": "updates/run_p03_h4_h12_neural_parallel.py",
+  "as_run": "provenance/as_run/strengthening/run_p03_h4_h12_neural_parallel.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/run_p03_h4_h12_neural_parallel.py",
+  "as_run_sha256": "d6faef5245806e7571a9b9b8b4af7f24a678ea9597ae04bac3df2585a7cd2c57",
+  "released_sha256": "d6faef5245806e7571a9b9b8b4af7f24a678ea9597ae04bac3df2585a7cd2c57",
+  "changed_lines": 0
+ },
+ {
+  "released": "updates/run_p03_h2_transformer_parallel.py",
+  "as_run": "provenance/as_run/strengthening/run_p03_h2_transformer_parallel.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/run_p03_h2_transformer_parallel.py",
+  "as_run_sha256": "87b794ef1d7a90731a702cbb08b8f2396ae944e3a4df30909be703f72ddb49ed",
+  "released_sha256": "87b794ef1d7a90731a702cbb08b8f2396ae944e3a4df30909be703f72ddb49ed",
+  "changed_lines": 0
+ },
+ {
+  "released": "updates/run_p06_ablation.py",
+  "as_run": "provenance/as_run/strengthening/run_p06_ablation.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/run_p06_ablation.py",
+  "as_run_sha256": "e6d7ee7da64847b5c879006371b42ad140a230e17c7979536fe9602f263e0048",
+  "released_sha256": "a4b042407deee2b684056f769f4cc800f268c1a5156d3b4d5d6a20f79eccd9a5",
+  "changed_lines": 9
+ },
+ {
+  "released": "updates/aggregate_p06.py",
+  "as_run": "provenance/as_run/strengthening/aggregate_p06.py",
+  "workspace_path": "tmp/paper1_strengthening_20260914/code/aggregate_p06.py",
+  "as_run_sha256": "3575286af41ed4422eb528055d9623a7da40c2e5fac4a7d3a9e5794a7fe363eb",
+  "released_sha256": "d0fc7286f9470b9adeabdf22ea65bea0f1b3dec18d2bbeb5319fdafdb47272cf",
+  "changed_lines": 16
+ },
+ {
+  "released": "analysis/d01_smart_persistence_audit.py",
+  "as_run": "provenance/as_run/v41_repair/code/d01_smart_persistence_audit.py",
+  "workspace_path": "reports/paper1_v41_repair_20260926/code/d01_smart_persistence_audit.py",
+  "as_run_sha256": "2740775e470bf538325a8fb22113541bf315f011634b493a4151a74648681c9f",
+  "released_sha256": "fd459add4907224ca4af7912edaef3e2e007c7ef540a995e551e6a1a8a4211ab",
+  "changed_lines": 7
+ },
+ {
+  "released": "analysis/d02_reference_and_update_inference.py",
+  "as_run": "provenance/as_run/v41_repair/code/d02_reference_and_update_inference.py",
+  "workspace_path": "reports/paper1_v41_repair_20260926/code/d02_reference_and_update_inference.py",
+  "as_run_sha256": "fd2798a5c6fd8832adf505f659181bef66067e530417cca91304ab27cea4ded0",
+  "released_sha256": "500e857f86f2f1841181f8f0839aaadb11d60bead06cd6d56f16edeac571148b",
+  "changed_lines": 12
+ },
+ {
+  "released": "analysis/d03_build_tables.py",
+  "as_run": "provenance/as_run/v41_repair/code/d03_build_tables.py",
+  "workspace_path": "reports/paper1_v41_repair_20260926/code/d03_build_tables.py",
+  "as_run_sha256": "b422eb2559e80ad33ddf45908bdeb7e721c203e9ab87580b306a01d7211645c9",
+  "released_sha256": "14f2668e75c3cacb06ef044bdbf80812876802225615fa12bdfb137dbc7b7fa8",
+  "changed_lines": 7
+ },
+ {
+  "released": "analysis/d04_matched_h6.py",
+  "as_run": "provenance/as_run/v41_repair/code/d04_matched_h6.py",
+  "workspace_path": "reports/paper1_v41_repair_20260926/code/d04_matched_h6.py",
+  "as_run_sha256": "c30fe4b9ce94c5981479195364eeba1a4920bf9b9efa7db7a7b2b8c8cab44d10",
+  "released_sha256": "c30fe4b9ce94c5981479195364eeba1a4920bf9b9efa7db7a7b2b8c8cab44d10",
+  "changed_lines": 0
+ },
+ {
+  "released": "analysis/d05_figure_data.py",
+  "as_run": "provenance/as_run/v41_repair/code/d05_figure_data.py",
+  "workspace_path": "reports/paper1_v41_repair_20260926/code/d05_figure_data.py",
+  "as_run_sha256": "6d00452e674a07efaadb2fb4a4e883d8822bb925278f7301cfb4651e15855aed",
+  "released_sha256": "961c3670d442e2792a25497a876817d77bbbb8d0009e7b58f067a90855d79472",
+  "changed_lines": 0
+ },
+ {
+  "released": "analysis/a01_download.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/a01_download.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/a01_download.py",
+  "as_run_sha256": "edb6124b19b66f3856bed487fe1fcbf08082a887b76325d9ad7eec32003d0b91",
+  "released_sha256": "dbd7e425165791b65d565541ed69df5fd20f7d833d0c0609c387dcd8eed683c3",
+  "changed_lines": 10
+ },
+ {
+  "released": "analysis/a02_prepare_9068.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/a02_prepare_9068.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/a02_prepare_9068.py",
+  "as_run_sha256": "59eac452b843d91a1b7b9dff792eb776488a9885b45b5378beeff7a4d8ab0593",
+  "released_sha256": "42e714781fe1923ff22536fee3870d283e1254f3457c2786583edad5935f3f31",
+  "changed_lines": 11
+ },
+ {
+  "released": "analysis/p01_write_protocol.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/p01_write_protocol.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/p01_write_protocol.py",
+  "as_run_sha256": "aad0b5d7703a84706bdbe3d1d07174bdaebec7f26e41ba5fd7c8dbec747bd7e4",
+  "released_sha256": "3c991f47debc92e72a835556210db34d0a499cc071cc264c74273cfb2ec1ea3d",
+  "changed_lines": 4
+ },
+ {
+  "released": "analysis/u01_updates_9068.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/u01_updates_9068.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/u01_updates_9068.py",
+  "as_run_sha256": "48eced727adb1e8ffd866c9dc926ce6a11bcf6af141a1e28db7bf08eb910b687",
+  "released_sha256": "0a753a0774fabc2d1547f89ead819ddf5f82dc6782c8cf268718a927b280578e",
+  "changed_lines": 10
+ },
+ {
+  "released": "analysis/t01_neural_tuning.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/t01_neural_tuning.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/t01_neural_tuning.py",
+  "as_run_sha256": "b1515487d50e19e31c3ea75a1f7bb2faa4aa203b107ec6ece54049fc251d6a73",
+  "released_sha256": "0b6d6ed56804a181051aed29317b6553b9a946c1b15bdbb1545881d0a9d5e3e8",
+  "changed_lines": 14
+ },
+ {
+  "released": "analysis/d06_evaluate_9068.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/d06_evaluate_9068.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/d06_evaluate_9068.py",
+  "as_run_sha256": "7f3539b7aca158d35d8aed6eb11991e98557dc696f85d2bebe5d841862b87dbc",
+  "released_sha256": "5eaf434271d3628a31e63bb920cf82536859b54dcf89dc78b282b6c1db266374",
+  "changed_lines": 10
+ },
+ {
+  "released": "analysis/d07_evaluate_tuning.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/d07_evaluate_tuning.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/d07_evaluate_tuning.py",
+  "as_run_sha256": "672581ed6332c86e2b58b29780b43324dd37731af6bd0b4a99eeda1aa8424090",
+  "released_sha256": "4d1dba67558a4212999113bf0469a727fe9f089110708602db3faabf80ad28f4",
+  "changed_lines": 20
+ },
+ {
+  "released": "analysis/d08_expectations.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/d08_expectations.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/d08_expectations.py",
+  "as_run_sha256": "9c07572dd4cddf7c175c4b83ca8eb5ff5ac2d28e9186b15b783909d1a9d0e6b2",
+  "released_sha256": "c2ad15482f8734a5de2494778277a0ec73e43598c8f8b6fc136272bb6dafba8a",
+  "changed_lines": 2
+ },
+ {
+  "released": "analysis/d09_matched_9068.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/d09_matched_9068.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/d09_matched_9068.py",
+  "as_run_sha256": "ee3d4d2320b6ad8d500f743aea2d60088b66923ee56dfb16ae28707b2ff3ca28",
+  "released_sha256": "ee3d4d2320b6ad8d500f743aea2d60088b66923ee56dfb16ae28707b2ff3ca28",
+  "changed_lines": 0
+ },
+ {
+  "released": "figures/build_figures_1_2.py",
+  "as_run": "provenance/as_run/v43_upgrade/figures_v5style/build_paper1_figures_v5style.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/figures_v5style/build_paper1_figures_v5style.py",
+  "as_run_sha256": "9a64a50f444d2fe7e0582b23e1b159baa65000db8ee290492551a6fa0be00463",
+  "released_sha256": "057e6811d4bd11fe21e39fb85f3b97a5bd0a7c0b2f01443c03ece929cda39800",
+  "changed_lines": 11
+ },
+ {
+  "released": "figures/f02_result_figures.py",
+  "as_run": "provenance/as_run/v41_repair/code/f02_result_figures.py",
+  "workspace_path": "reports/paper1_v41_repair_20260926/code/f02_result_figures.py",
+  "as_run_sha256": "e92a1ae872afa9e952c3462e5f5955fc5c9436b46c6c9f69f7a92eabb9284a60",
+  "released_sha256": "6d8a0116b33c0ecc7c96ff40cba9a62688db1852554c98164cd807764e086690",
+  "changed_lines": 4
+ },
+ {
+  "released": "figures/f03_figure6.py",
+  "as_run": "provenance/as_run/v43_upgrade/code/f03_figure6.py",
+  "workspace_path": "reports/paper1_v43_upgrade_20260926/code/f03_figure6.py",
+  "as_run_sha256": "9d82b2e1d1642359478c4e6e92a74a6efd66aabb107025601131114e7844b595",
+  "released_sha256": "fe30f5c8e19d5891664c1e29eab0428fbf08d18e565ab0faf193718708d5b412",
+  "changed_lines": 4
+ }
+]

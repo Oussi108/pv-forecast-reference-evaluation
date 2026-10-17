@@ -1,0 +1,32 @@
+{
+  "key": "PVDAQ9068_h12_gru_s11_point_full",
+  "testbed": "PVDAQ9068",
+  "horizon": 12,
+  "model": "gru",
+  "seed": 11,
+  "quantile": false,
+  "variant": "full",
+  "settings": {
+    "selected_epochs": 32,
+    "selection_validation_loss": 0.07585893037841417,
+    "architecture": "gru",
+    "parameters": 4993
+  },
+  "signature": {
+    "protocol": "951e8ecbce79a5b53bbbd9e29832affd0588eaaf8b27caa762d6948e84949951",
+    "data": "e13103061502f183fb372f4daa43684a22583fd7dec75f7d0315e9277699af03",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 16.2713840007782,
+  "counts": {
+    "select_train": 3204,
+    "select_val": 1615,
+    "development": 4819,
+    "calibration": 6712,
+    "test": 5201
+  },
+  "test_system_balanced_mae": 0.08711376041173935,
+  "prediction_sha256": "cb5d298eb5823c35d2b0d8a068327250454b65b7efdf519d9fc7cf3ecbf6f93c",
+  "status": "complete"
+}

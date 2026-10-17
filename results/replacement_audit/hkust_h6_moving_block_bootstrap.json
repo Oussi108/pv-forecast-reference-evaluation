@@ -1,0 +1,16 @@
+{
+  "schema_version": "hkust-h6-moving-block-bootstrap-1",
+  "created_utc": "2026-09-07T12:31:22.463259+00:00",
+  "block": "calendar day within each system",
+  "resamples": 2000,
+  "seed": 42,
+  "systems": 24,
+  "baseline_mae": 0.1855418,
+  "model_mae": 0.05972263,
+  "skill": 0.67811767,
+  "skill_ci_95": [
+    0.67368601,
+    0.68240879
+  ],
+  "interpretation": "Temporal dependence is partially retained through daily blocks; this remains descriptive and is not a formal DM test."
+}

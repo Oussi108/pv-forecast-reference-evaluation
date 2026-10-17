@@ -1,0 +1,21 @@
+{
+  "schema_version": "hkust-h6-bootstrap-1",
+  "created_utc": "2026-09-07T12:03:26.622895+00:00",
+  "unit": "system (24 systems resampled with replacement)",
+  "resamples": 5000,
+  "seed": 42,
+  "systems": 24,
+  "baseline_mae": 0.18345383,
+  "model_mae": 0.05973179,
+  "mae_improvement": 0.12372205,
+  "skill": 0.67440426,
+  "skill_ci_95": [
+    0.61067066,
+    0.73021243
+  ],
+  "difference_ci_95": [
+    0.11202987,
+    0.13396027
+  ],
+  "interpretation": "System-cluster bootstrap is descriptive and does not account for temporal dependence within a system."
+}

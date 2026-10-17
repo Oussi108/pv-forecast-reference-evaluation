@@ -1,0 +1,23 @@
+{
+  "chosen_smart_reference": {
+    "DKASC": "ghi_min200",
+    "HKUST": "envelope"
+  },
+  "selection_year": 2022,
+  "selection_population": "daylight",
+  "selection_horizon": 6,
+  "seeds": [
+    11,
+    23,
+    37,
+    51,
+    73
+  ],
+  "aggregation": "mean of seed-wise absolute losses, then equal-system mean",
+  "block_engine": "evaluate_corrected_study.block_interval (synchronized non-circular calendar blocks, fixed system set, rejected draws dropped)",
+  "holm_families": [
+    "family",
+    "testbed"
+  ],
+  "elapsed_s": 246.2
+}

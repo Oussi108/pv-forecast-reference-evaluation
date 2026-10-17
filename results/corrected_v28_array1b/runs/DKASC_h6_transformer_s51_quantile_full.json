@@ -1,0 +1,32 @@
+{
+  "key": "DKASC_h6_transformer_s51_quantile_full",
+  "testbed": "DKASC",
+  "horizon": 6,
+  "model": "transformer",
+  "seed": 51,
+  "quantile": true,
+  "variant": "full",
+  "settings": {
+    "selected_epochs": 39,
+    "selection_validation_loss": 0.015449349044509246,
+    "architecture": "transformer",
+    "parameters": 10183
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "cf6f672101ed0f50f27f8b2425a6fb4d148d9991715c1fa6d860c5c9e44c97aa",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 130.7271819114685,
+  "counts": {
+    "select_train": 5748,
+    "select_val": 2012,
+    "development": 7760,
+    "calibration": 7845,
+    "test": 5775
+  },
+  "test_system_balanced_mae": 0.028812620788812637,
+  "prediction_sha256": "d37c12b7f008a59140f8a75f63777179cfe5eceb4ff1720149026cc966c1df62",
+  "status": "complete"
+}

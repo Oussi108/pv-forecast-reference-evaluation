@@ -1,0 +1,147 @@
+{
+  "status": "complete",
+  "run_id": "HKUST_2023_h6_gru_s51",
+  "bed": "HKUST",
+  "year": 2023,
+  "horizon": 6,
+  "model": "gru",
+  "seed": 51,
+  "selected_epochs": 5,
+  "parent_prediction_sha256": "c86da175100435322d89eed900ea2acc9e0e6fe682b30825634b8224fe0985e7",
+  "data_sha256": "2171a26924d5ef025eed9dedbb06d9bcd5324788ef793cbd49d3c5576461b52f",
+  "monthly": [
+    {
+      "month": 1,
+      "status": "complete",
+      "fit_n": 260729,
+      "prediction_n": 20080,
+      "cutoff": "2023-01-01 00:00:00",
+      "train_target_max": "2022-12-31 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.038971340203174436,
+      "model_sha256": "b1c56e91932a6014f04d6937b5c636aa0cc670067515f7a55ad2708107a528af"
+    },
+    {
+      "month": 2,
+      "status": "complete",
+      "fit_n": 259583,
+      "prediction_n": 19971,
+      "cutoff": "2023-02-01 00:00:00",
+      "train_target_max": "2023-01-31 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.03907969684097703,
+      "model_sha256": "bf736a82a7098a4959ba85fe5701bb3fa040a2dfc24e607276d6a4742620187b"
+    },
+    {
+      "month": 3,
+      "status": "complete",
+      "fit_n": 260061,
+      "prediction_n": 22530,
+      "cutoff": "2023-03-01 00:00:00",
+      "train_target_max": "2023-02-28 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.03889651347306789,
+      "model_sha256": "ad8fa22ef00a4e2b54a6579334fb1e06845565439e10199889178a432c965b59"
+    },
+    {
+      "month": 4,
+      "status": "complete",
+      "fit_n": 260070,
+      "prediction_n": 22084,
+      "cutoff": "2023-04-01 00:00:00",
+      "train_target_max": "2023-03-31 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.0392241158651619,
+      "model_sha256": "eb90a31b309095381ed17a527180423a348e728f8ca884ec8c7c12e99add6945"
+    },
+    {
+      "month": 5,
+      "status": "complete",
+      "fit_n": 260139,
+      "prediction_n": 22877,
+      "cutoff": "2023-05-01 00:00:00",
+      "train_target_max": "2023-04-30 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.039149289059363296,
+      "model_sha256": "873debeef7863b76c34e94981994604704237b2e503a77123ea97b4e2045ad4e"
+    },
+    {
+      "month": 6,
+      "status": "complete",
+      "fit_n": 260342,
+      "prediction_n": 19047,
+      "cutoff": "2023-06-01 00:00:00",
+      "train_target_max": "2023-05-31 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.039597667301267604,
+      "model_sha256": "99714280fc8f13fce8ad6a6ab44533ad732c9ba31f163a15159de9e6954bce10"
+    },
+    {
+      "month": 7,
+      "status": "complete",
+      "fit_n": 257431,
+      "prediction_n": 22530,
+      "cutoff": "2023-07-01 00:00:00",
+      "train_target_max": "2023-06-30 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.0405016049484854,
+      "model_sha256": "91bd32f08a4e571196e47ce8681e8728bcab2c4e5b37a304bdb259cf1ccd5c63"
+    },
+    {
+      "month": 8,
+      "status": "complete",
+      "fit_n": 257356,
+      "prediction_n": 22367,
+      "cutoff": "2023-08-01 00:00:00",
+      "train_target_max": "2023-07-31 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.04039011951172033,
+      "model_sha256": "98d11922f5dd9690e79b23e3e9471f1df321c56c1dc5246e087c98fe7a7661e6"
+    },
+    {
+      "month": 9,
+      "status": "complete",
+      "fit_n": 256618,
+      "prediction_n": 15689,
+      "cutoff": "2023-09-01 00:00:00",
+      "train_target_max": "2023-08-31 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.04061358604875118,
+      "model_sha256": "f7c07857f06e9a5ab1bd99f21081e73224db0ad54e16347955d814152eb05eb5"
+    },
+    {
+      "month": 10,
+      "status": "complete",
+      "fit_n": 250037,
+      "prediction_n": 21652,
+      "cutoff": "2023-10-01 00:00:00",
+      "train_target_max": "2023-09-30 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.04049045821708797,
+      "model_sha256": "cf551ff5fe75f1d898507aeee72341b2d4d0ad27d3c57c058d93221a498b60ce"
+    },
+    {
+      "month": 11,
+      "status": "complete",
+      "fit_n": 249549,
+      "prediction_n": 22081,
+      "cutoff": "2023-11-01 00:00:00",
+      "train_target_max": "2023-10-31 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.04079599733253221,
+      "model_sha256": "cf2ac627572b3a83ae25509b0024cbca3b29e724d6677c8e41cea72e12cc80a7"
+    },
+    {
+      "month": 12,
+      "status": "complete",
+      "fit_n": 249947,
+      "prediction_n": 22183,
+      "cutoff": "2023-12-01 00:00:00",
+      "train_target_max": "2023-11-30 23:00:00",
+      "epochs": 5,
+      "last_loss": 0.040281922271627156,
+      "model_sha256": "68e5a6d3ddcef83dc9f8134c0ee6d5ad1d072edf2a222430b3467b1d4f9423b2"
+    }
+  ],
+  "prediction_sha256": "15a2badc274a87f14553482ae301e2161b470c3631c591653e801ced7d52a516"
+}

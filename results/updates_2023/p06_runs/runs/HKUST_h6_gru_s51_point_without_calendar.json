@@ -1,0 +1,32 @@
+{
+  "key": "HKUST_h6_gru_s51_point_without_calendar",
+  "testbed": "HKUST",
+  "horizon": 6,
+  "model": "gru",
+  "seed": 51,
+  "quantile": false,
+  "variant": "without_calendar",
+  "settings": {
+    "selected_epochs": 5,
+    "selection_validation_loss": 0.05529954794326948,
+    "architecture": "gru",
+    "parameters": 4865
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "2171a26924d5ef025eed9dedbb06d9bcd5324788ef793cbd49d3c5576461b52f",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 362.78279280662537,
+  "counts": {
+    "select_train": 92805,
+    "select_val": 63933,
+    "development": 156738,
+    "calibration": 260729,
+    "test": 253091
+  },
+  "test_system_balanced_mae": 0.04742100462317467,
+  "prediction_sha256": "e066dea4cad0ed6e3e62b6a0d88ef6a24ec9825f11dc8918b264c136570e909c",
+  "status": "complete"
+}

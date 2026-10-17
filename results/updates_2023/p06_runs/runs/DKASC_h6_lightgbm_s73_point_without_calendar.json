@@ -1,0 +1,32 @@
+{
+  "key": "DKASC_h6_lightgbm_s73_point_without_calendar",
+  "testbed": "DKASC",
+  "horizon": 6,
+  "model": "lightgbm",
+  "seed": 73,
+  "quantile": false,
+  "variant": "without_calendar",
+  "settings": {
+    "selected_iterations": [
+      1200
+    ],
+    "objective": "regression_l1"
+  },
+  "signature": {
+    "protocol": "2f90b3a92daa3a0cb86a7a47d08259028402cc1a4243da087e5755bc4cd576c9",
+    "data": "cf6f672101ed0f50f27f8b2425a6fb4d148d9991715c1fa6d860c5c9e44c97aa",
+    "training_code": "4fc7c4978bd6f512565a7ef6c100e99809a455c4fbf15634254612141ace8a28",
+    "preparation_code": "8b328409819e0b681d120ead3492e343923e3143625de2b21e0570b330b1a619"
+  },
+  "runtime_seconds": 19.08121371269226,
+  "counts": {
+    "select_train": 5748,
+    "select_val": 2012,
+    "development": 7760,
+    "calibration": 7845,
+    "test": 5775
+  },
+  "test_system_balanced_mae": 0.020784035325050354,
+  "prediction_sha256": "6364cf8ad9b48341205d39db0a2e37a9e2a4f6246561844013d93170e9235516",
+  "status": "complete"
+}

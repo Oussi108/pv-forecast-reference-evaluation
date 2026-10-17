@@ -1,0 +1,78 @@
+{
+  "DKASC": {
+    "persistence": 0.28362175822257996,
+    "previous_day": 0.04159281402826309,
+    "climatology": 0.10411208122968674,
+    "smart_v28": 0.10838223993778229,
+    "keys": 2706,
+    "keys_all_variants_finite": 2706,
+    "max_abs_diff_v28_vs_recomputed": 5.3447579473342444e-08,
+    "smart_v28_recomputed_on_common_keys": 0.10838224479918929,
+    "smart_ghi_min200_on_common_keys": 0.09545681176978903,
+    "smart_poa_min20_on_common_keys": 0.1788913712564285,
+    "smart_poa_min200_on_common_keys": 0.16281507039115908,
+    "smart_envelope_on_common_keys": 0.11107093725395577,
+    "previous_day_on_common_keys": 0.04159281402826309,
+    "v28_error_by_source_clear_ghi": {
+      "(20, 100]": {
+        "share": 0.3237250554323725,
+        "mae": 0.15860828757286072
+      },
+      "(100, 200]": {
+        "share": 0.2886178861788618,
+        "mae": 0.13073766231536865
+      },
+      "(200, 400]": {
+        "share": 0.07723577235772358,
+        "mae": 0.06279117614030838
+      },
+      "(400, 700]": {
+        "share": 0.15447154471544716,
+        "mae": 0.051574841141700745
+      },
+      "(700, 2000]": {
+        "share": 0.15594974131559497,
+        "mae": 0.04159654676914215
+      }
+    },
+    "issue_hour_share_night": 0.35439763488543974
+  },
+  "HKUST": {
+    "persistence": 0.23520536720752716,
+    "previous_day": 0.09736186265945435,
+    "climatology": 0.1240461990237236,
+    "smart_v28": 0.2304571121931076,
+    "keys": 121644,
+    "keys_all_variants_finite": 78652,
+    "max_abs_diff_v28_vs_recomputed": 5.9574137178941555e-08,
+    "smart_v28_recomputed_on_common_keys": 0.23391813756865074,
+    "smart_ghi_min200_on_common_keys": 0.165355658071164,
+    "smart_poa_min20_on_common_keys": 0.2531174859417749,
+    "smart_poa_min200_on_common_keys": 0.1747516465862984,
+    "smart_envelope_on_common_keys": 0.1087661068838791,
+    "previous_day_on_common_keys": 0.09989527612924576,
+    "v28_error_by_source_clear_ghi": {
+      "(20, 100]": {
+        "share": 0.3363914373088685,
+        "mae": 0.3371451795101166
+      },
+      "(100, 200]": {
+        "share": 0.27002564861398837,
+        "mae": 0.21328505873680115
+      },
+      "(200, 400]": {
+        "share": 0.07674854493439874,
+        "mae": 0.2391558736562729
+      },
+      "(400, 700]": {
+        "share": 0.16253987044161652,
+        "mae": 0.1534125804901123
+      },
+      "(700, 2000]": {
+        "share": 0.15429449870112788,
+        "mae": 0.0727703869342804
+      }
+    },
+    "issue_hour_share_night": 0.38678438722830555
+  }
+}

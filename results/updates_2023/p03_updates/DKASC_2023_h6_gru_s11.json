@@ -1,0 +1,99 @@
+{
+  "status": "complete",
+  "run_id": "DKASC_2023_h6_gru_s11",
+  "bed": "DKASC",
+  "year": 2023,
+  "horizon": 6,
+  "model": "gru",
+  "seed": 11,
+  "selected_epochs": 28,
+  "parent_prediction_sha256": "d39e4b9e2e45d975bc298710081b6df6afc5915bf4584a245a9e46b6bc833e88",
+  "data_sha256": "cf6f672101ed0f50f27f8b2425a6fb4d148d9991715c1fa6d860c5c9e44c97aa",
+  "monthly": [
+    {
+      "month": 1,
+      "status": "reused",
+      "fit_n": 7845,
+      "prediction_n": 492,
+      "cutoff": "2023-01-01 00:00:00"
+    },
+    {
+      "month": 2,
+      "status": "reused",
+      "fit_n": 7813,
+      "prediction_n": 620,
+      "cutoff": "2023-02-01 00:00:00"
+    },
+    {
+      "month": 3,
+      "status": "reused",
+      "fit_n": 7840,
+      "prediction_n": 642,
+      "cutoff": "2023-03-01 00:00:00"
+    },
+    {
+      "month": 4,
+      "status": "reused",
+      "fit_n": 7765,
+      "prediction_n": 591,
+      "cutoff": "2023-04-01 00:00:00"
+    },
+    {
+      "month": 5,
+      "status": "reused",
+      "fit_n": 7742,
+      "prediction_n": 714,
+      "cutoff": "2023-05-01 00:00:00"
+    },
+    {
+      "month": 6,
+      "status": "reused",
+      "fit_n": 7712,
+      "prediction_n": 576,
+      "cutoff": "2023-06-01 00:00:00"
+    },
+    {
+      "month": 7,
+      "status": "reused",
+      "fit_n": 7759,
+      "prediction_n": 445,
+      "cutoff": "2023-07-01 00:00:00"
+    },
+    {
+      "month": 8,
+      "status": "reused",
+      "fit_n": 7464,
+      "prediction_n": 713,
+      "cutoff": "2023-08-01 00:00:00"
+    },
+    {
+      "month": 9,
+      "status": "reused",
+      "fit_n": 7457,
+      "prediction_n": 720,
+      "cutoff": "2023-09-01 00:00:00"
+    },
+    {
+      "month": 10,
+      "status": "reused",
+      "fit_n": 7526,
+      "prediction_n": 183,
+      "cutoff": "2023-10-01 00:00:00"
+    },
+    {
+      "month": 11,
+      "status": "reused",
+      "fit_n": 6971,
+      "prediction_n": 67,
+      "cutoff": "2023-11-01 00:00:00"
+    },
+    {
+      "month": 12,
+      "status": "reused",
+      "fit_n": 6377,
+      "prediction_n": 12,
+      "cutoff": "2023-12-01 00:00:00"
+    }
+  ],
+  "prediction_sha256": "491d46e5b8daba9d84322fd665a8f617e2c6ca56d9b5b801d1abc61941ade825"
+}

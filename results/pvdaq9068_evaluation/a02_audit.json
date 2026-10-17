@@ -1,0 +1,86 @@
+{
+ "info": {
+  "capacity_kw": 4738.0,
+  "capacity_source": "power(kW DC)",
+  "power_column": [
+   "inverter_1_ac_power_(kw)_inv_150143",
+   "inverter_2_ac_power_(kw)_inv_150144"
+  ],
+  "irradiance_columns": [
+   "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723",
+   "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725"
+  ],
+  "temperature_column": [
+   "weather_station_ambient_temperature_(c)_o_149727"
+  ],
+  "native_step_s": 300.0,
+  "expected_per_hour": 12
+ },
+ "years": [
+  {
+   "year": 2021,
+   "hours": 8760,
+   "power_valid": 0.8660958904109589,
+   "all_channels_valid": 0.7829908675799087,
+   "days_with_power": 334,
+   "months_with_power": 12,
+   "last_valid": "2021-12-31 23:00:00-07:00",
+   "physical_bad": 0,
+   "humidity_valid": 0.8898401826484018
+  },
+  {
+   "year": 2022,
+   "hours": 8760,
+   "power_valid": 0.9337899543378996,
+   "all_channels_valid": 0.9248858447488585,
+   "days_with_power": 347,
+   "months_with_power": 12,
+   "last_valid": "2022-12-31 23:00:00-07:00",
+   "physical_bad": 0,
+   "humidity_valid": 0.9908675799086758
+  },
+  {
+   "year": 2023,
+   "hours": 8760,
+   "power_valid": 0.7617579908675799,
+   "all_channels_valid": 0.7567351598173516,
+   "days_with_power": 296,
+   "months_with_power": 11,
+   "last_valid": "2023-11-16 13:00:00-07:00",
+   "physical_bad": 0,
+   "humidity_valid": 0.9523972602739726
+  },
+  {
+   "year": 2024,
+   "hours": 8784,
+   "power_valid": 0.9642531876138434,
+   "all_channels_valid": 0.9386384335154827,
+   "days_with_power": 361,
+   "months_with_power": 12,
+   "last_valid": "2024-12-31 23:00:00-07:00",
+   "physical_bad": 0,
+   "humidity_valid": 0.973816029143898
+  }
+ ],
+ "timezone": "America/Denver",
+ "dev_centroid_hour": {
+  "power": 13.111940619409046,
+  "clear_ghi": 13.277838062958839
+ },
+ "dev_monthly_power_centroid": {
+  "1": 12.75,
+  "2": 12.75,
+  "3": 13.24,
+  "4": 13.44,
+  "5": 13.34,
+  "6": 13.3,
+  "7": 13.12,
+  "8": 13.48,
+  "9": 13.37,
+  "10": 13.2,
+  "11": 12.38,
+  "12": 12.28
+ },
+ "dev_max_power": 0.7797476666197646,
+ "dev_p99_power": 0.7728721682847897
+}
