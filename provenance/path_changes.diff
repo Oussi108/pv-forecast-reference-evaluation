@@ -551,3 +551,50 @@
  plt.rcParams.update({'font.family': 'Arial', 'font.size': 7, 'axes.linewidth': 0.6, 'xtick.major.width': 0.6,
                       'ytick.major.width': 0.6, 'xtick.major.size': 2.5, 'ytick.major.size': 2.5, 'svg.fonttype': 'none',
                       'pdf.fonttype': 42, 'axes.spines.top': False, 'axes.spines.right': False, 'legend.frameon': False})
+--- as_run/jrse_submission/figures/src/jrse_figures_1_2.py
++++ figures/jrse_figures_1_2.py
+@@ -13,6 +13,7 @@
+ """
+ import json
+ import os
++import sys
+ from pathlib import Path
+ 
+ import matplotlib
+@@ -24,8 +25,10 @@
+ from matplotlib.colors import to_rgb
+ from matplotlib.patches import Circle, FancyArrowPatch, FancyBboxPatch, Polygon, Rectangle
+ 
+-OUT = Path(__file__).resolve().parents[1] / "production"
+-WS = Path(r"E:/master in china/s2/research/solar energy forecasting")
++OUT = Path(__file__).resolve().parents[1] / "results" / "figures" / "jrse"
++OUT.mkdir(parents=True, exist_ok=True)
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
++from pv_paths import PRIV_PVDAQ  # noqa: E402
+ S = 6.69 / 7.2            # JRSE: printed at the AIP two-column maximum width (6.69 in); drawing units stay in v44 inches
+ MINPT = 8.0               # JRSE: minimum text size at printed size
+ plt.rcParams.update({"font.family": "Times New Roman", "font.size": 9, "mathtext.fontset": "stix", "text.color": "#20242b",
+@@ -39,7 +42,7 @@
+ ORANGE, ORANGE_F = "#bb9062", "#faf0e2"
+ RUST, RUST_F = "#b0644e", "#f6e6df"
+ GREY, GREY_F = "#b9bec6", "#f6f7f9"
+-SRC = WS / "tmp/paper1_v43_private/prepared/PVDAQ9068/pvdaq_9068.pkl"
++SRC = PRIV_PVDAQ / "prepared/PVDAQ9068/pvdaq_9068.pkl"
+ END = pd.Timestamp("2021-09-24 14:00", tz="America/Denver")
+ CREDIT = "Example series: NREL PVDAQ system 9068 (CC BY 4.0), humidity NOAA ISD Greeley, 2021"
+ 
+--- as_run/jrse_submission/figures/src/jrse_figures_3_to_6.py
++++ figures/jrse_figures_3_to_6.py
+@@ -17,10 +17,10 @@
+ from matplotlib.lines import Line2D
+ from matplotlib.patches import Patch
+ 
+-REL = Path(r'E:/master in china/s2/research/solar energy forecasting/paper1_code_release')
++REL = Path(__file__).resolve().parents[1]
+ RES = REL / 'results/reference_and_update_inference'
+ RES9 = REL / 'results/pvdaq9068_evaluation'
+-OUT = Path(__file__).resolve().parents[1] / 'production'
++OUT = REL / 'results/figures/jrse'
+ OUT.mkdir(parents=True, exist_ok=True)
+ FS = 8.0                                   # minimum text size (pt) at printed size
+ plt.rcParams.update({'font.family': 'Arial', 'font.size': FS, 'axes.linewidth': 0.6, 'xtick.major.width': 0.6,

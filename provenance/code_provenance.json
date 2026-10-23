@@ -254,5 +254,21 @@
   "as_run_sha256": "9d82b2e1d1642359478c4e6e92a74a6efd66aabb107025601131114e7844b595",
   "released_sha256": "fe30f5c8e19d5891664c1e29eab0428fbf08d18e565ab0faf193718708d5b412",
   "changed_lines": 4
+ },
+ {
+  "released": "figures/jrse_figures_1_2.py",
+  "as_run": "provenance/as_run/jrse_submission/figures/src/jrse_figures_1_2.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/paper1/JRSE_submission/figures/src/jrse_figures_1_2.py",
+  "as_run_sha256": "bc7588b5c2063c0f54631012f527a54a42c4c7e5d5e5be51a40d0a5e24ed8ba1",
+  "released_sha256": "68f6289bd830910c5f5e055ad64f7cbd0376ff88b77970209794db9543957069",
+  "changed_lines": 9
+ },
+ {
+  "released": "figures/jrse_figures_3_to_6.py",
+  "as_run": "provenance/as_run/jrse_submission/figures/src/jrse_figures_3_to_6.py",
+  "workspace_path": "WorkLoad/solar_pipeline_scaffold/paper1/JRSE_submission/figures/src/jrse_figures_3_to_6.py",
+  "as_run_sha256": "0a6b413e951e7709f120fe43a3ed1945fe71cd7339e7fbd9d8d64d147bb85c18",
+  "released_sha256": "cd571afdaa4a714219b4aa457572682742b976ee34a8b42c42522a97e3d73489",
+  "changed_lines": 4
  }
 ]

@@ -48,7 +48,7 @@ LightGBM and the Transformer at 6 h. Run records and training curves go to `resu
 ## 3. Interval calibration, LightGBM updates and the 2024 Array 1B extension
 
 ```bash
-python scripts/publication_revision_v29.py --stage calibration   # fixed-map interval corrections (Table 4, Figure 5)
+python scripts/publication_revision_v29.py --stage calibration   # fixed-map interval corrections (Table IV, Figure 5)
 python scripts/publication_revision_v29.py --stage updating      # LightGBM annual/monthly updates, 2023
 python scripts/publication_revision_v29.py --stage temporal      # Array 1B 2024 (reads raw/DKASC for 2024)
 ```
@@ -79,7 +79,7 @@ python analysis/d01_smart_persistence_audit.py 6    # how the any-daylight smart
 python analysis/d02_reference_and_update_inference.py
 python analysis/d04_matched_h6.py
 python analysis/d05_figure_data.py
-python analysis/d03_build_tables.py                 # Holm families, Tables 2-4, S1-S6, text numbers
+python analysis/d03_build_tables.py                 # Holm families, Tables II-IV, S1-S6, text numbers
 ```
 
 `d02` does three jobs:
@@ -102,7 +102,7 @@ python analysis/u01_updates_9068.py       # annual and monthly updates, 2023 and
 python analysis/t01_neural_tuning.py PVDAQ9068 DKASC HKUST   # neural-configuration grid (all three testbeds)
 python analysis/d06_evaluate_9068.py      # pre-specified contrasts, references, calibration
 python analysis/d09_matched_9068.py       # contrast C5 on matched keys
-python analysis/d08_expectations.py       # expectations E1-E5 (Table 5)
+python analysis/d08_expectations.py       # expectations E1-E5 (Table V)
 python analysis/d07_evaluate_tuning.py    # configuration sensitivity (Tables S13a, S13b)
 ```
 
@@ -118,6 +118,8 @@ python analysis/d07_evaluate_tuning.py    # configuration sensitivity (Tables S1
 python figures/build_figures_1_2.py   # Figures 1-2 (needs the prepared PVDAQ 9068 frame for the example series)
 python figures/f02_result_figures.py  # Figures 3-5 (from results/ only)
 python figures/f03_figure6.py         # Figure 6   (from results/ only)
+python figures/jrse_figures_1_2.py    # journal versions of Figures 1-2 (needs the same PVDAQ 9068 frame)
+python figures/jrse_figures_3_to_6.py # journal versions of Figures 3-6 (from results/ only)
 ```
 
-All figures are written to `results/figures/`.
+All figures are written to `results/figures/`; the journal versions go to `results/figures/jrse/`.
