@@ -15,23 +15,25 @@ capacity). Skill is in percent relative to the named reference.
 | `reference_and_update_inference/` | `analysis/d01`–`d05` | Smart-persistence audit and specification, paired comparisons with Holm adjustment, block-length sensitivity, figure data; `tables/` is written by `d03_build_tables.py` |
 | `v43_pvdaq9068/` | `scripts/train_corrected_study.py` under `protocol/protocol_v43_pvdaq9068.json` | PVDAQ 9068 frozen 2021 fits (`runs/`, `curves/`) |
 | `pvdaq9068_evaluation/` | `analysis/a01`, `a02`, `t01`, `d06`–`d09` | PVDAQ 9068 download manifest, data audit, prepared-window counts, pre-specified evaluation, expectations, configuration sensitivity |
-| `figures/` | `figures/*.py` | Figures 1–6 of the paper |
+| `figures/` | `figures/*.py` | Figures 1–6 of the paper; `figures/jrse/Fig1`–`Fig6` are the journal versions (`figures/jrse_figures_1_2.py`, `figures/jrse_figures_3_to_6.py`) |
 
 ## Main paper
+
+Table numbers follow the manuscript submitted to the *Journal of Renewable and Sustainable Energy* (Roman numerals); the file names keep Arabic numbers (`table2.csv` is Table II). The journal versions of Figures 1–6 are `figures/jrse/Fig1`–`Fig6`.
 
 | Item | File(s) |
 |---|---|
 | Figure 1, Figure 2 | `figures/Figure1_study_workflow_v44.*`, `figures/Figure2_model_paths_v44.*` (`figures/build_figures_1_2.py`) |
-| Table 1 | Array 1B and HKUST: `corrected_v28_array1b/preparation.json` (`populations`). Array 1B 2024: `publication_v29/temporal_preparation.json`. PVDAQ 9068: `pvdaq9068_evaluation/a02_prepared_windows.json` |
-| Table 2 | `reference_and_update_inference/tables/table2.csv`; PVDAQ 9068 rows: `pvdaq9068_evaluation/d06_metrics_9068.csv` |
+| Table I | Array 1B and HKUST: `corrected_v28_array1b/preparation.json` (`populations`). Array 1B 2024: `publication_v29/temporal_preparation.json`. PVDAQ 9068: `pvdaq9068_evaluation/a02_prepared_windows.json` |
+| Table II | `reference_and_update_inference/tables/table2.csv`; PVDAQ 9068 rows: `pvdaq9068_evaluation/d06_metrics_9068.csv` |
 | Figure 3 | `reference_and_update_inference/d01_smart_persistence_audit_h6.json`, `d03_inference_holm_by_lead.csv` |
 | Figure 4 | `reference_and_update_inference/d05_skill_by_lead.csv` |
-| Table 3 | `reference_and_update_inference/tables/table3.csv`; PVDAQ 9068 rows: `pvdaq9068_evaluation/d06_metrics_9068.csv`, `d06_inference_9068.csv` |
-| Table 4 | `reference_and_update_inference/tables/table4_inference.json` (from `publication_v29/calibration_inference.csv`); PVDAQ 9068: `pvdaq9068_evaluation/d06_calibration_9068.csv` |
+| Table III | `reference_and_update_inference/tables/table3.csv`; PVDAQ 9068 rows: `pvdaq9068_evaluation/d06_metrics_9068.csv`, `d06_inference_9068.csv` |
+| Table IV | `reference_and_update_inference/tables/table4_inference.json` (from `publication_v29/calibration_inference.csv`); PVDAQ 9068: `pvdaq9068_evaluation/d06_calibration_9068.csv` |
 | Figure 5 | `reference_and_update_inference/d05_coverage_by_hour.csv` |
-| Table 5 | `pvdaq9068_evaluation/d08_expectations.json` |
+| Table V | `pvdaq9068_evaluation/d08_expectations.json` |
 | Figure 6 | `pvdaq9068_evaluation/d06_inference_9068.csv`, `d09_matched_c5_9068.csv`, `d07_tuning_evaluation.csv` |
-| Table 6 | Reporting checklist (text); its evidence column points to the items above |
+| Table VI | Reporting checklist (text); its evidence column points to the items above |
 | Prose numbers | `reference_and_update_inference/tables/text_numbers.json`, `d02_summary.json` and the files above |
 
 ## Supplementary material
