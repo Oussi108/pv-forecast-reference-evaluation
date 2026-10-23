@@ -60,8 +60,8 @@
   "as_run": "provenance/as_run/strengthening/strengthening_runner.py",
   "workspace_path": "tmp/paper1_strengthening_20260914/code/strengthening_runner.py",
   "as_run_sha256": "1fd1f0ff4365e3ab6502333e7ca07c462e9220d7f1da90de131f27794daf3295",
-  "released_sha256": "03881c90a323918749091c367f256a2268b09ee88827e8e720b73a3e88ac3542",
-  "changed_lines": 39
+  "released_sha256": "88e480ce6576b141d3de75b04e673ea94a90ce5669da78bd2623f0c84801a03b",
+  "changed_lines": 51
  },
  {
   "released": "updates/run_p03_updates.py",
@@ -124,16 +124,16 @@
   "as_run": "provenance/as_run/v41_repair/code/d01_smart_persistence_audit.py",
   "workspace_path": "reports/paper1_v41_repair_20260926/code/d01_smart_persistence_audit.py",
   "as_run_sha256": "2740775e470bf538325a8fb22113541bf315f011634b493a4151a74648681c9f",
-  "released_sha256": "fd459add4907224ca4af7912edaef3e2e007c7ef540a995e551e6a1a8a4211ab",
-  "changed_lines": 7
+  "released_sha256": "7ac6d4623fa2463847b5037fffb9bdca3d3e61694b9706053d1fec406898e232",
+  "changed_lines": 15
  },
  {
   "released": "analysis/d02_reference_and_update_inference.py",
   "as_run": "provenance/as_run/v41_repair/code/d02_reference_and_update_inference.py",
   "workspace_path": "reports/paper1_v41_repair_20260926/code/d02_reference_and_update_inference.py",
   "as_run_sha256": "fd2798a5c6fd8832adf505f659181bef66067e530417cca91304ab27cea4ded0",
-  "released_sha256": "500e857f86f2f1841181f8f0839aaadb11d60bead06cd6d56f16edeac571148b",
-  "changed_lines": 12
+  "released_sha256": "e3eb3d9595a020f7e556f070a80b1ef96fa7013fe67eba404d78be31ed114ca3",
+  "changed_lines": 25
  },
  {
   "released": "analysis/d03_build_tables.py",
@@ -164,7 +164,7 @@
   "as_run": "provenance/as_run/v43_upgrade/code/a01_download.py",
   "workspace_path": "reports/paper1_v43_upgrade_20260926/code/a01_download.py",
   "as_run_sha256": "edb6124b19b66f3856bed487fe1fcbf08082a887b76325d9ad7eec32003d0b91",
-  "released_sha256": "dbd7e425165791b65d565541ed69df5fd20f7d833d0c0609c387dcd8eed683c3",
+  "released_sha256": "254fd9580892066160152f48a215924ffe52c53acaffb292fc615e29bbb27fc7",
   "changed_lines": 10
  },
  {
@@ -236,8 +236,8 @@
   "as_run": "provenance/as_run/v43_upgrade/figures_v5style/build_paper1_figures_v5style.py",
   "workspace_path": "reports/paper1_v43_upgrade_20260926/figures_v5style/build_paper1_figures_v5style.py",
   "as_run_sha256": "9a64a50f444d2fe7e0582b23e1b159baa65000db8ee290492551a6fa0be00463",
-  "released_sha256": "057e6811d4bd11fe21e39fb85f3b97a5bd0a7c0b2f01443c03ece929cda39800",
-  "changed_lines": 11
+  "released_sha256": "13d2bdba0c82e15a3cd6d3cd13e86695c80b5a2963e8001619317c1c23d565fb",
+  "changed_lines": 37
  },
  {
   "released": "figures/f02_result_figures.py",
@@ -259,16 +259,16 @@
   "released": "figures/jrse_figures_1_2.py",
   "as_run": "provenance/as_run/jrse_submission/figures/src/jrse_figures_1_2.py",
   "workspace_path": "WorkLoad/solar_pipeline_scaffold/paper1/JRSE_submission/figures/src/jrse_figures_1_2.py",
-  "as_run_sha256": "bc7588b5c2063c0f54631012f527a54a42c4c7e5d5e5be51a40d0a5e24ed8ba1",
-  "released_sha256": "68f6289bd830910c5f5e055ad64f7cbd0376ff88b77970209794db9543957069",
+  "as_run_sha256": "bc60a269a63b5f72e82334455ce0d570c9e6ee281977d3c4a053247c031e356a",
+  "released_sha256": "78525910e03f0e899a538dd35954d01264c356fb0d951a1228fe012ed70ad1cc",
   "changed_lines": 9
  },
  {
   "released": "figures/jrse_figures_3_to_6.py",
   "as_run": "provenance/as_run/jrse_submission/figures/src/jrse_figures_3_to_6.py",
   "workspace_path": "WorkLoad/solar_pipeline_scaffold/paper1/JRSE_submission/figures/src/jrse_figures_3_to_6.py",
-  "as_run_sha256": "0a6b413e951e7709f120fe43a3ed1945fe71cd7339e7fbd9d8d64d147bb85c18",
-  "released_sha256": "cd571afdaa4a714219b4aa457572682742b976ee34a8b42c42522a97e3d73489",
+  "as_run_sha256": "05b005a4069f9d00cb78ee4ed587bc66a9cd8f4f0900cbe94af155dc3bab1fde",
+  "released_sha256": "83fce1d7e7d5c39737527591a14bb57951848d03b825dde1d5a347e43ffa2565",
   "changed_lines": 4
  }
 ]

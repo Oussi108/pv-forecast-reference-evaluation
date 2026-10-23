@@ -76,13 +76,30 @@ On 17 October 2026 the evaluation, table and figure scripts were re-run from thi
 predictions. They reproduced every released table and evaluation file exactly, and Figures 1–6 pixel for pixel. The
 details are in `provenance/RELEASE_CHECK.md`.
 
-The scripts differ from the versions that produced the paper only in the lines that name file locations
-(`provenance/path_changes.diff`). Model-fitting scripts were not re-run for the release.
+The released scripts differ from the as-run copies in `provenance/as_run/` only in the lines that name file locations
+and, for four scripts (`analysis/d01`, `analysis/d02`, `figures/build_figures_1_2.py`, `updates/strengthening_runner.py`),
+in their opening description and figure titles, which used internal project names. `provenance/path_changes.diff`
+lists every changed line. Model-fitting scripts were not re-run for the release.
 
 On 23 October 2026 the journal versions of the figures were added (`figures/jrse_figures_1_2.py`,
 `figures/jrse_figures_3_to_6.py`, `results/figures/jrse/`); `jrse_figures_3_to_6.py` reproduces the journal Figures 3–6
 pixel for pixel from the released results alone. A `.gitattributes` file stops git from converting line endings, so every
 file stays byte-identical to the hashes in `MANIFEST.sha256` and `protocol/FREEZE.json` on any platform.
+
+## Names of files and folders
+
+Some names carry the labels under which the analyses were run (for example `v28`, `v29`, `v43`). They are kept because
+the run records, the provenance hashes and the frozen PVDAQ 9068 protocol refer to them. In the terms of the paper:
+
+| Name | What it holds |
+|---|---|
+| `configs/corrected_study_v28_array1b.json`, `results/corrected_v28_array1b/` | Array 1B and HKUST data preparation, frozen 2021 fits and their evaluation |
+| `scripts/publication_revision_v29.py`, `results/publication_v29/` | Fixed-map interval calibration, LightGBM updates and the 2024 Array 1B extension |
+| `updates/`, `results/updates_2023/` | 2023 annual and monthly updates of all model families, input-removal fits and reference diagnostics |
+| `analysis/d01`–`d05`, `results/reference_and_update_inference/` | Smart-persistence specification and the reference and update comparisons (Array 1B, HKUST) |
+| `protocol/` (`PREREGISTRATION_v43.md`, `protocol_v43_pvdaq9068.json`, `FREEZE.json`), `results/v43_pvdaq9068/`, `results/pvdaq9068_evaluation/` | PVDAQ 9068 protocol, frozen fits and pre-specified evaluation |
+| `results/figures/*_v42`, `*_v43`, `*_v44` | Figures as first drawn for the manuscript; `results/figures/jrse/` holds the journal versions |
+| `provenance/as_run/` | Byte-identical copies of the scripts as run, filed under the workspace folders of the time |
 
 ## Licence
 

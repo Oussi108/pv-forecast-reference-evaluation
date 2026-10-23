@@ -60,7 +60,7 @@ def main():
         if sha(ROOT / row['released']) != row['released_sha256'] or sha(ROOT / row['as_run']) != row['as_run_sha256']:
             fails.append(f"provenance hash differs: {row['released']}")
     print(f'provenance: {len(prov)} scripts checked ({sum(r["changed_lines"] == 0 for r in prov)} unchanged, '
-          f'others differ only in path lines; see provenance/path_changes.diff)')
+          f'others differ only in path and description lines; see provenance/path_changes.diff)')
 
     bad = [n for n, p in present.items() if p.suffix.lower() in FORBIDDEN]
     fails += [f'data or model file present: {n}' for n in bad]

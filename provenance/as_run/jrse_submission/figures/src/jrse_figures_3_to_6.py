@@ -1,6 +1,6 @@
 """JRSE versions of Figures 3-6, redrawn from the released aggregate results (no new numbers).
 
-Same data and marks as paper1_code_release/figures/f02_result_figures.py (Figs 3-5) and f03_figure6.py (Fig 6); changed
+Same data and marks as figures/f02_result_figures.py (Figs 3-5) and figures/f03_figure6.py (Fig 6); changed
 only for AIP Publishing figure rules: width 170 mm (two-column maximum 6.69 in), all text >= 8 pt at that size, panel
 labels "(a)", and the testbed label "Array 1B" (as in the text) instead of "DKASC".
 """

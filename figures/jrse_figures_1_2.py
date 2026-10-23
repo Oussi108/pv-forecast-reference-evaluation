@@ -1,15 +1,12 @@
-"""JRSE versions of Figures 1-2, derived from reports/paper1_v43_upgrade_20260926/figures_v5style/build_paper1_figures_v5style.py.
+"""Journal (JRSE) versions of Figure 1 (study workflow) and Figure 2 (model paths).
 
-Changed for AIP Publishing figure rules: drawn at 6.69 in width, all text >= 8 pt, testbed label Array 1B.
-"""
-"""Paper 1 Figures 1-2 redrawn in the Paper 2 'paper_style_v5' visual language (code-drawn; no AI images).
-
-Content is copied from the v43 figures (Figure1_study_workflow_v43, Figure 2 'Model paths') and checked against the v43
-manuscript text (seeds 11/23/37/51/73; <=1200 rounds, 31 leaves; patience 60 rounds / 6 epochs; width 32, one layer;
-four attention heads; 23.4 kW dual-axis; 4.7 MW single-axis). Only the drawing style changes; no number or claim changes.
-The input insets are REAL hourly data from NREL PVDAQ system 9068 in 2021 (development year; CC BY 4.0), 24 completed
-hours ending 2021-09-24 14:00 local time; every channel is min-max scaled for display only.
-Outputs (PDF, SVG, 600 dpi PNG): Figure1_study_workflow_v5style, Figure2_model_paths_v5style, all_figures.pdf.
+Same drawing as figures/build_figures_1_2.py, changed for the AIP Publishing figure rules: drawn at 6.69 in width,
+all text >= 8 pt, all lines >= 0.5 pt, testbed label Array 1B. Drawn with matplotlib (no AI-generated images).
+Every number shown (seeds 11/23/37/51/73; <=1200 rounds, 31 leaves; patience 60 rounds / 6 epochs; width 32, one layer;
+four attention heads; 23.4 kW dual-axis; 4.7 MW single-axis) is checked against the manuscript text.
+The input insets are real hourly data from NREL PVDAQ system 9068 in 2021 (development year; CC BY 4.0): 24 completed
+hours ending 2021-09-24 14:00 local time, every channel min-max scaled for display only.
+Outputs (PDF, SVG, 600 dpi PNG): Fig1, Fig2.
 """
 import json
 import os
@@ -59,7 +56,7 @@ for name, col, _ in CH:
     SERIES[name] = (v - v.min()) / max(v.max() - v.min(), 1e-9)
 
 
-# ------------------------------------------------------------------ drawing primitives (v5 style)
+# ------------------------------------------------------------------ drawing primitives
 def canvas(w, h, y0=0.0):
     fig = plt.figure(figsize=(w * S, (h - y0) * S), facecolor="white")
     ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(0, w); ax.set_ylim(y0, h); ax.set_aspect("equal"); ax.axis("off")
@@ -319,7 +316,7 @@ def figure1(records, ms=False):
     if ms:
         return save(fig, ax, "Fig1", "Figure 1: study workflow (JRSE)", records)
     label(ax, 7.12, .08, CREDIT, 6.2, ha="right", italic=True, color=MUTED)
-    return save(fig, ax, "Figure1_study_workflow_v5style", "Paper 1 study workflow (v5 style)", records)
+    return save(fig, ax, "Figure1_study_workflow_standalone", "Study workflow (standalone version)", records)
 
 
 # ================================================================== Figure 2: model paths
@@ -408,7 +405,7 @@ def figure2(records, ms=False):
     if ms:
         return save(fig, ax, "Fig2", "Figure 2: model paths (JRSE)", records)
     label(ax, 7.12, .64, CREDIT, 6.2, ha="right", italic=True, color=MUTED)
-    return save(fig, ax, "Figure2_model_paths_v5style", "Paper 1 model paths (v5 style)", records)
+    return save(fig, ax, "Figure2_model_paths_standalone", "Model paths (standalone version)", records)
 
 
 if __name__ == "__main__":

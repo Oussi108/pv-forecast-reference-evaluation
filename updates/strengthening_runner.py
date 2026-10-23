@@ -1,9 +1,9 @@
-"""Isolated execution runner for PAPER1-STRENGTHEN-20260914.
+"""Isolated execution runner for the 2023 update and input-removal experiments.
 
-This runner writes only below the strengthening execution root. Frozen v29 and
-adopted parent artifacts are read-only inputs. The first implemented stages are
-P00 provenance, P01 independent array/reference/metric checks, and P02 stronger
-reference forecasts. Later stages will be added as separate signed revisions.
+This runner writes only below its private execution root (PV_PRIVATE_ROOT/updates_2023); the frozen fits and
+earlier results are read-only inputs. Its stages are P00 provenance, P01 independent array/reference/metric checks
+and P02 stronger reference forecasts; the update (P03) and input-removal (P06) fits are run by run_p03_*.py and
+run_p06_ablation.py.
 """
 from __future__ import annotations
 

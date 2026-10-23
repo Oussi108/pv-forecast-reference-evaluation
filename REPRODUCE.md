@@ -93,11 +93,11 @@ All outputs go to `results/reference_and_update_inference/`.
 ## 6. PVDAQ 9068 (pre-specified evaluation)
 
 ```bash
-python analysis/a01_download.py           # PVDAQ 9068 + NOAA ISD raw files -> $PV_PRIVATE_ROOT/paper1_v43_private/raw
+python analysis/a01_download.py           # PVDAQ 9068 + NOAA ISD raw files -> $PV_PRIVATE_ROOT/pvdaq9068/raw
 python analysis/a02_prepare_9068.py       # hourly frame, data audit, h{2,4,6,12}.npz (no forecast is scored)
 export PV_FORECAST_PROTOCOL_PATH="$PWD/protocol/protocol_v43_pvdaq9068.json"
-python scripts/train_corrected_study.py --private-root "$PV_PRIVATE_ROOT/paper1_v43_private/prepared" --stage point --beds PVDAQ9068
-python scripts/train_corrected_study.py --private-root "$PV_PRIVATE_ROOT/paper1_v43_private/prepared" --stage quantile --beds PVDAQ9068
+python scripts/train_corrected_study.py --private-root "$PV_PRIVATE_ROOT/pvdaq9068/prepared" --stage point --beds PVDAQ9068
+python scripts/train_corrected_study.py --private-root "$PV_PRIVATE_ROOT/pvdaq9068/prepared" --stage quantile --beds PVDAQ9068
 python analysis/u01_updates_9068.py       # annual and monthly updates, 2023 and 2024
 python analysis/t01_neural_tuning.py PVDAQ9068 DKASC HKUST   # neural-configuration grid (all three testbeds)
 python analysis/d06_evaluate_9068.py      # pre-specified contrasts, references, calibration
