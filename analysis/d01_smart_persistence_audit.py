@@ -1,8 +1,8 @@
-"""D01: audit of the clear-sky ('smart') persistence reference used in Paper 1 v28-v40.
+"""D01: audit of the clear-sky ('smart') persistence reference in its any-daylight form (specification (a)).
 
-Reads the private prepared hourly frames and window arrays (read-only), reproduces
-the Table 2 reference MAEs, diagnoses where the v28 smart reference fails, and scores
-fairer smart-persistence variants on exactly the same 2023 six-hour daylight keys.
+Reads the private prepared hourly frames and window arrays (read-only), reproduces the Table II reference MAEs,
+diagnoses where the any-daylight smart reference fails (Fig. 3(a)), and scores alternative smart-persistence
+specifications on exactly the same 2023 six-hour daylight keys.
 No model is trained; no source file is modified.
 """
 import json

@@ -1,5 +1,5 @@
 """A01: download PVDAQ system 9068 (CC BY 4.0, OEDI) and NOAA ISD Greeley-Weld (public domain) raw files; record hashes.
-Raw observations stay in PV_PRIVATE_ROOT/paper1_v43_private (never inside the public release)."""
+Raw observations stay in PV_PRIVATE_ROOT/pvdaq9068 (never inside the public release)."""
 import hashlib, json, time, urllib.request
 from pathlib import Path
 import sys

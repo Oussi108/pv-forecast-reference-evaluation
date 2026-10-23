@@ -1,11 +1,12 @@
-"""D02: v41 repair analysis for Paper 1 (saved predictions only; no training).
+"""D02: reference specification, reference comparisons and update inference for Array 1B and HKUST
+(saved predictions only; no training).
 
 1. Specifies the clear-sky (smart) persistence reference without using 2023:
-   candidates are scored on 2022 six-hour daylight targets and the winner is fixed per testbed.
-2. Scores frozen models against previous-day, revised smart and convex references with the
-   inherited synchronized 7-day calendar-block engine (2000 draws, seed 42), Holm within family.
-3. Completes the update-policy comparison for all three model families (average seed-wise
-   losses; R01 aggregation) at all four lead times, with paired intervals.
+   candidates are scored on 2022 six-hour daylight targets and the lowest-MAE candidate is fixed per testbed.
+2. Scores frozen models against previous-day, specified smart and convex references with the
+   synchronized 7-day calendar-block engine (2000 draws, seed 42), Holm within family.
+3. Completes the update-policy comparison for all three model families (seed-wise losses averaged
+   before equal-system aggregation) at all four lead times, with paired intervals.
 4. Block-length sensitivity (1/7/14/28 days) for the headline contrasts.
 """
 import json

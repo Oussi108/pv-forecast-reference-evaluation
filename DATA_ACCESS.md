@@ -13,7 +13,7 @@ Expected layout (the code creates all other sub-folders itself):
 pv_private/
   raw/DKASC/87-Site_DKA-M9_A+C-Phases.csv
   raw/HKUST/Dataset/...                    (extracted Dryad archive)
-  paper1_v43_private/raw/...               (filled by analysis/a01_download.py)
+  pvdaq9068/raw/...               (filled by analysis/a01_download.py)
 ```
 
 ## 1. DKASC Array 1B (Alice Springs, Australia)
@@ -44,7 +44,7 @@ pv_private/
   <https://doi.org/10.25984/1846021>.
 - **Licence:** CC BY 4.0.
 - **Download:** `python analysis/a01_download.py` downloads the seven data files and the system metadata into
-  `$PV_PRIVATE_ROOT/paper1_v43_private/raw/pvdaq9068/`. It also records each file's size and SHA-256 in
+  `$PV_PRIVATE_ROOT/pvdaq9068/raw/pvdaq9068/`. It also records each file's size and SHA-256 in
   `results/pvdaq9068_evaluation/a01_download_manifest.json`, which you can compare with the released copy.
 
 ## 4. NOAA Integrated Surface Database, station 724768-24051 (Greeley–Weld County Airport)
@@ -53,7 +53,7 @@ pv_private/
 - **Source:** NOAA NCEI global-hourly files, `https://www.ncei.noaa.gov/data/global-hourly/access/<year>/72476824051.csv`
   for 2020–2025.
 - **Licence:** U.S. Government work, public domain.
-- **Download:** `analysis/a01_download.py` downloads these files into `$PV_PRIVATE_ROOT/paper1_v43_private/raw/isd/`.
+- **Download:** `analysis/a01_download.py` downloads these files into `$PV_PRIVATE_ROOT/pvdaq9068/raw/isd/`.
 
 ## Acknowledgement text
 

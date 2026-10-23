@@ -1,11 +1,11 @@
-"""Paper 1 Figures 1-2 redrawn in the Paper 2 'paper_style_v5' visual language (code-drawn; no AI images).
+"""Figures 1-2 of the paper (study workflow and model paths), drawn with matplotlib (no AI-generated images).
 
-Content is copied from the v43 figures (Figure1_study_workflow_v43, Figure 2 'Model paths') and checked against the v43
-manuscript text (seeds 11/23/37/51/73; <=1200 rounds, 31 leaves; patience 60 rounds / 6 epochs; width 32, one layer;
-four attention heads; 23.4 kW dual-axis; 4.7 MW single-axis). Only the drawing style changes; no number or claim changes.
-The input insets are REAL hourly data from NREL PVDAQ system 9068 in 2021 (development year; CC BY 4.0), 24 completed
-hours ending 2021-09-24 14:00 local time; every channel is min-max scaled for display only.
-Outputs (PDF, SVG, 600 dpi PNG): Figure1_study_workflow_v5style, Figure2_model_paths_v5style, all_figures.pdf.
+Every number shown (seeds 11/23/37/51/73; <=1200 rounds, 31 leaves; patience 60 rounds / 6 epochs; width 32, one layer;
+four attention heads; 23.4 kW dual-axis; 4.7 MW single-axis) is checked against the manuscript text.
+The input insets are real hourly data from NREL PVDAQ system 9068 in 2021 (development year; CC BY 4.0): 24 completed
+hours ending 2021-09-24 14:00 local time, every channel min-max scaled for display only.
+Outputs (PDF, SVG, 600 dpi PNG): manuscript versions Figure1_study_workflow_v44 and Figure2_model_paths_v44, standalone
+versions Figure1_study_workflow_v5style and Figure2_model_paths_v5style, and all_figures.pdf.
 """
 import json
 import sys
@@ -52,7 +52,7 @@ for name, col, _ in CH:
     SERIES[name] = (v - v.min()) / max(v.max() - v.min(), 1e-9)
 
 
-# ------------------------------------------------------------------ drawing primitives (v5 style)
+# ------------------------------------------------------------------ drawing primitives
 def canvas(w, h, y0=0.0):
     fig = plt.figure(figsize=(w, h - y0), facecolor="white")
     ax = fig.add_axes([0, 0, 1, 1]); ax.set_xlim(0, w); ax.set_ylim(y0, h); ax.set_aspect("equal"); ax.axis("off")
@@ -292,9 +292,9 @@ def figure1(records, ms=False):
         boxed_label(ax, (x, .24, w - .03, .48), text, 6.9)
         x += w
     if ms:
-        return save(fig, ax, "Figure1_study_workflow_v44", "Paper 1 Figure 1: study workflow", records)
+        return save(fig, ax, "Figure1_study_workflow_v44", "Figure 1: study workflow", records)
     label(ax, 7.12, .08, CREDIT, 6.2, ha="right", italic=True, color=MUTED)
-    return save(fig, ax, "Figure1_study_workflow_v5style", "Paper 1 study workflow (v5 style)", records)
+    return save(fig, ax, "Figure1_study_workflow_v5style", "Study workflow (standalone version)", records)
 
 
 # ================================================================== Figure 2: model paths
@@ -381,9 +381,9 @@ def figure2(records, ms=False):
         label(ax, 6.00, yy - .10 - .065 * n, body, 6.5, ha="left", color=MUTED)
         yy -= .28 + .13 * n
     if ms:
-        return save(fig, ax, "Figure2_model_paths_v44", "Paper 1 Figure 2: model paths", records)
+        return save(fig, ax, "Figure2_model_paths_v44", "Figure 2: model paths", records)
     label(ax, 7.12, .64, CREDIT, 6.2, ha="right", italic=True, color=MUTED)
-    return save(fig, ax, "Figure2_model_paths_v5style", "Paper 1 model paths (v5 style)", records)
+    return save(fig, ax, "Figure2_model_paths_v5style", "Model paths (standalone version)", records)
 
 
 if __name__ == "__main__":
@@ -395,7 +395,7 @@ if __name__ == "__main__":
     figure1(REC, ms=True); figure2(REC, ms=True)       # manuscript versions used in v44
     (OUT / "validation.json").write_text(json.dumps({"figures": REC, "example_series": {
         "source": "NREL PVDAQ system 9068 (CC BY 4.0) power, plane-of-array irradiance and temperature; relative humidity from "
-                  "NOAA ISD Greeley 724768-24051; clear-sky from pvlib; file PV_PRIVATE_ROOT/paper1_v43_private/prepared/PVDAQ9068/pvdaq_9068.pkl",
+                  "NOAA ISD Greeley 724768-24051; clear-sky from pvlib; file PV_PRIVATE_ROOT/pvdaq9068/prepared/PVDAQ9068/pvdaq_9068.pkl",
         "window_local": [str(_w.index.min()), str(_w.index.max())], "year": 2021, "use": "display only, min-max scaled per channel"},
         "content_source": "v43 Figures 1-2, checked against the v43 manuscript text; no numbers changed"}, indent=1), encoding="utf-8")
     print("built", [r["stem"] for r in REC], "->", OUT)
