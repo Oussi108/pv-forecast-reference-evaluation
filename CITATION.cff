@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code or these results, please cite the paper and this archive."
 title: "Code and aggregate results for: Reference specification, model updating and calibration population in hourly photovoltaic power forecasting"
 type: software
-version: "1.0.0"
+version: "1.1.0"
 license: MIT
 authors:
   - family-names: "Oussi"
@@ -15,6 +15,6 @@ keywords:
   - smart persistence
   - model updating
   - prediction intervals
-# Add after deposit:
-# doi: "10.5281/zenodo.XXXXXXX"
-# repository-code: "https://github.com/<user>/<repository>"
+# concept DOI: resolves to the latest version; every release also has its own version DOI
+doi: "10.5281/zenodo.23590205"
+repository-code: "https://github.com/Oussi108/pv-forecast-reference-evaluation"

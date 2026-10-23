@@ -109,5 +109,7 @@ the run records, the provenance hashes and the frozen PVDAQ 9068 protocol refer 
 
 ## Citation
 
-Please cite the paper and this archive; `CITATION.cff` holds the archive metadata. The DOI will be added when the archive is
-deposited.
+Please cite the paper and this archive; `CITATION.cff` holds the archive metadata.
+
+- Archive (all versions): <https://doi.org/10.5281/zenodo.23590205>. Each release also has its own version DOI,
+  listed on that page; version 1.0.0 is <https://doi.org/10.5281/zenodo.23590206>.
