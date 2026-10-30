@@ -2,14 +2,14 @@
 
 The deployed model's daylight absolute errors are aggregated per target day. A day's mean error enters the monitor only
 after the day has ended (all of its labels are then observed). The monitor (Page-Hinkley, increase direction) works on
-errors standardized by the mean and standard deviation of the daily errors of the 2021 validation quarter:
+errors standardized by the mean and standard deviation of the frozen fit's daily daylight errors over 2021:
 
     m_T = sum_{t<=T} (z_t - zbar_T - delta),   M_T = min_{t<=T} m_t,   alarm when m_T - M_T > lambda
 
 On an alarm at the end of day d the model is refitted on all rows whose TARGET lies in the 365 days before 00:00 of day
 d+1, and is used for every row ISSUED from that instant on; the monitor restarts. Refits are at least MIN_GAP_DAYS
-apart. delta = 0.5 is fixed; lambda is chosen from LAMBDAS by the lowest 2022 daylight MAE, with the same procedure
-started on 1 Jan 2022 from the frozen 2021 fit (no 2023 or 2024 label is used). The fitting itself is supplied by the
+apart. delta = 0.5 is fixed; lambda is chosen from LAMBDAS (per family, on seed 11) by the lowest 2022 daylight MAE,
+with the same procedure started on 1 Jan 2022 from the frozen 2021 fit (no 2023 or 2024 label is used). The fitting itself is supplied by the
 caller (the u01 LightGBM / neural fitting functions), so this module contains only the policy.
 """
 import numpy as np
@@ -43,7 +43,7 @@ def run_policy(issue_ns, target_ns, y, daylight, fit_predict, initial_pred, star
 
     fit_predict(train_mask, predict_mask) -> predictions for predict_mask rows (fit only on train_mask rows).
     initial_pred: predictions of the model deployed at start_ns for all rows (NaN allowed outside the period).
-    scale: (mean, sd) of daily daylight MAE on the 2021 validation quarter.
+    scale: (mean, sd) of the frozen fit's daily daylight MAE over 2021.
     Returns (predictions for all rows, list of refit instants in ns).
     """
     pred = np.asarray(initial_pred, float).copy()

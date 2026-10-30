@@ -35,10 +35,11 @@ all-hour weights). Contrasts: every frozen and updated model vs this reference, 
 ## C. Drift-triggered updating (`analysis/x03_drift_updates.py`)
 
 Page–Hinkley monitor (increase direction, δ = 0.5) on daily daylight MAE of the deployed 6-h model, standardized by the
-mean and SD of the daily errors in the 2021 validation quarter. A day enters the monitor only after it has ended. On an
+mean and SD of the frozen fit's daily daylight MAE over 2021 (in-sample; λ selection on 2022 absorbs the scale). A day enters the monitor only after it has ended. On an
 alarm the model is refitted on the targets of the preceding 365 days and serves every row issued from the next midnight;
-refits are at least 30 days apart; the monitor restarts. λ ∈ {2, 4, 8, 16} is chosen by the lowest 2022 daylight MAE,
-running the same policy through 2022 from the frozen 2021 fit. Families: LightGBM, GRU and Transformer with the
+refits are at least 30 days apart; the monitor restarts. λ ∈ {2, 4, 8, 16} is chosen per family on seed 11 by the
+lowest 2022 daylight MAE, running the same policy through 2022 from the frozen 2021 fit (ties go to the smaller λ). The
+chosen λ is used for all five seeds, and the policy then runs without interruption from 1 Jan 2022 to the end of 2024. Families: LightGBM, GRU and Transformer with the
 development-selected settings, five seeds. Contrasts at 6 h: drift vs frozen, drift vs annual, drift vs monthly, and
 monthly vs annual. Also reported: number and dates of refits per testbed and year.
 
@@ -55,6 +56,12 @@ hour (night; below 10°; 10–30°; at least 30°), calibrated on 2022, with a f
 band with fewer than 100 rows. (2) Adaptive conformal inference with γ = 0.005, separately for day and night, where
 an error is used only after its target time. Compared with raw, all-hour and day/night corrections on daylight
 coverage and on interval-score skill against day/night.
+
+## Freeze and run
+
+`python tools/freeze_v44.py` writes `protocol/FREEZE_v44.json` with the SHA-256 of this file and of `analysis/x02`–`x06`.
+Commit and push it publicly first. `analysis/x06_run_9068.py` refuses to run if any hash differs. DKASC Array 1B and
+HKUST runners follow the same pattern after the HKUST timestamp fix and re-preparation.
 
 ## What is reported whatever the outcome
 
